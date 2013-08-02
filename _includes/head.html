@@ -1,0 +1,95 @@
+<meta charset="utf-8">
+<title>{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ page.description }}">
+<meta name="keywords" content="{{ page.tags | join: ', ' }}">
+{% if site.owner.twitter %}<!-- Twitter Card and Open Graph meta -->
+<meta name="twitter:title" content="{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}">
+<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.content | strip_html | strip_newlines | truncate: 120 }}{% endif %}">
+<meta name="twitter:creator" content="@{{ site.owner.twitter }}">
+{% if page.layout == 'photo' %}
+<meta name="twitter:card" content="photo">
+{% if page.image %}<meta name="twitter:image:src" content="{{ site.url }}/images/{{ page.image.feature }}">{% endif %}
+{% else %}
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image:src" content="{% if page.image.thumb %}{{ site.url }}/images/{{ page.image.thumb }}{% else %}{{ site.url }}/images/default-thumb.png{% endif %}">{% endif %}
+<meta property="og:type" content="article">
+<meta property="og:image" content="{% if page.image.thumb %}{{ site.url }}/images/{{ page.image.thumb }}{% else %}{{ site.url }}/images/default-thumb.png{% endif %}">
+{% endif %}
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}">
+<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.content | strip_html | strip_newlines | truncate: 120 }}{% endif %}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:site_name" content="{{ site.title }}">
+
+{% if site.google_verify %}<!-- Webmaster Tools verfication -->
+<meta name="google-site-verification" content="{{ site.google_verify }}">{% endif %}
+{% if site.bing_verify %}<meta name="msvalidate.01" content="{{ site.bing_verify }}">{% endif %}
+
+{% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}
+<link rel="canonical" href="{{ canonical }}">
+<link href="{{ site.url }}/feed.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
+{% if site.owner.google_plus %}<link rel="author" href="{{ site.owner.google_plus }}?rel=author">{% endif %}
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Type -->
+<link rel="stylesheet" href="link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700,700italic' rel='stylesheet' type='text/css'>" media="all" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ site.url }}/css/entypo/entypo.css" media="all">
+<link rel='stylesheet' href='/calplus/cal.css' media='all' />
+
+
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="{{ site.url }}/assets/css/i.css">
+
+<!-- Fresh Squeezed jQuery -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="{{ site.url }}/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="{{ site.url }}/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="{{ site.url }}/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="{{ site.url }}/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ site.url }}/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.url }}/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.url }}/images/apple-touch-icon-144x144-precomposed.png">
+
+<div id="bump">
+  <body class="">
+    <header class="site-header">
+      <div class="wrap">
+        <hgroup>
+          <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+        </hgroup>
+        <a href="#nav" class="menu"><span class='icons'>☰</span></a>
+        <nav role="navigation">
+          <ul>
+            <li>
+              <a href="{{ site.url }}" title="{{ site.title }}">Home</a>
+            </li>
+            
+            {% for link in site.links %}
+                <li><a href="{% if link.external %}{{ link.url }}{% else %}{{ site.url }}{{ link.url }}{% endif %}" {% if link.external %}target="_blank"{% endif %}>{{ link.title }}</a></li>
+            {% endfor %}
+
+          </ul>
+        </nav>
+        <?php endif; ?>
+      </div>
+    </header>
