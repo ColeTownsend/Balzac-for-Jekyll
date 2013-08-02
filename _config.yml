@@ -2,7 +2,7 @@ title:            Balzac
 tagline:          A beautiful theme.
 description:      Describe your website.
 #Comment out url when working locally to resolve base urls correctly
-## url:           
+url: coletownsend.github.io/Balzac-for-Jekyll          
 
 # Owner/author information
 owner:
