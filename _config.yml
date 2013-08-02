@@ -1,21 +1,21 @@
-title:            Site Title
-tagline:          A short tagline
+title:            Balzac
+tagline:          A beautiful theme.
 description:      Describe your website.
 #Comment out url when working locally to resolve base urls correctly
-url:              http://your-site.com
+## url:           
 
 # Owner/author information
 owner:
-  name:           Your Name
-  avatar:         bio-photo.jpg
-  bio:            "Describe your self."
-  email:          your@email.com
+  name:           Cole Townsend
+  avatar:         avatar.png
+  bio:            "Aesthete & Athlete"
+  email:          cole@coletownsend.com
   # Social networking links are used in author-bio sidebar. Update and remove as you like.
-  twitter:        
+  twitter: ctrunsthis        
   facebook:       
-  github:         
+  github: coletownsend       
   linkedin:       
-  instagram:      
+  instagram: ctrunsthis     
   lastfm:         
   tumblr:         
   # For Google Authorship https://plus.google.com/authorship
