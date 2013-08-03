@@ -1,23 +1,23 @@
-title:            Site Title
-tagline:          A short tagline
+title:            Balzac
+tagline:          A beautiful theme.
 description:      Describe your website.
 #Comment out url when working locally to resolve base urls correctly
-url:              http://your-site.com
+# url: "http://localhost:4000"          
 
 # Owner/author information
 owner:
-  name:           Your Name
-  avatar:         bio-photo.jpg
-  bio:            "Describe your self."
-  email:          your@email.com
+  name:           Cole Townsend
+  avatar:         avatar.png
+  bio:            "Aesthete & Athlete"
+  email:          cole@coletownsend.com
   # Social networking links are used in author-bio sidebar. Update and remove as you like.
-  twitter:        
+  twitter: ctrunsthis        
   facebook:       
-  github:         
+  github: coletownsend       
   linkedin:       
-  instagram:      
-  lastfm:         
-  tumblr:         
+  instagram: ctrunsthis     
+  dribbble:  coletownsend
+
   # For Google Authorship https://plus.google.com/authorship
   google_plus:    
 
@@ -44,10 +44,8 @@ links:
 timezone:    America/New_York
 future:      true
 pygments:    true
+safe:        true
 markdown:    kramdown
-
-# https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title
 
 kramdown:
   auto_ids: true
@@ -56,12 +54,8 @@ kramdown:
   toc_levels: 1..6
   use_coderay: false
 
-  coderay:
-    coderay_line_numbers: 
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: class
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title
 
 include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "minimal-mistakes.sublime-project", "minimal-mistakes.sublime-workspace"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp"]
