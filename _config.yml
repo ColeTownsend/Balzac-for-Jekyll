@@ -2,7 +2,7 @@ title:            Balzac
 tagline:          A beautiful theme.
 description:      Describe your website.
 #Comment out url when working locally to resolve base urls correctly
-url: "http://localhost:4000"          
+# url: "http://localhost:4000"          
 
 # Owner/author information
 owner:
@@ -16,8 +16,8 @@ owner:
   github: coletownsend       
   linkedin:       
   instagram: ctrunsthis     
-  lastfm:         
-  tumblr:         
+  dribbble:  coletownsend
+
   # For Google Authorship https://plus.google.com/authorship
   google_plus:    
 
@@ -47,9 +47,6 @@ pygments:    true
 safe:        true
 markdown:    kramdown
 
-# https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title
-
 kramdown:
   auto_ids: true
   footnote_nr: 1
@@ -57,6 +54,8 @@ kramdown:
   toc_levels: 1..6
   use_coderay: false
 
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp"]

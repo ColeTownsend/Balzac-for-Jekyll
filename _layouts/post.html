@@ -1,21 +1,28 @@
 {% include head.html %}
 
+<section class="article">
+
 {% if page.image.feature %}
-  <div class="featured-image" style="background-image: url({{ site.url }}/images/{{ page.image.feature }}); ?>);"></div>
+  <div class="overlay"></div>
+  <div class="featured-image" style="background-image: url({{ site.url }}/images/{{ page.image.feature }})"></div>
+{% else %}
+  <div class="overlay"></div>
+  <div class="featured-image" style="background-image: url({{ site.url }}/images/typewriter.jpg)"></div>
 {% endif %}
+
 
       <article class="wrap post">
         <header class="post-header">
           <hgroup>
-            <h1><?php echo article_title(); ?></h1>
-            <p class="date"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %d, %Y" }}</time></p>
-            <p class="intro">{{ page.tagline }}</p>
+            <h1>{{page.title}}</h1>
+            <p class="date"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
+            <p class="intro">{% if post.description %}{{ post.description }}{% endif %}</p>
           </hgroup>
         </header>
     
         {{ content }}
           
-        <a href="http://twitter.com/share?url=<?php echo full_url(); ?>&text=<?php echo article_title(); ?>&via=<?php echo twitter_account(); ?>" class="share">Share</a>
+        <a href="#" class="share">Share</a>
     
       </article>
     </section>

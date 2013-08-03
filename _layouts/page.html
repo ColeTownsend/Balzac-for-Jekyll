@@ -1,10 +1,16 @@
 {% include head.html %}
 
-<section class="article" id="article-<?php echo article_id(); ?>">
+<section class="article">
+
       {% if page.image.feature %}
-        <div class="overlay"></div>
-        <div class="featured-image" style="background-image: url({{ site.url }}/images/{{ page.image.feature }});" itemprop="primaryImageOfPage">
-        </div>
+      <div class="overlay"></div>
+      <div class="featured-image" style="background-image: url({{ site.url }}/images/{{ page.image.feature }});" itemprop="primaryImageOfPage">
+      </div>
+      
+      {% else %}
+      <div class="overlay"></div>
+      <div class="featured-image" style="background-image: url({{ site.url }}/images/typewriter.jpg);" itemprop="primaryImageOfPage">
+      </div>
       {% endif %}
 
       <article class="wrap post">

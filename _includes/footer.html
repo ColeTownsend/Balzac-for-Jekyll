@@ -2,36 +2,23 @@
   <footer>
     <aside class="wrap">
       <ol class="prev-posts">
-        <p class="list-title">You might like</p>
-        {% for post in site.related_posts limit:3 %}
-          {% assign match = false %}
-          {% for category in post.categories %}
-            {% if page.categories contains category %}
-              {% assign match = true %}
-            {% endif %}
-          {% endfor %}
-          {% if match %}
+        <p class="list-title">Recent Posts</p>
+        {% for post in site.posts | limit:3 %} <!-- for1 -->
             <li>
-              <span class="recent-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></span>
+              <span class="recent-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title | strip_html | strip_newlines | truncate: 30 }} </a></span>
               <span class="date"><time datetime="{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></span>
             </li>
-           {% endif %}
-           {% endfor %}
-
-           {% else %}
-            <li>
-              <span class="recent-title">Oops, no matches.<a href="{{ site.url }}/articles" title="Articles">All Posts</a></span>
-            </li>
-           
-           {% endif %}
+        {% endfor %}
       </ol>
       
       <div class="social">
         <ul>
             <li><a id="mail" href="mailto:{{ site.owner.email }}"><span class="foot-link">Contact Me</span></a></li>
+            
             {% if site.owner.twitter %} 
-            <li><a id="twit" href="http://dribbble.com/{{ site.owner.twitter }}" target="_blank"><span class="foot-link">@{{ site.owner.twitter }}</span></a></li> 
-            <?php endif; ?>
+            <li><a id="twit" href="http://twitter.com/{{ site.owner.twitter }}" target="_blank"><span class="foot-link">@{{ site.owner.twitter }}</span></a></li> 
+            {% endif %}
+            
             
             {% if site.owner.dribbble %} 
             <li><a id="drib" href="http://dribbble.com/{{ site.owner.dribbble }}" target="_blank"><span class="foot-link">Dribbble</span></a></li>
@@ -39,15 +26,15 @@
         </ul>
     </div>
     </aside>
-    <small>{{ site.time | date: '%Y' }} {{ site.owner.name }}. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://gtat.me/balzac">Balzac</a> theme.</small>
+    <small>&copy; {{ site.time | date: '%Y' }} {{ site.owner.name }}. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://gtat.me/balzac">Balzac</a> theme.</small>
   </footer>
 
   <!-- If they're out, get some from the cellar -->
   <script>window.jQuery || document.write('{{ site.url }}/js/jquery.min.js'); ?>"><\/script>')</script>
-  <script src="{{ site.url }}/js/retina.min.js"></script>
+  <script src="{{ site.url }}/assets/js/retina.min.js"></script>
 
   <!-- Custom JS -->
-  <script src="{{ site.url }}/js/scripts.js"></script>
+  <script src="{{ site.url }}/assets/js/scripts.js"></script>
   
 
   </body>

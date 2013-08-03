@@ -365,13 +365,13 @@ img.loading {
         }
         
         .date {
-            margin-bottom: $lh/2;
+            margin-bottom: 0;
         }
         
         .date time {
             position: relative;
             top: -6px;
-            font-size: 14px;
+            font-size: $fs5;
             font-weight: bold;
             font-family: $sans;
             font-style: normal;

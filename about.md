@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 permalink: /about/index.html
 title: About the Theme
 tagline: Minimal Mistakes, a Jekyll Theme
