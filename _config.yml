@@ -44,6 +44,7 @@ links:
 timezone:    America/New_York
 future:      true
 pygments:    true
+safe:        true
 markdown:    kramdown
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
