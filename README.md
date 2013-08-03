@@ -1,32 +1,19 @@
 # Balzac
 
-Jekyll is pretty rad and figured releasing a cleaned up version of [my setup](http://mademistakes.com) as a theme to hack up and use would be cool. So here be that theme --- I call it **[Minimal Mistakes](http://mmistakes.github.io/minimal-mistakes)**, a responsive Jekyll theme with editorial tendencies. 
-
-## Minimal Mistakes is all about:
-
-* Responsive templates. Looking good on mobile, tablet, and desktop.
-* Gracefully degrading in older browsers. Compatible with Internet Explorer 8+ and all modern browsers. 
-* Minimal embellishments. Content first --- other widget nonsense never.
-* Large feature images for posts and pages.
-* Simple and clear permalink structure *(ie: domain.com/category/post-title)*
-
-![screenshot of Minimal Mistakes theme](http://mmistakes.github.io/minimal-mistakes/images/mm-theme-post-600.jpg)
+This is forked from [minimal mistakes](http://mademistakes.com) as a theme to hack up and use would be cool. I needed some type of framework to build off as I have no experience with Jekyll. Gotta learn somehow!
 
 General notes and suggestions for customizing Minimal Mistakes.
 
 ## Basic Setup
 
 1. [Install Jekyll](http://jekyllrb.com) if you haven't already.
-2. Fork the [Minimal Mistakes repo](http://github.com/mmistakes/minimal-mistakes/)
-3. Make it your own and customize, customize, customize.
+2. Profit.
 
-## [Preview the Theme](http://mmistakes.github.io/minimal-mistakes)
+## [Preview the Theme](http://gtat.me/balzac)
 
 ``` bash
 minimal-mistakes/
 ├── _includes
-|    ├── author-bio.html  //bio stuff goes here
-|    ├── chrome-frame.html  //displays on IE8 and less
 |    ├── footer.html  //site footer
 |    ├── head.html  //site head
 |    ├── navigation.html //site top nav
