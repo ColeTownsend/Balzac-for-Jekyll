@@ -22,9 +22,7 @@ owner:
 links:
   - title: About
     url: /about
-  - title: Articles
-    url: /articles
-  - title: The Creator
+  - title: Cole Who?
     url: http://coletownsend.com
     external: true
 
