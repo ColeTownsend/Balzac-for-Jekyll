@@ -7,11 +7,11 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}">
 <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 120  }}{% else %}{{ page.content | strip_html | strip_newlines | truncate: 120 }}{% endif %}">
-<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:url" content="{{ site.baseurl }}{{ page.url }}">
 <meta property="og:site_name" content="{{ site.title }}">
 
 
-<link href="{{ site.url }}/feed.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
+<link href="{{ sitebase.url }}/feed.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 
 <!-- http://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
@@ -21,13 +21,13 @@
 <!-- Type -->
 <link rel="stylesheet" href="link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700,700italic' rel='stylesheet' type='text/css'>" media="all" />
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="{{ site.url }}/css/entypo/entypo.css" media="all">
+<link rel="stylesheet" href="{{ sitebase.url }}/css/entypo/entypo.css" media="all">
 <link rel='stylesheet' href='/calplus/cal.css' media='all' />
 
 
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="{{ site.url }}/assets/css/i.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/i.css">
 
 <!-- Fresh Squeezed jQuery -->
 
@@ -41,24 +41,24 @@
 
 <!-- Icons -->
 <!-- 16x16 -->
-<link rel="shortcut icon" href="{{ site.url }}/favicon.ico">
+<link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico">
 
 <div id="bump">
   <body class="">
     <header class="site-header">
       <div class="wrap">
         <hgroup>
-          <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+          <h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1>
         </hgroup>
         <a href="#nav" class="menu"><span class='icons'>☰</span></a>
         <nav role="navigation">
           <ul>
             <li>
-              <a href="{{ site.url }}" title="{{ site.title }}">Home</a>
+              <a href="{{ site.baseurl }}" title="{{ site.title }}">Home</a>
             </li>
             
             {% for link in site.links %}
-                <li><a href="{% if link.external %}{{ link.url }}{% else %}{{ site.url }}{{ link.url }}{% endif %}" {% if link.external %}target="_blank"{% endif %}>{{ link.title }}</a></li>
+                <li><a href="{% if link.external %}{{ link.url }}{% else %}{{ site.baseurl }}{{ link.url }}{% endif %}" {% if link.external %}target="_blank"{% endif %}>{{ link.title }}</a></li>
             {% endfor %}
 
           </ul>
