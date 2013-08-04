@@ -30,7 +30,9 @@ a:hover {
 }
 
 em {
-    font-style: italic;
+    padding: 1px 2px;
+    border-radius: 2px;
+    background: #ffe8c0;
 }
 
 strong {
@@ -55,6 +57,45 @@ blockquote, blockquote p {
     color: lighten($black, .2);
     margin-bottom: $lh;
 }
+
+
+/*   Code Formatting    */
+
+code {
+    color: $accent;
+    font-family: "Monaco", "Courier New", "Courier";
+    font-size: .75em;
+    font-weight: bold;
+}
+
+.highlight {
+    background: $black;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: $lh;
+
+    code {
+        color: $white;
+        font-family: "Monaco", "Courier New", "Courier";
+        font-size: .9em;
+        .lineno {
+            margin-right: $lh/2;
+            color: $grey-light;
+            line-height: 2em;
+        }
+        .nt {
+            color: #c85b5c;
+        }
+        .na {
+            color: #f0e687;
+        }
+        .s {
+            color: #87ceeb;
+        }
+    }
+}
+
+
 
 hr {
     display: block;
@@ -200,10 +241,12 @@ header.site-header nav {
   display: block;
   padding-right: 5vw;
   @include clearfix;
+  
   ul li {
     font-size: 16px;
     text-transform: uppercase;
     display: inline;
+    font-weight: bold;
     top: 2px;
     position: relative;
     margin-left: 20px; 
@@ -280,11 +323,6 @@ header.site-header nav {
             text-align: left;
         }
     }
-}
-
-// Loader
-img.loading {
-    
 }
 
 // Archive Page
@@ -453,6 +491,25 @@ img.loading {
             margin-bottom: 0;
             }
         }
+    }
+
+    ol {
+        display: block;
+        margin-bottom: $lh;
+        list-style: default;
+        list-style-type: default; 
+        lh h1, lh h2, lh h3, lh h4, lh h5 {
+            @include underline(2px, solid, $grey-light);
+        }
+        li {
+            list-style: default;
+            list-style-type: default;
+            margin-left: $lh*1.5;
+            padding-left: $lh/3;
+        &:last-child {
+            margin-bottom: 0;
+            }
+        } 
     }  
     
     .share {
@@ -652,6 +709,8 @@ footer {
   
   header.site-header {
     min-height: 59px;
+    margin-top: 20px;
+    padding-top: 0;
   }
   
   header.site-header hgroup h1 {
