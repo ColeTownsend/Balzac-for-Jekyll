@@ -300,21 +300,37 @@ blockquote, blockquote p {
   margin-bottom: 33px;
 }
 
+/*   Code Formatting    */
+code {
+  color: #24536b;
+  font-family: "Monaco", "Courier New", "Courier";
+  font-size: .85em;
+}
+
 .highlight {
   background: #3b3b3b;
   padding: 12px;
   border-radius: 4px;
 }
-
-code {
+.highlight code {
   color: #f9f9f9;
   font-family: "Monaco", "Courier New", "Courier";
   font-size: .9em;
+  margin-bottom: 33px;
 }
-code .lineno {
+.highlight code .lineno {
   margin-right: 16.5px;
   color: #d9d9d9;
   line-height: 2em;
+}
+.highlight code .nt {
+  color: #c85b5c;
+}
+.highlight code .ns {
+  color: #f0e687;
+}
+.highlight code .s {
+  color: #87ceeb;
 }
 
 hr {

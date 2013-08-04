@@ -58,20 +58,40 @@ blockquote, blockquote p {
     margin-bottom: $lh;
 }
 
+
+/*   Code Formatting    */
+
+code {
+    color: $accent;
+    font-family: "Monaco", "Courier New", "Courier";
+    font-size: .85em;
+}
+
+
 .highlight {
     background: $black;
     padding: 12px;
     border-radius: 4px;
-}
 
-code {
-    color: $white;
-    font-family: "Monaco", "Courier New", "Courier";
-    font-size: .9em;
-    .lineno {
-        margin-right: $lh/2;
-        color: $grey-light;
-        line-height: 2em;
+    code {
+        color: $white;
+        font-family: "Monaco", "Courier New", "Courier";
+        font-size: .9em;
+        margin-bottom: $lh;
+        .lineno {
+            margin-right: $lh/2;
+            color: $grey-light;
+            line-height: 2em;
+        }
+        .nt {
+            color: #c85b5c;
+        }
+        .ns {
+            color: #f0e687;
+        }
+        .s {
+            color: #87ceeb;
+        }
     }
 }
 
