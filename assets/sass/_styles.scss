@@ -30,7 +30,9 @@ a:hover {
 }
 
 em {
-    font-style: italic;
+    padding: 1px 2px;
+    border-radius: 2px;
+    background: #ffe8c0;
 }
 
 strong {
@@ -59,7 +61,6 @@ blockquote, blockquote p {
 code {
     color: $accent;
     font-family: "Monaco", "Courier New", "Courier";
-    margin-left: $lh;
     font-size: .9em;
 }
 
