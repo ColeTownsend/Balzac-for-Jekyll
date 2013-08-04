@@ -305,6 +305,7 @@ code {
   color: #24536b;
   font-family: "Monaco", "Courier New", "Courier";
   font-size: .85em;
+  font-weight: bold;
 }
 
 .highlight {
@@ -326,7 +327,7 @@ code {
 .highlight code .nt {
   color: #c85b5c;
 }
-.highlight code .ns {
+.highlight code .na {
   color: #f0e687;
 }
 .highlight code .s {
@@ -739,6 +740,24 @@ header.site-header nav ul li a:hover {
   padding-left: 11px;
 }
 .post ul li:last-child {
+  margin-bottom: 0;
+}
+.post ol {
+  display: block;
+  margin-bottom: 33px;
+  list-style: default;
+  list-style-type: default;
+}
+.post ol lh h1, .post ol lh h2, .post ol lh h3, .post ol lh h4, .post ol lh h5 {
+  border-bottom: 2px solid #d9d9d9;
+}
+.post ol li {
+  list-style: default;
+  list-style-type: default;
+  margin-left: 49.5px;
+  padding-left: 11px;
+}
+.post ol li:last-child {
   margin-bottom: 0;
 }
 .post .share {
