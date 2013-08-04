@@ -270,7 +270,9 @@ a:hover {
 }
 
 em {
-  font-style: italic;
+  padding: 1px 2px;
+  border-radius: 2px;
+  background: #ffe8c0;
 }
 
 strong {
@@ -298,11 +300,21 @@ blockquote, blockquote p {
   margin-bottom: 33px;
 }
 
+.highlight {
+  background: #3b3b3b;
+  padding: 12px;
+  border-radius: 4px;
+}
+
 code {
-  color: #24536b;
+  color: #f9f9f9;
   font-family: "Monaco", "Courier New", "Courier";
-  margin-left: 33px;
   font-size: .9em;
+}
+code .lineno {
+  margin-right: 16.5px;
+  color: #d9d9d9;
+  line-height: 2em;
 }
 
 hr {
@@ -942,7 +954,7 @@ footer .social ul li:last-child {
     color: white;
   }
   header.site-header a.menu .icons {
-    font-size: 32px;
+    font-size: 64px;
   }
 
   header.site-header a.menu img {
