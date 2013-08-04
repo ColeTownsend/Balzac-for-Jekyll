@@ -56,6 +56,13 @@ blockquote, blockquote p {
     margin-bottom: $lh;
 }
 
+code {
+    color: $accent;
+    font-family: "Monaco", "Courier New", "Courier";
+    margin-left: $lh;
+    font-size: .9em;
+}
+
 hr {
     display: block;
     margin: 0 auto;
@@ -204,6 +211,7 @@ header.site-header nav {
     font-size: 16px;
     text-transform: uppercase;
     display: inline;
+    font-weight: bold;
     top: 2px;
     position: relative;
     margin-left: 20px; 
@@ -652,6 +660,8 @@ footer {
   
   header.site-header {
     min-height: 59px;
+    margin-top: 20px;
+    padding-top: 0;
   }
   
   header.site-header hgroup h1 {
@@ -675,7 +685,7 @@ footer {
     height: 16px;
     color: white;
     .icons {
-        font-size: 64px;
+        font-size: 32px;
     }
   }
   
