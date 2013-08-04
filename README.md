@@ -1,8 +1,6 @@
 # Balzac
 
-This is forked from [minimal mistakes](http://mademistakes.com) as a theme to hack up and use would be cool. I needed some type of framework to build off as I have no experience with Jekyll. Gotta learn somehow!
-
-General notes and suggestions for customizing Minimal Mistakes.
+This is forked from [minimal mistakes](http://mademistakes.com). I needed some type of framework to build off as I have no experience with Jekyll. 
 
 ## Basic Setup
 
@@ -37,23 +35,13 @@ minimal-mistakes/
 └── index.md  //homepage. lists 5 most recent posts
 ```
 
+# This part of the Readme courtesy of Minimal Mistakes
+
 ## Customization
 
 ### _config.yml
 
 Most of the variables found here are used in the .html files found in `_includes` if you need to add or remove anything. A good place to start would be to change the title, tagline, description, and url of your site. When working locally comment out `url` or else you will get a bunch of broken links because they are absolute and prefixed with `{{ site.url }}` in the various `_includes` and `_layouts`. Just remember to uncomment `url` when building for deployment or pushing to **gh-pages**...
-
-#### Owner/Author Information
-
-Change your name, bio, and avatar photo (100x100 pixels or larger), Twitter url, email, and Google+ url. If you want to link to an external image on Gravatar or something similiar you'll need to edit the path in `author-bio.html` since it assumes it is located in `\images`.
-
-Including a link to your Google+ profile has the added benefit of displaying [Google Authorship](https://plus.google.com/authorship) in Google search results if you've went ahead and applied for it. Don't have a Google+ account? Just leave it blank and/or remove `<link rel="author" href="{{ site.owner.google_plus }}">` from `head.html`.
-
-#### Google Analytics and Webmaster Tools
-
-Your Google Analytics ID goes here along with meta tags for [Google Webmaster Tools](http://support.google.com/webmasters/bin/answer.py?hl=en&answer=35179) and [Bing Webmaster Tools](https://ssl.bing.com/webmaster/configure/verify/ownershi) site verification.
-
-#### Top Navigation Links
 
 Edit page/post titles and URLs to include in the site's navigation. For external links add `external: true`.
 
@@ -105,9 +93,6 @@ For example. Say you want to group all your posts under `blog/` instead of `arti
 
 If done correctly `/blog` should be a page listing all the site's posts.
 
-#### Thumbnails for OG and Twitter Cards
-
-Post and page thumbnails work the same way. These are used by [Open Graph](https://developers.facebook.com/docs/opengraph/) and [Twitter Cards](https://dev.twitter.com/docs/cards) meta tags found in `head.html`. If you don't assign a thumbnail the default graphic *(default-thumb.png)* is used. I'd suggest changing this to something more meaningful -- your logo or avatar are good options.
 
 #### Table of Contents
 
