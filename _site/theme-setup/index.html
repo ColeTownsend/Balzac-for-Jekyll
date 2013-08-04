@@ -73,11 +73,13 @@
     </header>
 
 
-<section class="article" id="article-<?php echo article_id(); ?>">
+<section class="article">
+
       
-        <div class="overlay"></div>
-        <div class="featured-image" style="background-image: url(/images/texture-feature-02.jpg);" itemprop="primaryImageOfPage">
-        </div>
+      <div class="overlay"></div>
+      <div class="featured-image" style="background-image: url(/images/texture-feature-02.jpg);" itemprop="primaryImageOfPage">
+      </div>
+      
       
 
       <article class="wrap post">
@@ -268,7 +270,7 @@
 </div>
 
           
-      <a class="share" href="https://twitter.com/intent/tweet?text=&quot;Theme Setup&quot;%20<?php echo($post_link); ?>%20via%20&#64;ctrunsthis" data-dnt="true">Share</a>
+      <a class="share" href="https://twitter.com/intent/tweet?text=&quot;Theme Setup&quot;%20%20via%20&#64;ctrunsthis" data-dnt="true">Share</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     
       </article>
@@ -283,17 +285,17 @@
          <!-- for1 -->
             <li>
               <span class="recent-title"><a href="/articles/readability-feature-post" title="Post with Large Feature Image and Text">Post with Large Feature Ima... </a></span>
-              <span class="date"><time datetime="{ post.date | date_to_xmlschema }}">May 23, 2013</time></span>
+              <span class="date"><time datetime="{ page.date | date_to_xmlschema }}"></time></span>
             </li>
          <!-- for1 -->
             <li>
               <span class="recent-title"><a href="/articles/sample-post-images" title="A Post with Images">A Post with Images </a></span>
-              <span class="date"><time datetime="{ post.date | date_to_xmlschema }}">May 22, 2013</time></span>
+              <span class="date"><time datetime="{ page.date | date_to_xmlschema }}"></time></span>
             </li>
          <!-- for1 -->
             <li>
               <span class="recent-title"><a href="/articles/readability-post" title="Testing Readability with a Bunch of Text">Testing Readability with a ... </a></span>
-              <span class="date"><time datetime="{ post.date | date_to_xmlschema }}">May 22, 2012</time></span>
+              <span class="date"><time datetime="{ page.date | date_to_xmlschema }}"></time></span>
             </li>
         
       </ol>
