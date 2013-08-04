@@ -4,7 +4,7 @@ permalink: /theme-setup/index.html
 title: Theme Setup
 description: "Instructions on how to install and customize the Jekyll theme Minimal Mistakes."
 tags: [Jekyll, theme, responsive]
-w---
+---
 
 <section id="table-of-contents" class="toc">
   <header>
