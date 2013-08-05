@@ -1,14 +1,12 @@
 ---
 layout: post
 title: Post and Feature Image
-description: "Just about everything you'll need to style in the theme: headings, paragraphs, blockquotes, tables, code blocks, and more."
+description: "In my younger and more vulnerable years my father gave me some advice that I’ve been turning over in my mind ever since."
 category: articles
 tags: [intro, beginner, jekyll, tutorial]
 image:
   feature: gatsby.jpg
 ---
-
-In my younger and more vulnerable years my father gave me some advice that I’ve been turning over in my mind ever since.
 
 “Whenever you feel like criticizing any one,” he told me, “just remember that all the people in this world haven’t had the advantages that you’ve had.”
 
