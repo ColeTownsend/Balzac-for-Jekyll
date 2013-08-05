@@ -1,36 +1,30 @@
 # Balzac
 
-Jekyll is pretty rad and figured releasing a cleaned up version of [my setup](http://mademistakes.com) as a theme to hack up and use would be cool. So here be that theme --- I call it **[Minimal Mistakes](http://mmistakes.github.io/minimal-mistakes)**, a responsive Jekyll theme with editorial tendencies. 
+Jekyll is neat and I figured that porting Balzac (for AnchorCMS) would be a great learning experience. 
 
-## Minimal Mistakes is all about:
+## Features:
+- flexible, uses max-width for responsive goodness
+- responsive drop down menu
+- retina images using @2x
+- post loop in the footer showing 3 latest posts
+- custom portfolio page for case studies
 
-* Responsive templates. Looking good on mobile, tablet, and desktop.
-* Gracefully degrading in older browsers. Compatible with Internet Explorer 8+ and all modern browsers. 
-* Minimal embellishments. Content first --- other widget nonsense never.
-* Large feature images for posts and pages.
-* Simple and clear permalink structure *(ie: domain.com/category/post-title)*
-
-![screenshot of Minimal Mistakes theme](http://mmistakes.github.io/minimal-mistakes/images/mm-theme-post-600.jpg)
-
-General notes and suggestions for customizing Minimal Mistakes.
+General notes and suggestions for customizing Balzac.
 
 ## Basic Setup
 
 1. [Install Jekyll](http://jekyllrb.com) if you haven't already.
-2. Fork the [Minimal Mistakes repo](http://github.com/mmistakes/minimal-mistakes/)
-3. Make it your own and customize, customize, customize.
+2. Fork the [Minimal Mistakes repo](http://github.com/coletownsend/balzac-for-jekyll/)
+3. Twerk it out so it's just for you.
 
-## [Preview the Theme](http://mmistakes.github.io/minimal-mistakes)
+## [Preview the Theme](http://jekyll.gtat.me)
 
 ``` bash
 minimal-mistakes/
 ├── _includes
-|    ├── author-bio.html  //bio stuff goes here
-|    ├── chrome-frame.html  //displays on IE8 and less
 |    ├── footer.html  //site footer
 |    ├── head.html  //site head
-|    ├── navigation.html //site top nav
-|    └── scripts.html  //jQuery, plugins, GA, etc.
+|    ├── head-dark.html  //custom site head for archive/post listing pages
 ├── _layouts
 |    ├── home.html  //homepage layout
 |    ├── page.html  //page layout
@@ -58,7 +52,7 @@ Most of the variables found here are used in the .html files found in `_includes
 
 #### Owner/Author Information
 
-Change your name, bio, and avatar photo (100x100 pixels or larger), Twitter url, email, and Google+ url. If you want to link to an external image on Gravatar or something similiar you'll need to edit the path in `author-bio.html` since it assumes it is located in `\images`.
+Change your name, bio, Twitter url, email, Dribbble URL, etc.
 
 Including a link to your Google+ profile has the added benefit of displaying [Google Authorship](https://plus.google.com/authorship) in Google search results if you've went ahead and applied for it. Don't have a Google+ account? Just leave it blank and/or remove `<link rel="author" href="{{ site.owner.google_plus }}">` from `head.html`.
 
