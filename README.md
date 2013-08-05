@@ -18,7 +18,7 @@ This is forked from [minimal mistakes](http://mademistakes.com). I needed some t
 5.  ???
 6.  Profit
 
-## [Preview the Theme](http://gtat.me/balzac)
+## [Preview the Theme](http://jekyll.gtat.me)
 =======
  [Preview the Theme](http://jekyll.gtat.me)
  
