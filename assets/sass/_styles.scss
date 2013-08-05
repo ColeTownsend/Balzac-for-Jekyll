@@ -137,6 +137,10 @@ input {
     border-bottom: 2px solid $link;
 }
 
+.pad-top {
+    padding-top: $lh*2;
+}
+
 /************ Layout *************/
 
 #bump {
@@ -452,6 +456,7 @@ header.site-header nav {
     h1, h2, h3, h4, h5 {
         padding-top: ($lh * 1/2);
         margin-bottom: ($lh * 1/2);
+        line-height: 1.25em
 
     }
     

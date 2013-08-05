@@ -373,6 +373,10 @@ input {
   border-bottom: 2px solid #8ab9d1;
 }
 
+.pad-top {
+  padding-top: 66px;
+}
+
 /************ Layout *************/
 #bump {
   min-height: 100%;
@@ -717,6 +721,7 @@ header.site-header nav ul li a:hover {
 .post h1, .post h2, .post h3, .post h4, .post h5 {
   padding-top: 16.5px;
   margin-bottom: 16.5px;
+  line-height: 1.25em;
 }
 .post figure {
   margin: 33px 0;
