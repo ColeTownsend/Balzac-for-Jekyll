@@ -1,13 +1,17 @@
+{% if page.image.feature %}
+
 {% include head.html %}
 
 <section class="article">
 
-{% if page.image.feature %}
   <div class="overlay"></div>
   <div class="featured-image" style="background-image: url({{ site.url }}/images/{{ page.image.feature }})"></div>
 {% else %}
-  <div class="overlay"></div>
-  <div class="featured-image" style="background-image: url({{ site.url }}/images/typewriter.jpg)"></div>
+
+{% include head-dark.html %}
+
+<section class="article pad-top">
+
 {% endif %}
 
 

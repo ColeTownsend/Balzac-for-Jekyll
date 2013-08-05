@@ -137,6 +137,10 @@ input {
     border-bottom: 2px solid $link;
 }
 
+.pad-top {
+    padding-top: $lh*2;
+}
+
 /************ Layout *************/
 
 #bump {
@@ -365,30 +369,36 @@ header.site-header nav {
             
             a {
                 position: relative;
+                &:hover {
+                    @include transit;
+                }
             }
             
-            a:visited:after {
-                content:'✓';
+            a:hover:before {
+                content:'...';
                 color: $grey-light;
-                font-family: "Icons";
+                font-family: $sans;
                 position: absolute;
                 margin-left: -70px;
-                font-size: 60px;
+                font-size: 40px;
                 left: 0;
-                top: -6px;
+                top: -20px;
                 text-align: center;
+                @include transit;
             }
             
-            a:after {
+            a:before {
                 content:'“';
                 color: $grey-light;
-                font-family: "Icons";
                 position: absolute;
                 margin-left: -70px;
                 font-size: 60px;
+                z-index: 9001; // over 9000!!!!!!!
                 top: -6px;
                 left: 0;
                 text-align: center;
+                @include transit;
+
             }
             
             h1 {
@@ -403,12 +413,12 @@ header.site-header nav {
         }
         
         .date {
-            margin-bottom: 0;
+            margin-bottom: 3px;
         }
         
         .date time {
             position: relative;
-            top: -6px;
+            top: -3px;
             font-size: $fs5;
             font-weight: bold;
             font-family: $sans;
@@ -446,6 +456,7 @@ header.site-header nav {
     h1, h2, h3, h4, h5 {
         padding-top: ($lh * 1/2);
         margin-bottom: ($lh * 1/2);
+        line-height: 1.25em
 
     }
     
@@ -485,7 +496,7 @@ header.site-header nav {
         li {
             list-style: disc;
             list-style-type: disc;
-            margin-left: $lh*1.5;
+            margin-left: $lh*2;
             padding-left: $lh/3;
         &:last-child {
             margin-bottom: 0;
@@ -496,16 +507,15 @@ header.site-header nav {
     ol {
         display: block;
         margin-bottom: $lh;
-        list-style: default;
-        list-style-type: default; 
         lh h1, lh h2, lh h3, lh h4, lh h5 {
             @include underline(2px, solid, $grey-light);
         }
         li {
-            list-style: default;
-            list-style-type: default;
-            margin-left: $lh*1.5;
+            margin-left: $lh*2;
             padding-left: $lh/3;
+            margin-bottom: $lh/3;
+            line-height: $lh;
+            font-size: $fsp;
         &:last-child {
             margin-bottom: 0;
             }

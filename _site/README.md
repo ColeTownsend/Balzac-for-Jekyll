@@ -1,10 +1,5 @@
 # Balzac
 
-<<<<<<< HEAD
-This is forked from [minimal mistakes](http://mademistakes.com) as a theme to hack up and use would be cool. I needed some type of framework to build off as I have no experience with Jekyll. Gotta learn somehow!
-
-General notes and suggestions for customizing Minimal Mistakes.
-=======
 Jekyll is neat and I figured that porting Balzac (for AnchorCMS) would be a great learning experience. 
 
 ## Features:
@@ -15,21 +10,14 @@ Jekyll is neat and I figured that porting Balzac (for AnchorCMS) would be a grea
 - custom portfolio page for case studies
 
 General notes and suggestions for customizing Balzac.
->>>>>>> gh-pages
 
 ## Basic Setup
 
 1. [Install Jekyll](http://jekyllrb.com) if you haven't already.
-<<<<<<< HEAD
-2. Profit.
-
-## [Preview the Theme](http://gtat.me/balzac)
-=======
 2. Fork the [Minimal Mistakes repo](http://github.com/coletownsend/balzac-for-jekyll/)
 3. Twerk it out so it's just for you.
 
 ## [Preview the Theme](http://jekyll.gtat.me)
->>>>>>> gh-pages
 
 ``` bash
 minimal-mistakes/
