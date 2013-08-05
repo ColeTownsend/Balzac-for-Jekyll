@@ -71,7 +71,7 @@ links:
   - title: Other Page
     url: /other-page
   - title: External Page
-    url: http://mademistakes.com
+    url: http://coletownsend.com
     external: true
 ```
 
