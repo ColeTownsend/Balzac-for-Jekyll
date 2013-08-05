@@ -681,11 +681,11 @@ header.site-header nav ul li a:hover {
   line-height: 1.45em;
 }
 .archive-wrap .post-list .date {
-  margin-bottom: 0;
+  margin-bottom: 3px;
 }
 .archive-wrap .post-list .date time {
   position: relative;
-  top: -6px;
+  top: -3px;
   font-size: 16px;
   font-weight: bold;
   font-family: "Source Sans Pro", "Open Sans", "Helvetica Neue", "Arial", sans-serif;
