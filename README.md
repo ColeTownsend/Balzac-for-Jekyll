@@ -2,6 +2,8 @@
 
 This is forked from [minimal mistakes](http://mademistakes.com). I needed some type of framework to build off as I have no experience with Jekyll. Michael already wrote up an incredibly comprehensive readme.md so I basically copied all of it and replaced what was necessary.
 
+
+![Balzac for Jekyll](http://cl.ly/Qdzo/Screen%20Shot%202013-08-05%20at%205.35.11%20PM.jpg)
 ![Balzac for Jekyll](http://cl.ly/Qdyh/Screen%20Shot%202013-08-05%20at%205.30.01%20PM.jpg)
 
 ## Features:
