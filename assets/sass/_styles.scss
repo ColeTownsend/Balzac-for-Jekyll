@@ -430,6 +430,7 @@ header.site-header nav {
     }
 }
  
+// Post Formatting
 
 .post {
     
@@ -635,6 +636,10 @@ footer {
             }
         }
     }
+}
+
+.disqus {
+    margin-top: $lh*2;
 }
 
 
