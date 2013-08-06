@@ -22,6 +22,9 @@ owner:
 links:
   - title: About
     url: /about
+  - title: Github
+    url: https://github.com/ColeTownsend/Balzac-for-Jekyll
+    external: true
   - title: Cole Who?
     url: http://coletownsend.com
     external: true
