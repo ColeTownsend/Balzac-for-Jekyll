@@ -3,6 +3,7 @@ layout: post-no-feature
 title: "Image in Post"
 description: "Once when I was six years old I saw a magniﬁcent picture in a book, called
 True Stories from Nature, about the primeval forest."
+comments: true
 category: articles
 ---
 
