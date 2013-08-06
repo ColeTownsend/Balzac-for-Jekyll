@@ -10,11 +10,12 @@ owner:
   avatar:         avatar.png
   bio:            "Aesthete & Athlete"
   email:          cole@coletownsend.com
-  # Social networking links are used in author-bio sidebar. Update and remove as you like.
-  twitter: ctrunsthis        
-  github: coletownsend       
-  instagram: ctrunsthis     
-  dribbble:  coletownsend
+  twitter:        ctrunsthis        
+  github:         coletownsend       
+  instagram:      ctrunsthis     
+  dribbble:       coletownsend
+  disqus:         balzac
+  # Plug in your disqus shortname!
   
 
 # Links to include in top navigation
@@ -22,6 +23,9 @@ owner:
 links:
   - title: About
     url: /about
+  - title: Github
+    url: https://github.com/ColeTownsend/Balzac-for-Jekyll
+    external: true
   - title: Cole Who?
     url: http://coletownsend.com
     external: true

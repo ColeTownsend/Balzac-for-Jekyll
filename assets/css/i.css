@@ -929,6 +929,10 @@ footer .social ul li:last-child {
   margin-bottom: 0;
 }
 
+.disqus {
+  margin-top: 66px;
+}
+
 /* Tablet
    ========================================================================== */
 @media only screen and (max-width: 800px) {
