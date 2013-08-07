@@ -306,7 +306,6 @@ code {
   font-family: "Monaco", "Courier New", "Courier";
   font-size: .75em;
   font-weight: bold;
-  overflow: scroll;
 }
 
 .highlight {
@@ -314,6 +313,7 @@ code {
   padding: 12px;
   border-radius: 4px;
   margin-bottom: 33px;
+  overflow-x: scroll;
 }
 .highlight code {
   color: #f9f9f9;
