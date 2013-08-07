@@ -73,6 +73,7 @@ code {
     padding: 12px;
     border-radius: 4px;
     margin-bottom: $lh;
+    overflow-x: scroll;
 
     code {
         color: $white;

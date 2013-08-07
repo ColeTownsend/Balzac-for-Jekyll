@@ -313,6 +313,7 @@ code {
   padding: 12px;
   border-radius: 4px;
   margin-bottom: 33px;
+  overflow-x: scroll;
 }
 .highlight code {
   color: #f9f9f9;
@@ -930,7 +931,7 @@ footer .social ul li:last-child {
 }
 
 .disqus {
-  margin-top: 66px;
+  margin-top: 99px;
 }
 
 /* Tablet
