@@ -306,6 +306,7 @@ code {
   font-family: "Monaco", "Courier New", "Courier";
   font-size: .75em;
   font-weight: bold;
+  overflow: scroll;
 }
 
 .highlight {
@@ -930,7 +931,7 @@ footer .social ul li:last-child {
 }
 
 .disqus {
-  margin-top: 66px;
+  margin-top: 99px;
 }
 
 /* Tablet
