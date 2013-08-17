@@ -551,6 +551,9 @@ header.site-header nav ul li a:hover {
   z-index: 2;
   background: rgba(0, 0, 0, 0.55);
 }
+.article .overlay-lighter {
+  background: rgba(0, 0, 0, 0.2);
+}
 .article .featured-image {
   vertical-align: middle;
   min-height: 360px;
