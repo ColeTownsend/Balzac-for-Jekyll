@@ -844,6 +844,7 @@ footer section {
   zoom: 1;
 }
 footer small {
+  font-size: 12px;
   text-align: center;
   display: block;
   width: 100%;
@@ -852,6 +853,9 @@ footer small {
   font-family: "Source Sans Pro", "Open Sans", "Helvetica Neue", "Arial", sans-serif;
   text-transform: uppercase;
   color: rgba(249, 249, 249, 0.1);
+}
+footer small a {
+  color: rgba(249, 249, 249, 0.3);
 }
 footer .list-title {
   margin-bottom: 16.5px;
@@ -1015,7 +1019,7 @@ footer .social ul li:last-child {
     color: white;
   }
   header.site-header a.menu .icons {
-    font-size: 64px;
+    font-size: 32px;
   }
 
   header.site-header a.menu img {

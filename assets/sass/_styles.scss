@@ -568,6 +568,7 @@ footer {
     }
     
     small {
+        font-size: ($fs6);
         text-align: center;
         display: block;
         width: 100%;
@@ -576,6 +577,9 @@ footer {
         font-family: $sans;
         text-transform: uppercase;
         color: transparentize($white, .9);
+        a {
+            color: transparentize($white, .7);
+        }
     }
     
     .list-title {
@@ -750,7 +754,7 @@ footer {
     height: 16px;
     color: white;
     .icons {
-        font-size: 64px;
+        font-size: 32px;
     }
   }
   
