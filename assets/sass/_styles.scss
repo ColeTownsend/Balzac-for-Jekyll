@@ -284,6 +284,9 @@ header.site-header nav {
         z-index: 2;
         background: rgba(0,0,0,.55);
     }
+    .overlay-lighter {
+        background: rgba(0,0,0,.2);
+    }
     
     .featured-image {
         vertical-align: middle;
@@ -394,7 +397,7 @@ header.site-header nav {
                 position: absolute;
                 margin-left: -70px;
                 font-size: 60px;
-                z-index: 9001; // over 9000!!!!!!!
+                z-index: 10;
                 top: -6px;
                 left: 0;
                 text-align: center;
