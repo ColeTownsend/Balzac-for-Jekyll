@@ -552,7 +552,7 @@ header.site-header nav ul li a:hover {
   background: rgba(0, 0, 0, 0.55);
 }
 .article .overlay-lighter {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.1);
 }
 .article .featured-image {
   vertical-align: middle;
