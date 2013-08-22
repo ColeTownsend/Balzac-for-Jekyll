@@ -1,21 +1,20 @@
 title:            Balzac
 tagline:          A beautiful theme.
-description:      Describe your website.
+description:      # Describe your website.
 #Comment out url when working locally to resolve base urls correctly
-url: http://jekyll.gtat.me
+url: # ex: http://jekyll.gtat.me
 
 # Owner/author information
 owner:
-  name:           Cole Townsend
-  avatar:         avatar.png
-  bio:            "Aesthete & Athlete"
-  email:          cole@coletownsend.com
-  twitter:        ctrunsthis        
-  github:         coletownsend       
-  instagram:      ctrunsthis     
-  dribbble:       coletownsend
-  disqus:         balzac
-  # Plug in your disqus shortname!
+  name:           #Your Name
+  avatar:         #  your avatar, like from Twitter. In case you want to use it somewhere.
+  bio:            # your bio, like from Twitter. In case you want to use it somewhere. 
+  email:          #your email address
+  twitter:        # your twitter username        
+  github:         # your github username        
+  instagram:      # your insta username      
+  dribbble:       # your dribbb username 
+  disqus:         # your twitter username 
   
 
 # Links to include in top navigation
@@ -28,6 +27,9 @@ links:
     external: true
   - title: Cole Who?
     url: http://coletownsend.com
+    external: true
+  - title: RSS
+    url: /rss
     external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
