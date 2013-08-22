@@ -29,7 +29,7 @@ links:
     url: http://coletownsend.com
     external: true
   - title: RSS
-    url: /rss
+    url: /feed.xml
     external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
