@@ -2,19 +2,11 @@
 
 [Preview the Theme](http://balzac.siteleaf.net/)
 
-This is forked from [Balzac for Jekyll](https://github.com/ColeTownsend/Balzac-for-Jekyll).
-
 ![Balzac for Jekyll](http://cl.ly/Qdzo/Screen%20Shot%202013-08-05%20at%205.35.11%20PM.jpg)
 
 ![Balzac for Jekyll](http://cl.ly/Qdyh/Screen%20Shot%202013-08-05%20at%205.30.01%20PM.jpg)
 
-## Features:
-
-- flexible, uses max-width for responsive goodness
-- responsive drop down menu
-- retina images using @2x
-- post loop in the footer showing 3 latest posts
-- custom portfolio page for case studies
+This is forked from [Balzac for Jekyll](https://github.com/ColeTownsend/Balzac-for-Jekyll).
 
 ## Improvements over Jekyll theme
 
@@ -26,6 +18,14 @@ This is forked from [Balzac for Jekyll](https://github.com/ColeTownsend/Balzac-f
 - removed Entypo icons from repo and replaced with links to Symbolset CDN
 - removed all images (feature images should be uploaded to Siteleaf site to decouple from codebase)
 - added Guardfile to watch SASS files and compile/compress when changed
+
+## Original Features:
+
+- flexible, uses max-width for responsive goodness
+- responsive drop down menu
+- retina images using @2x
+- post loop in the footer showing 3 latest posts
+- custom portfolio page for case studies
 
 ## Basic Setup
 
