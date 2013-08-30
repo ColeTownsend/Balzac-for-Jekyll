@@ -27,7 +27,7 @@ This is forked from [Balzac for Jekyll](https://github.com/ColeTownsend/Balzac-f
 - post loop in the footer showing 3 latest posts
 - custom portfolio page for case studies
 
-## Setup
+## Advanced Setup (for local dev)
 
 1. Fork this repo.
 2. Open Terminal in the repo's directory.
