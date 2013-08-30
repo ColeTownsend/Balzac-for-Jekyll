@@ -3,4 +3,4 @@
 require 'rubygems'
 require 'siteleaf'
 
-run Siteleaf::Server.new(:site_id => ENV['SITE_ID'])
+run Siteleaf::Server.new(:site_id => '5220aa4b5dde224708000140') # change to Siteleaf site ID
