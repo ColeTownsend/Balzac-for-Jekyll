@@ -68,7 +68,7 @@
               {% endunless %}
             {% endfor %}
 
-            <li><a href="{{ site.meta.repo }}" target="_blank">Github</a></li>
+            {% if site.meta.repo %}<li><a href="{{ site.meta.repo }}" target="_blank">Github</a></li>{% endif %}
           </ul>
         </nav>
       </div>
