@@ -19,7 +19,7 @@ This is forked from [Balzac for Jekyll](https://github.com/ColeTownsend/Balzac-f
 - removed all images (feature images should be uploaded to Siteleaf site to decouple from codebase)
 - added Guardfile to watch SASS files and compile/compress when changed
 
-## Original Features:
+## Original Features
 
 - flexible, uses max-width for responsive goodness
 - responsive drop down menu
@@ -27,7 +27,7 @@ This is forked from [Balzac for Jekyll](https://github.com/ColeTownsend/Balzac-f
 - post loop in the footer showing 3 latest posts
 - custom portfolio page for case studies
 
-## Basic Setup
+## Setup
 
 1. Fork this repo.
 2. Open Terminal in the repo's directory.
