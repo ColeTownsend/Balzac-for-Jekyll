@@ -1,12 +1,18 @@
 # Balzac
 
-[Preview the Theme](http://balzac.siteleaf.net/)
-
 ![Balzac for Jekyll](http://cl.ly/Qdzo/Screen%20Shot%202013-08-05%20at%205.35.11%20PM.jpg)
 
 ![Balzac for Jekyll](http://cl.ly/Qdyh/Screen%20Shot%202013-08-05%20at%205.30.01%20PM.jpg)
 
 This is forked from [Balzac for Jekyll](https://github.com/ColeTownsend/Balzac-for-Jekyll).
+
+## Preview
+
+[Preview the theme](http://balzac.siteleaf.net/)
+
+## Download
+
+[Download the theme](https://github.com/destroytoday/Balzac-for-Siteleaf/releases/tag/v1.0.1)
 
 ## Improvements over Jekyll theme
 
@@ -26,6 +32,12 @@ This is forked from [Balzac for Jekyll](https://github.com/ColeTownsend/Balzac-f
 - retina images using @2x
 - post loop in the footer showing 3 latest posts
 - custom portfolio page for case studies
+
+## Basic Setup
+
+1. [Download the theme](https://github.com/destroytoday/Balzac-for-Siteleaf/releases/tag/v1.0.1)
+2. Upload theme to Siteleaf website.
+3. Add [site metadata](#site-metadata)
 
 ## Advanced Setup (for local dev)
 
@@ -75,6 +87,7 @@ Add the following metadata to your Siteleaf site in the admin:
 - keywords - site keywords used in HTML meta tag
 - disqus - Disqus shortname
 - twitter - Twitter username
+- repo - Github repo
 
 ### Top Navigation Links
 
@@ -94,6 +107,10 @@ This theme assumes that your posts are located in a page called `Articles` with 
 
 - rename the `/articles` directory to `/blog`
 - edit `/index.html` and change `site.pages.articles` to `site.pages.blog`
+
+### Comments
+
+If you added a site metadata field for your Disqus shortname, you can include comments on any page by adding a metadata field `comments` with the value `true`.
 
 ## License
 
