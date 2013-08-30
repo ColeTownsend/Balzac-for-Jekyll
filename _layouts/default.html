@@ -2,12 +2,16 @@
 <html lang="en">
 <meta charset="utf-8">
 <title>{{ title }} &#8211; {{ site.title }}</title>
-<meta name="description" content="{{ meta.description | fallback: site.meta.description }}">
+
+{% assign description = meta.description | fallback: site.meta.description %}
+<meta name="description" content="{{ meta.description | strip_html | strip_newlines | truncate: 120 }}">
 <meta name="keywords" content="{% if type == 'post' %}{{ taxonomy.tags | join: ', ' }}{% else %}{{ meta.keywords | fallback: site.meta.keywords }}{% endif %}">
 
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="{% if title %}{{ title }} &#8211; {% endif %}{{ site.title }}">
-<meta property="og:description" content="{% if meta.description %}{{ meta.description | strip_html | strip_newlines | truncate: 120  }}{% else %}{{ excerpt }}{% endif %}">
+
+{% assign description = meta.description | fallback: excerpt %}
+<meta property="og:description" content="{{ description | strip_html | strip_newlines | truncate: 120  }}">
 <meta property="og:url" content="{{ permalink }}">
 <meta property="og:site_name" content="{{ site.title }}">
 
@@ -43,7 +47,8 @@
 
 <!-- Icons -->
 <!-- 16x16 -->
-<link rel="shortcut icon" href="/assets/favicon.ico">
+<link rel='icon' type='image/png' href='/assets/favicon.png'>
+<link rel='shortcut icon' type='image/png' href='/assets/favicon.png'>
 
 <div id="bump">
   <body>

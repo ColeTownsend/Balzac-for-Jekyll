@@ -11,7 +11,7 @@
           <hgroup>
             <h1>{{ title }}</h1>
             <p class="date">{{ date | date: "%b %d, %Y" }}</p>
-            <p class="intro">{% if meta.description %}{{ meta.description }}{% else %}{{ excerpt }}{% endif %}</p>
+            {% if meta.description %}<p class="intro">{{ meta.description }}</p>{% endif %}
           </hgroup>
         </header>
 
