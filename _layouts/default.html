@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>{{ title }} &#8211; {{ site.title }}</title>
+<meta name="description" content="{{ meta.description | fallback: site.meta.description }}">
+<meta name="keywords" content="{% if type == 'post' %}{{ taxonomy.tags | join: ', ' }}{% else %}{{ meta.keywords | fallback: site.meta.keywords }}{% endif %}">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="{% if title %}{{ title }} &#8211; {% endif %}{{ site.title }}">
+<meta property="og:description" content="{% if meta.description %}{{ meta.description | strip_html | strip_newlines | truncate: 120  }}{% else %}{{ excerpt }}{% endif %}">
+<meta property="og:url" content="{{ permalink }}">
+<meta property="og:site_name" content="{{ site.title }}">
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Type -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700,700italic" rel='stylesheet' type='text/css' />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel='stylesheet' type='text/css'>
+
+<!-- symbolset icons -->
+<link href="//cdn.symbolset.com/8ed5930027570001be7e8978b173558eddc4f9d5/symbolset.css" rel="stylesheet">
+
+<!-- In order to use Calendas Plus, you must first purchase it. Then, create a font-face package using FontSquirrel.
+<link rel='stylesheet' href='/assets/cal.css' media='all' />
+-->
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/i.css">
+
+<!-- Fresh Squeezed jQuery -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+
+<div id="bump">
+  <body>
+    <header class="site-header{% if meta.feature and meta.dark %} site-header-lighter{% endif %}">
+      <div class="wrap">
+        <hgroup>
+          <h1><a href="/">{{ site.title }}</a></h1>
+        </hgroup>
+        <a href="#nav" class="menu ss-icon ss-rows"></a>
+        <nav role="navigation">
+          <ul>
+            {% for page in site.pages %}
+              {% unless page.meta.hide_from_nav %}
+                <li>
+                  <a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a>
+                </li>
+              {% endunless %}
+            {% endfor %}
+
+            <li><a href="{{ site.meta.repo }}" target="_blank">Github</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    {{ content }}
+
+    <div class="push"></div>
+    <footer>
+      <aside class="wrap">
+        <ol class="prev-posts">
+          <p class="list-title">Recent Posts</p>
+          {% for post in site.pages.articles.posts | limit:3 %}
+          <li>
+            <span class="recent-title"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title | strip_html | strip_newlines | truncate: 30 }} </a></span>
+            <span class="date">{{ post.date | date: "%b %d, %Y" }}</span>
+          </li>
+          {% endfor %}
+        </ol>
+
+        <div class="social">
+          <ul>
+            <li><a id="mail" href="mailto:{{ site.meta.email }}"><span class="foot-link">Contact Me</span></a></li>
+
+            {% if site.meta.twitter %}
+              <li><a id="twit" href="http://twitter.com/{{ site.meta.twitter }}" target="_blank"><span class="foot-link">@{{ site.meta.twitter }}</span></a></li>
+            {% endif %}
+
+            {% if site.meta.dribbble %}
+              <li><a id="drib" href="http://dribbble.com/{{ site.meta.dribbble }}" target="_blank"><span class="foot-link">Dribbble</span></a></li>
+            {% endif %}
+          </ul>
+        </div>
+      </aside>
+      <small>&copy; {{ site.time | date: '%Y' }} {{ site.meta.name }}. Powered by <a href="http://siteleaf.com">Siteleaf</a> using the <a href="https://github.com/destroytoday/Balzac-for-Siteleaf">Balzac</a> theme.</small>
+    </footer>
+
+    <!-- If they're out, get some from the cellar -->
+    <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+    <script src="/assets/js/retina.min.js"></script>
+
+    <!-- symbolset icons -->
+    <script src="//cdn.symbolset.com/8ed5930027570001be7e8978b173558eddc4f9d5/symbolset.js"></script>
+
+    <!-- Custom JS -->
+    <script src="/assets/js/scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+.DS_Store
+.rbenv-vars
+.rbenv-gemsets
+.ruby-version
+.sass-cache
+config.ru

@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'jekyll'
-gem 'jekyll-minibundle'
-gem 'coderay'
-gem 'rake'
+gem 'rack'
+gem 'siteleaf'
+gem 'racksh'
+gem 'guard-shell'
+gem 'guard-sass'
+gem 'guard-livereload'

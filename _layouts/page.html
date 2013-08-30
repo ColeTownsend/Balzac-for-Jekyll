@@ -1,35 +1,27 @@
-{% if page.image.feature %}
-
-{% include head.html %}
-
-<section class="article">
-
-  <div class="overlay"></div>
-  <div class="featured-image" style="background-image: url({{ site.url }}/images/{{ page.image.feature }})"></div>
-{% else %}
-
-{% include head-dark.html %}
-
-<section class="article pad-top">
-
-{% endif %}
-
+{% capture 'content' %}
+  {% if meta.feature %}
+    <section class="article">
+      <div class="overlay{% unless meta.dark %} overlay-lighter{% endunless %}"></div>
+      <div class="featured-image" style="background-image: url({{ meta.feature }})"></div>
+  {% else %}
+    <section class="article pad-top">
+  {% endif %}
       <article class="wrap post">
         <header class="post-header">
           <hgroup>
-            <h1>{{ page.title }}</h1>
-            <p class="intro">{% if page.description %}{{ page.description }}{% else %}{{ page.tagline }}{% endif %}</p>
-
+            <h1>{{ title }}</h1>
+            <p class="date">{{ date | date: "%b %d, %Y" }}</p>
+            <p class="intro">{% if meta.description %}{{ meta.description }}{% else %}{{ excerpt }}{% endif %}</p>
           </hgroup>
         </header>
-    
-        {{ content }}
-          
-      <a class="share" href="https://twitter.com/intent/tweet?text=&quot;{{ page.title }}&quot;%20{{ site.url }}{{ page.url }}%20via%20&#64;{{ site.owner.twitter }}" data-dnt="true">Share</a>
-      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-    
+
+        {{ body }}
+
+        {% include 'includes/share' %}
+        {% include 'includes/comments' %}
       </article>
     </section>
-</div>
+  </div>
+{% endcapture %}
 
-{% include footer.html %}
+{% include 'layouts/default' %}
