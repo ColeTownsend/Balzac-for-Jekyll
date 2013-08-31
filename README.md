@@ -87,6 +87,7 @@ Add the following metadata to your Siteleaf site in the admin:
 - keywords - site keywords used in HTML meta tag
 - disqus - Disqus shortname
 - twitter - Twitter username
+- symbolset - Symbolset ID
 - repo - Github repo
 
 ### Top Navigation Links
