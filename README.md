@@ -12,7 +12,7 @@ This is forked from [Balzac for Jekyll](https://github.com/ColeTownsend/Balzac-f
 
 ## Download
 
-[Download the theme](https://github.com/destroytoday/Balzac-for-Siteleaf/releases/tag/v1.0.1)
+[Download the theme](https://github.com/destroytoday/Balzac-for-Siteleaf/releases)
 
 ## Improvements over Jekyll theme
 
@@ -35,7 +35,7 @@ This is forked from [Balzac for Jekyll](https://github.com/ColeTownsend/Balzac-f
 
 ## Basic Setup
 
-1. [Download the theme](https://github.com/destroytoday/Balzac-for-Siteleaf/releases/tag/v1.0.1)
+1. [Download the theme](https://github.com/destroytoday/Balzac-for-Siteleaf/releases)
 2. Upload theme to Siteleaf website.
 3. Add [site metadata](#site-metadata)
 
