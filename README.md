@@ -124,7 +124,7 @@ If done correctly `/blog` should be a page listing all the site's posts.
 
 ## License
 
-This is [MIT](LICENSE) with no added caveats, so feel free to use this Jekyll theme on your site without linking back to me or using a disclaimer. 
+This is free to use, fork, do whatever you want. You don't need to link me to it, but please contact me if you intend to market this theme. I am releasing premium versions of this design for select CMS's. 
 
 If you'd like give me credit somewhere on your blog or tweet a shout out to
 [@ctrunsthis](https://twitter.com/ctrunsthis), that would be pretty sweet.
