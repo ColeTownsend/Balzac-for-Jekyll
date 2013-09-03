@@ -6,7 +6,7 @@ layout: nil
     <url>
         <loc>{{ site.url }}</loc>
     </url>
-    
+
     {% for post in site.posts %}
     <url>
         <loc>{{ site.url }}{{ post.url }}</loc>
