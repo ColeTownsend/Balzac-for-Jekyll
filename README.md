@@ -120,7 +120,7 @@ If done correctly `/blog` should be a page listing all the site's posts.
 
 ## License
 
-This is [MIT](LICENSE) with no added caveats, so feel free to use this Jekyll theme on your site without linking back to me or using a disclaimer. 
+This is under the [GPL](http://choosealicense.com/licenses/gpl-v2/) with no added caveats, so feel free to use this Jekyll theme on your site without linking back to me or using a disclaimer. Basically you must make your source code equally available to others.
 
 If you'd like give me credit somewhere on your blog or tweet a shout out to
 [@ctrunsthis](https://twitter.com/ctrunsthis), that would be pretty sweet.
