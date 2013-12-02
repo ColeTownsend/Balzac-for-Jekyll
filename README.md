@@ -6,6 +6,8 @@ This is forked from [minimal mistakes](http://mademistakes.com). I needed some t
 If you'd like give me credit somewhere on your blog or tweet a shout out to
 [@twnsndco](https://twitter.com/twnsndco), that would be pretty sweet.
 
+---
+
 
 ![Balzac for Jekyll](http://cl.ly/Qdzo/Screen%20Shot%202013-08-05%20at%205.35.11%20PM.jpg)
 ![Balzac for Jekyll](http://cl.ly/Qdyh/Screen%20Shot%202013-08-05%20at%205.30.01%20PM.jpg)
