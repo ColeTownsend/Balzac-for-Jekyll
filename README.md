@@ -3,6 +3,10 @@
 This is forked from [minimal mistakes](http://mademistakes.com). I needed some type of framework to build off as I have no experience with Jekyll. Michael already wrote up an incredibly comprehensive readme.md so I basically copied all of it and replaced what was necessary.
 
 
+If you'd like give me credit somewhere on your blog or tweet a shout out to
+[@twnsndco](https://twitter.com/twnsndco), that would be pretty sweet.
+
+
 ![Balzac for Jekyll](http://cl.ly/Qdzo/Screen%20Shot%202013-08-05%20at%205.35.11%20PM.jpg)
 ![Balzac for Jekyll](http://cl.ly/Qdyh/Screen%20Shot%202013-08-05%20at%205.30.01%20PM.jpg)
 
@@ -124,7 +128,4 @@ If done correctly `/blog` should be a page listing all the site's posts.
 
 ## License
 
-This is free to use, fork, do whatever you want. You don't need to link me to it, but please contact me if you intend to market this theme. I am releasing premium versions of this design for select CMS's. 
-
-If you'd like give me credit somewhere on your blog or tweet a shout out to
-[@ctrunsthis](https://twitter.com/ctrunsthis), that would be pretty sweet.
+This is free to use, fork, do whatever you want. You *cannot* sell this design though. You don't need to link me to it, but please contact me if you intend to market this theme. I am releasing premium versions of this design for select CMS's. 
