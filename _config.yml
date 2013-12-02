@@ -1,6 +1,6 @@
 title:            Balzac
 tagline:          A beautiful theme.
-description:      Describe your website.
+description:      Insouciant.
 #Comment out url when working locally to resolve base urls correctly
 url: http://jekyll.gtat.me
 
@@ -8,11 +8,11 @@ url: http://jekyll.gtat.me
 owner:
   name:           Cole Townsend
   avatar:         avatar.png
-  bio:            "Aesthete & Athlete"
+  bio:            "Insouciant"
   email:          cole@coletownsend.com
-  twitter:        ctrunsthis        
+  twitter:        twnsndco        
   github:         coletownsend       
-  instagram:      ctrunsthis     
+  instagram:      twnsnd     
   dribbble:       coletownsend
   disqus:         balzac
   # Plug in your disqus shortname!
