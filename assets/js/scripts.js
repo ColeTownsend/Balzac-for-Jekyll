@@ -10,7 +10,7 @@ $(document).ready(function() {
     if(w > 680 && menu.is(':hidden')) {
       menu.removeAttr('style');
     }
-  }); 
+  });
 
 
   $('article.post iframe').wrap('<div class="video-container" />');
@@ -18,10 +18,17 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-    var vpH = $(window).height();
-    var vH = vpH - 350;
-    $('.overlay').css("height", vH);
-    $('.featured-image').css("height", vH);
+    var vpH = ($(window).height())*.6667;
+    
+    $('.overlay').css("height", vpH);
+    $('.featured-image').css("height", vpH);
+
+    $(window).resize(function(){
+    var vpH = ($(window).height())*.6667;
+    
+    $('.overlay').css("height", vpH);
+    $('.featured-image').css("height", vpH);
+});
 });
 
 
