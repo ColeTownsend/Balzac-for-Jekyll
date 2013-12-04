@@ -24,7 +24,7 @@ links:
   - title: About
     url: /about
   - title: Donate
-    url: mailto:cole@twnsnd.co?cc=cash@square.com&subject=$5&body=Hey Cole,Thanks for making Balzac! I really dig it and want you to keep pushing updates. Go get yourself a hot cup of coffee.
+    url: http://gtat.me/balzac/donate
   - title: Github
     url: https://github.com/ColeTownsend/Balzac-for-Jekyll
     external: true
