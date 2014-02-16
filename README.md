@@ -1,6 +1,6 @@
 # Balzac
 
-This is forked from [minimal mistakes](http://mademistakes.com). I needed some type of framework to build off as I have no experience with Jekyll. Michael already wrote up an incredibly comprehensive readme.md so I basically copied all of it and replaced what was necessary.
+This is forked from [minimal mistakes](http://mademistakes.com). I needed some type of framework to build off as I have no experience with Jekyll. Michael set up an awesome dev environment for this which really helped speed up my progress. He also already wrote up an incredibly comprehensive readme.md so I basically copied all of it and replaced what was necessary. The design itself is my own and I cannot let you sell this or tweak the design for resale, unless I you [contact me](mailto:cole@coletownsend.com).
 
 
 If you'd like give me credit somewhere on your blog or tweet a shout out to
