@@ -4,6 +4,7 @@ body {
   font-family: $serif;
   color: $black;
   -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+  -moz-osx-font-smoothing: grayscale; /* Fix for Mozilla */
   text-size-adjust: 100%;
   background: $white;
   min-height: 100%;
