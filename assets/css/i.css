@@ -235,6 +235,7 @@ body {
   font-family: "Calendas Plus", "Crimson Text", "Hoefler Text", "Georgia", serif;
   color: #3b3b3b;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   /* Fix for webkit rendering */
   text-size-adjust: 100%;
   background: #f9f9f9;
