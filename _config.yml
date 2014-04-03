@@ -15,8 +15,12 @@ owner:
   instagram:      ctrunsthis     
   dribbble:       coletownsend
   disqus:         balzac
+  location:       "Buffalo, NY"
   # Plug in your disqus shortname!
-  
+
+tools:
+  standards:      "HTML, SCSS, Jekyll"
+  software:       "git"
 
 # Links to include in top navigation
 # For external links add external: true
