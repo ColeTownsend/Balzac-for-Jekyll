@@ -1,17 +1,13 @@
 {% if page.image.feature %}
-
-{% include head-dark.html %}
-
-<section class="article">
-
-  <div class="overlay overlay-lighter"></div>
-  <div class="featured-image" style="background-image: url({{ site.url }}/images/{{ page.image.feature }})"></div>
+  <!-- Light Header for images -->
+  {% include head-dark.html %}
+  <section class="article">
+    <div class="overlay overlay-lighter"></div>
+    <div class="featured-image" style="background-image: url({{ site.url }}/images/{{ page.image.feature }})"></div>
 {% else %}
-
+<!-- Dark Header -->
 {% include head-dark.html %}
-
 <section class="article pad-top">
-
 {% endif %}
 
 
