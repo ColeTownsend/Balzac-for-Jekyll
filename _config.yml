@@ -54,6 +54,9 @@ kramdown:
     coderay_bold_every: 10
     coderay_css: class
 
+sass:
+    style: :compressed
+
 # https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink:   /:categories/:title
 
