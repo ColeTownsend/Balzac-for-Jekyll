@@ -1,8 +1,7 @@
 title:            Balzac
 tagline:          A beautiful theme.
 description:      Describe your website.
-#Comment out url when working locally to resolve base urls correctly
-url: http://jekyll.gtat.me
+canonical: http://jekyll.gtat.me
 
 # Owner/author information
 owner:
@@ -10,9 +9,9 @@ owner:
   avatar:         avatar.png
   bio:            "Aesthete & Athlete"
   email:          cole@coletownsend.com
-  twitter:        twnsndco        
-  github:         coletownsend       
-  instagram:      ctrunsthis     
+  twitter:        twnsndco
+  github:         coletownsend
+  instagram:      ctrunsthis
   dribbble:       coletownsend
   disqus:         balzac
   location:       "Buffalo, NY"
@@ -48,7 +47,7 @@ kramdown:
   use_coderay: false
 
   coderay:
-    coderay_line_numbers: 
+    coderay_line_numbers:
     coderay_line_numbers_start: 1
     coderay_tab_width: 4
     coderay_bold_every: 10
