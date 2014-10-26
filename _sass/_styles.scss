@@ -17,7 +17,7 @@ h1,h2,h3,h4,h5 {
 }
 
 p {
-    margin-bottom: $lh;
+    margin-bottom: $lh/2;
 }
 
 a, a:visited, a:active {
@@ -51,14 +51,19 @@ small {
     background: $hilite;
 }
 
-blockquote, blockquote p {
-    font-style: italic;
-    line-height: 1.3em;
-    text-align: center;
-    color: lighten($black, .2);
-    margin-bottom: $lh;
+blockquote  {
+    font-size: $fsp;
+    margin: 1.5em 0;
+    border-left: 3px solid #eee;
+    padding: 0 0 0 2em;
+    line-height: 0.7em;
+    color: lighten($black, 7);
 }
 
+blockquote p {
+    margin: 1em 0;
+    padding: 0.1em 0em;
+}
 
 /*   Code Formatting    */
 
@@ -79,11 +84,11 @@ code {
     code {
         color: $white;
         font-family: "Monaco", "Courier New", "Courier";
-        font-size: .9em;
+        font-size: .7em;
+        line-height: 1.5em;
         .lineno {
             margin-right: $lh/2;
             color: $grey-light;
-            line-height: 2em;
         }
         .nt {
             color: #c85b5c;
@@ -132,7 +137,7 @@ input {
 .icons {
   font-family: "Icons";
   font-size: 14px;
-  line-height: 20px; 
+  line-height: 20px;
 }
 
 .bb {
@@ -162,7 +167,7 @@ input {
 
 .post {
     @include column(8);
-    max-width: 680px;
+    max-width: 720px;
     display: block;
     margin: 0 auto;
     float: none;
@@ -176,7 +181,7 @@ header.site-header {
   position: absolute;
   width: 100%;
   z-index: 5000;
-  
+
   .wrap {
       max-width: 90vw;
   }
@@ -184,7 +189,7 @@ header.site-header {
 }
 
 #bump .darken {
-      
+
       a {
       color: $black;
       @include transit(all, .2s, ease-in-out);
@@ -194,15 +199,15 @@ header.site-header {
         @include transit(all, .2s, ease-in-out);
         }
       }
-      
+
       .menu .icons {
           color: $black;
       }
-      
+
       nav ul li a {
             color: $black;
             &:active {
-              color: $link;  
+              color: $link;
             }
             &:hover {
                 text-shadow: none;
@@ -247,7 +252,7 @@ header.site-header nav {
   display: block;
   padding-right: 5vw;
   @include clearfix;
-  
+
   ul li {
     font-size: 16px;
     text-transform: uppercase;
@@ -255,7 +260,7 @@ header.site-header nav {
     font-weight: bold;
     top: 2px;
     position: relative;
-    margin-left: 20px; 
+    margin-left: 20px;
     a {
         color: white;
         @include transit(all, .2s, ease);
@@ -263,18 +268,18 @@ header.site-header nav {
             @include tshd(0, 0, 3px, rgba(255,255,255,.6));
             @include transit(all, .2s, ease);
         }
-    } 
+    }
   }
 }
 
 
 /* Article Stuff */
 
-   
+
 .article {
     position: relative;
     margin-bottom: $lh;
-    
+
     .overlay {
         vertical-align: middle;
         min-height: 360px;
@@ -288,7 +293,7 @@ header.site-header nav {
     .overlay-lighter {
         background: rgba(0,0,0,.1);
     }
-    
+
     .featured-image {
         vertical-align: middle;
         min-height: 360px;
@@ -308,7 +313,7 @@ header.site-header nav {
             max-height: 800px;
         }
     }
-    
+
     // Header Stuff
     header {
         margin: (2*$lh) 0 $lh 0;
@@ -327,7 +332,7 @@ header.site-header nav {
                 margin-top: $lh * 2/3;
             }
         }
-        
+
         .intro {
             text-align: left;
         }
@@ -351,7 +356,7 @@ header.site-header nav {
     margin: 0 auto;
     float: none;
     padding-top: 140px;
-    
+
     // Post Listing
     .post-list {
         list-style-type: none;
@@ -360,25 +365,25 @@ header.site-header nav {
         @include push(2);
         display: block;
         float: none;
-        
+
         lh h2 {
             margin-bottom: $lh*1.5;
         }
-        
+
         li {
             display: block;
             float: none;
             font-size: $fs3;
             margin-bottom: $lh*2;
             position: relative;
-            
+
             a {
                 position: relative;
                 &:hover {
                     @include transit;
                 }
             }
-            
+
             a:hover:before {
                 content:'...';
                 color: $grey-light;
@@ -391,7 +396,7 @@ header.site-header nav {
                 text-align: center;
                 @include transit;
             }
-            
+
             a:before {
                 content:'“';
                 color: $grey-light;
@@ -405,22 +410,22 @@ header.site-header nav {
                 @include transit;
 
             }
-            
+
             h1 {
                 font-size: $fs3;
-                font-style: italic;
+                // font-style: italic;
             }
         }
-        
+
         .summary {
             font-size: 18px;
             line-height: 1.45em;
         }
-        
+
         .date {
             margin-bottom: 3px;
         }
-        
+
         .date time {
             position: relative;
             top: -3px;
@@ -434,13 +439,13 @@ header.site-header nav {
         }
     }
 }
- 
+
 // Post Formatting
 
 .post {
-    
+
     min-height: 500px;
-    
+
     .deets {
         position: relative;
         top: 45px;
@@ -454,25 +459,25 @@ header.site-header nav {
             margin-bottom: $lh/2;
         }
     }
-    
+
     h1 {
-        font-style: italic;
+        // font-style: italic;
     }
-    
+
     h1, h2, h3, h4, h5 {
         padding-top: ($lh * 1/2);
         margin-bottom: ($lh * 1/2);
         line-height: 1.25em
 
     }
-    
+
     figure {
         margin: $lh 0;
-        
+
         img {
             margin-bottom: $lh/2;
         }
-        
+
         figcaption {
             font-size: $fs5;
             font-family: $sans;
@@ -482,7 +487,7 @@ header.site-header nav {
             text-align: center;
         }
     }
-    
+
     img {
         width: 100%;
         height: auto;
@@ -490,7 +495,7 @@ header.site-header nav {
         margin: $lh auto;
         @include br(4px);
     }
-    
+
     ul {
         display: block;
         margin-bottom: $lh;
@@ -521,13 +526,12 @@ header.site-header nav {
             padding-left: $lh/3;
             margin-bottom: $lh/3;
             line-height: $lh;
-            font-size: $fsp;
         &:last-child {
             margin-bottom: 0;
             }
-        } 
-    }  
-    
+        }
+    }
+
     .share {
         text-align: center;
         display: block;
@@ -562,7 +566,7 @@ footer {
     font-size: $fsp;
     color: $white;
     position: relative;
-        
+
     // Contain that ish
     section {
         @include column(10);
@@ -570,7 +574,7 @@ footer {
         display: block;
         margin: 0 auto;
     }
-    
+
     small {
         font-size: ($fs6);
         text-align: center;
@@ -585,11 +589,11 @@ footer {
             color: transparentize($white, .7);
         }
     }
-    
+
     .list-title {
         margin-bottom: $lh/2;
         border-bottom: 2px solid $link;
-        font-style: italic;
+        // font-style: italic;
         font-size: $fs4;
     }
     .prev-posts {
@@ -605,7 +609,7 @@ footer {
             margin-top: $lh/2;
             .recent-title {
                 @include column(8,12);
-                font-style: italic;
+                // font-style: italic;
                 a {
                     &:hover {
                         color: $white;
@@ -624,7 +628,7 @@ footer {
             }
         }
     }
-    
+
     .social {
         position: absolute;
         top: 109px;
@@ -656,7 +660,7 @@ footer {
    ========================================================================== */
 
 @media only screen and (max-width: $breakpoint-2-max-width) {
-    
+
 // Type Fixes
 
 h1 {
@@ -664,31 +668,31 @@ h1 {
 }
 
 blockquote, blockquote p {
-    font-size: $fs3;
+    font-size: $fsp;
 }
 
 footer {
     font-size: $fs5;
-    
+
     .prev-posts {
         li  {
-          
+
           .recent-title {
-              
+
           }
-          
+
           span.date {
               font-size: $fs6;
-          }  
+          }
         }
     }
-    
+
     .social {
         right: 10vw;
     }
 }
-    
-    
+
+
 }
 
 /* Mobile
@@ -696,16 +700,16 @@ footer {
 
 @media only screen and (max-width: 500px) {
     footer {
-    
+
     .social {
         display: none;
     }
-    
+
     aside {
         width: 90%;
         margin: 0 auto;
     }
-    
+
     .prev-posts {
         @include column(9);
         padding-left: 0;
@@ -716,39 +720,39 @@ footer {
             margin-top: $lh/2;
         }
     }
-    
+
     }
 }
 
 @media only screen and (max-width : 680px) {
- 
+
  /* All Posts */
-      
+
   section.article img.loading {
     top: 10px !important;
     right: 6%;
     left: inherit;
   }
-  
-  
+
+
   header.site-header {
     min-height: 59px;
     margin-top: 20px;
     padding-top: 0;
   }
-  
+
   header.site-header hgroup h1 {
     margin-bottom: 0;
     font-size: $fsp;
   }
-  
+
   header.site-header hgroup {
     position: absolute;
     left: 7%;
     float: none;
     padding-left: 0;
   }
-  
+
   header.site-header a.menu {
     position: absolute;
     right: 7%;
@@ -761,37 +765,37 @@ footer {
         font-size: 32px;
     }
   }
-  
+
   header.site-header a.menu img {
     width: 24px;
     height: auto;
   }
-  
+
   header.site-header nav {
     display: none;
     float: none;
     width: 100%;
     padding-right: 0;
   }
-  
+
   header.site-header nav:before {
     display: table;
     clear: both;
     content: '';
   }
-  
+
   header.site-header nav ul {
     padding: 20px 0 10px 0;
     margin-top: 15px;
   }
-  
+
   header.site-header nav ul li {
     display: block;
     margin-left: 0;
     top: 0px;
     font-size: $fs5;
   }
-  
+
   header.site-header nav ul li a {
     display: block;
     text-align: right;
@@ -803,19 +807,19 @@ footer {
     color: $white;
     &:active {
       background-color: $link;
-      color: white;  
+      color: white;
     }
     &:hover {
         text-shadow: none;
     }
   }
-  
+
   #bump .darken nav ul {
           padding: 0;
           margin-top: 40px;
           background: $black;
       }
-      
+
    #bump .darken nav ul li a {
         color: $white;
         &:active {

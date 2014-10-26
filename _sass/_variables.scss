@@ -28,31 +28,49 @@ $accent: #24536B;
    ========================================================================== */
 
 $sans: "Source Sans Pro", "Open Sans", "Helvetica Neue", "Arial", sans-serif;
-$serif: "Calendas Plus","Crimson Text", "Hoefler Text", "Georgia", serif;
+// $serif: "Calendas Plus","Crimson Text", "Hoefler Text", "Georgia", serif;
+$serif: "Calendas Plus","Crimson Text", "Hoefler Text", "Georgia", STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", serif;
 
-   
-   
+
 /* Type Scale
    ========================================================================== */
 
 /** * 12 & 16 as roots then powers of two. */
 
-$fs1:64px;
-$fs2:48px;
-$fs3:32px;
-$fs4:24px;
+// $fs1:64px;
+// $fs2:48px;
+// $fs3:32px;
+// $fs4:24px;
+//
+// $fsp:22px;
 
-$fsp:22px;
+
+$fs1:28px;
+$fs2:24px;
+$fs3:22px;
+$fs4:18px;
+
+$fsp:18px;
+
+
+/* article font size */
+
+// $afs1:28px;
+// $afs2:24px;
+// $afs3:22px;
+// $afs4:18px;
+//
+// $afsp:18px;
 
 $fs5:16px;
 $fs6:12px;
 
 // Line Height
 
-$lh: 33px;
+$lh: 32px;
 $lhsmall: 24px;
 
-// Sizing 
+// Sizing
 $footerHeight: 320px;
 
 // Griddit
@@ -61,7 +79,7 @@ $footerHeight: 320px;
 
 /* Break Points
    ========================================================================== */
-   
+
 /* Mobile */
 $breakpoint-1-max-width:480px;
 

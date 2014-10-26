@@ -11,9 +11,6 @@ owner:
   email:          cole@coletownsend.com
   twitter:        twnsndco
   github:         coletownsend
-  instagram:      ctrunsthis
-  dribbble:       coletownsend
-  disqus:         balzac
   location:       "Buffalo, NY"
   # Plug in your disqus shortname!
 
@@ -37,7 +34,11 @@ links:
 timezone:    America/New_York
 future:      true
 highlighter: pygments
-markdown:    kramdown
+markdown:    redcarpet
+
+redcarpet:
+    extensions: [fenced_code_blocks]
+    render_options:
 
 kramdown:
   auto_ids: true

@@ -8,18 +8,19 @@
 /* Meat
    ========================================================================== */
 
-p {           
+p {
     font-size: $fsp;
-    line-height: $lh; 
+    line-height: $lh;
 }
 
-.intro {      
-    font-size: $fs3; 
+.post-header {
+  h1 {font-size:48px;}
+.intro {
+    font-size: $fs2;
     line-height: 1.4em;
 }
-
+}
 .post ul li {
-    font-size: $fsp;
     line-height: $lh;
     margin-bottom: $lh/3;
 }
@@ -29,35 +30,45 @@ p {
 /* Headings
    ========================================================================== */
 
-h1,.h1 {      font-size: $fs1; }
-h2,.h2 {      font-size: $fs2; } 
-h3,.h3 {      font-size: $fs3; } 
-h4,.h4 {      font-size: $fs4; } 
-h5,.h5 {      font-size: $fs5; } 
-h6,.h6 {      font-size: $fs6; } 
+h1,.h1 {
+  font-size: $fs1;
+    border-bottom: 2px solid #eee;
+    padding:       20px 0 10px;
+}
+h2,.h2 { font-size: $fs2; }
+h3,.h3 { font-size: $fs3; }
+h4,.h4 { font-size: $fs4; }
+h5,.h5 { font-size: $fs5; }
+h6,.h6 { font-size: $fs6; }
+p,li   { font-size: $fsp; }
+
+.article.archive{
+     h2 { font-size: 48px; }
+     .post-list {
+       h1 { font-size: 32px; 
+       border-bottom : none;
+       }
+       p  { font-size: 22px; }
+     }
+}
 
 .meta {       font-size: $fs6; }
 
-blockquote, blockquote p {  font-size: $fs2; }
+blockquote, blockquote p {  font-size: $fsp; }
 
 .archive input { font-size: $fs2}
 
-
-
-
-
-
-// Iphone 
+// Iphone
 
 @media only screen and (max-width: $breakpoint-1-max-width) {
 
-p {           
+p {
     font-size: $fs5;
     line-height: $lhsmall;
 }
 
-.intro {      
-    font-size: $fs4; 
+.intro {
+    font-size: $fs4;
     line-height: 1.4em;
 }
 
@@ -68,15 +79,15 @@ p {
 }
 
 h1,.h1 {      font-size: $fs2; }
-h2,.h2 {      font-size: $fs3; } 
-h3,.h3 {      font-size: $fs4; } 
-h4,.h4 {      font-size: $fs5; } 
-h5,.h5 {      font-size: $fs6; } 
-h6,.h6 {      font-size: $fs6; } 
+h2,.h2 {      font-size: $fs3; }
+h3,.h3 {      font-size: $fs4; }
+h4,.h4 {      font-size: $fs5; }
+h5,.h5 {      font-size: $fs6; }
+h6,.h6 {      font-size: $fs6; }
 
 .meta {       font-size: $fs6; }
 
-blockquote, blockquote p {  font-size: $fs4; }
+blockquote, blockquote p {  font-size: $fsp; }
 
 .archive input { font-size: $fs3}
 
