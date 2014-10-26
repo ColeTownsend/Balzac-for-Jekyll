@@ -105,10 +105,13 @@ A good rule of thumb is to keep feature images nice and wide so you don't push t
 
 ``` yaml
 image:
+# local image 
   feature: feature-image-filename.jpg
+# link image
+  feature: "http(s)://image.domain.com/feature-image-filename.jpg"
 ```
 
-This makes the assumption that the feature image is in the *images* folder. To add a feature image to a post or page just include the filename in the front matter like so.
+This makes the assumption that the feature image is in the *images* folder unless it has a link address. To add a feature image to a post or page just include the filename in the front matter like so.
 You can "serve" images responsively with retina.js. All you need to do is have a file with @2x before the file type. That should be placed in the *images* folder. You literally don't have to do anything other than that. 2 copies. One is linked. That's it.
 Ex:
 `cool-photo@2x.jpg` 
