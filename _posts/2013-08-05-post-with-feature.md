@@ -5,7 +5,7 @@ description: "In my younger and more vulnerable years my father gave me some adv
 category: articles
 tags: [intro, beginner, jekyll, tutorial]
 image:
-  feature: gatsby.jpg
+  feature: "https://farm8.staticflickr.com/7014/6840341477_e49612bc59_o_d.jpg"
 ---
 
 “Whenever you feel like criticizing any one,” he told me, “just remember that all the people in this world haven’t had the advantages that you’ve had.”
