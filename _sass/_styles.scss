@@ -393,7 +393,7 @@ header.site-header nav {
             }
             
             a:before {
-                content:'“';
+                content:'\201c';
                 color: $grey-light;
                 position: absolute;
                 margin-left: -70px;
