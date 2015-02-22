@@ -17,7 +17,7 @@ $columns: 10;
 $total-width: 100%;
 
 
-// Utility function — you should never need to modify this
+// Utility function - you should never need to modify this
 @function gridsystem-width($columns:$columns) {
 	@return ($column-width * $columns) + ($gutter-width * $columns);
 }
