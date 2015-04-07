@@ -118,4 +118,4 @@ If you added a site metadata field for your Disqus shortname, you can include co
 This is [MIT](LICENSE) with no added caveats, so feel free to use this Siteleaf theme on your site without linking back to me or using a disclaimer. 
 
 If you'd like give the original designer, Cole Townsend, credit somewhere on your blog or tweet a shout out to
-[@ctrunsthis](https://twitter.com/ctrunsthis), that would be pretty sweet.
+[@twnsndco](https://twitter.com/twnsndco), that would be pretty sweet.
