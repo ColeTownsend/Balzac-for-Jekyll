@@ -31,7 +31,11 @@ $(function(){
       if (!imgUrl) {
         return;
       }
-      imgUrl = imgUrl.substring(4, imgUrl.length-1);
+      var urlre = /url\([\"\']?(.*?)[\"\']?\)/;
+      imgUrl = imgUrl.match(urlre);
+      if($.isArray(imgUrl)) {
+        imgUrl = imgUrl[1]; // Captured subexpression.
+      }
       return imgUrl;
   }).load(function(){
     $('img.loading').fadeOut(500);
