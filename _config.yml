@@ -21,6 +21,10 @@ tools:
   standards:      "HTML, SCSS, Jekyll"
   software:       "git"
 
+# Open Graph customization
+opengraph:
+  locale:           en_US
+
 # Links to include in top navigation
 # For external links add external: true
 links:
