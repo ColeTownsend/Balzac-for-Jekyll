@@ -289,11 +289,11 @@ header.site-header nav {
         background: rgb(0,0,0);
     }
     
-    .content1 {
+    /*.content1 {
         position: relative;
         z-index: 10;
         top: 360px;
-    }
+    }*/
 
     .featured-image {
         vertical-align: middle;
@@ -336,6 +336,8 @@ header.site-header nav {
         
         .intro {
             text-align: left;
+            position: relative;
+            top: 360px;
         }
     }
 }
