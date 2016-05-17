@@ -289,6 +289,10 @@ header.site-header nav {
         background: rgb(0,0,0);
     }
     
+    .content{
+        margin-top: 360px;
+    }
+
     .featured-image {
         vertical-align: middle;
         min-height: 360px;
@@ -313,8 +317,6 @@ header.site-header nav {
     header {
         margin: (2*$lh) 0 $lh 0;
         hgroup {
-            min-height: 360px;
-            max-height: 800px;
             color: $black;
             position: relative;
             text-align: center;
