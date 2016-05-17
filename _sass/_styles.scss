@@ -283,10 +283,10 @@ header.site-header nav {
         max-height: 800px;
         position: absolute;
         z-index: 2;
-        background: rgba(0,0,0,.55);
+        background: rgba(0,0,0);
     }
     .overlay-lighter {
-        background: rgba(0,0,0,.1);
+        background: rgba(0,0,0);
     }
     
     .featured-image {
@@ -313,6 +313,8 @@ header.site-header nav {
     header {
         margin: (2*$lh) 0 $lh 0;
         hgroup {
+            min-height: 360px;
+            max-height: 800px;
             color: $black;
             position: relative;
             text-align: center;
