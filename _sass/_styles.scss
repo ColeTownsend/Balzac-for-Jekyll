@@ -290,8 +290,6 @@ header.site-header nav {
     }
     
     .featured-image {
-        z-index:-1;
-        position:fixed;
         vertical-align: middle;
         min-height: 360px;
         height: 50vh;
@@ -303,7 +301,7 @@ header.site-header nav {
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
-        position: relative;
+        position: fixed;
         top: 0;
         z-index: -1;
         img {
