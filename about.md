@@ -1,26 +1,25 @@
 ---
 layout: post
 permalink: /about/index.html
-title: About the Theme
-description: Balzac is a new, fluid & responsive theme for Jekyll (and AnchorCMS). It's gloriously beautiful and suited to long form. Built on a SCSS foundation, it's organized and awesome.
-tags: [about, Jekyll, theme, responsive]
+title: About robotics club
+description: Robotics club IIT Bombay is a community of robotic enthusiasts who come together and tinker in the institute
+tags: [about, Robotics, Club]
 image:
   feature: soft-trees.jpg
 ---
 
-This is built on Semantic.gs grid framework which I edited a bit to make it fluid. I hope you enjoy using, forking, whatevering this theme as much as I did making it. 
+The Robotics Club is a community of students who derive pleasure in creating robots that may even be potent to work without human intervention. Each member of this family is provided insight into mechanical, basic electronic, monetary and informatory aid besides the indispensable guidance of experienced members. Club will support and foster interest in various aspects related to robotics in particular, mechanical design through workshops and projects.Robo-geeks will be provided a workspace, tools and other amenities to let their imagination loose. Competitions of various levels like Formula-1, Maze solver will be held under this club which will develop your interest in Robotics.This club will definitely give you what students look for and expect from a technological institute. 
 
-### Features
-* flexible, uses max-width for responsive goodness
-* responsive drop down menu
-* retina images using @2x
-* post loop in the footer showing 3 latest post
-* custom portfolio page for case studies
+### Team
+Managers :
++ Soham Shanbhag
++ Sravan Patchala
+
+Conveners : 
++ Ritik Madan
++ Aditya Kadmawala
++ Shobhna Mishra
++ Anshik Gupta
 
 ### Acknowledgements
-I utilized my own HTML templates, but had no prior knowledge of liquid nor the required Jekyll system file format. I took [Michael Rose](http://twitter.com/mmistakes)'s theme [Minimal Mistakes](http://mmistakes.github.io/minimal-mistakes/). Having a prebuilt archive and the YAML front-matter already set up was a great help. 
-
- The lovely font shown here is Calendas. For full splendor on your blog, I suggest you [head over and buy that](http://calendasplus.com/). The full family is 3 weights and costs $3. Many thanks to Daniel Bruce for the wonderful Entypo icons. Those can be picked up at [entypo.com](http://entypo.com), but are included with the source files. It's also <b>retina ready</b> via retina.js. Check out how that works over at [retinajs.com](http://retinajs.com).
-
-### The Name
-Balzac was a famous writer, known for his beautiful prose. I read some Balzac in school, but mostly feel comfort in the name of my favorite coffee shop in Stratford, Ontario. 
+This theme is the Balzac theme by Cole Townsend, developed for Jekyll

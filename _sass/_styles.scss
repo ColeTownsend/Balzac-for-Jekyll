@@ -290,6 +290,8 @@ header.site-header nav {
     }
     
     .featured-image {
+        z-index:-1;
+        position:fixed;
         vertical-align: middle;
         min-height: 360px;
         height: 50vh;
