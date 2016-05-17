@@ -1,20 +1,20 @@
-title:            Balzac
-tagline:          A beautiful theme.
-description:      Describe your website.
+title:            Robotics Club IIT Bombay
+tagline:          
+description:      Official website of robotics club, IIT Bombay
 canonical: https://robo-club-iitb.github.io
 
 # Owner/author information
 owner:
-  name:           Cole Townsend
+  name:           Robotics CLub IITB
   avatar:         avatar.png
-  bio:            "Aesthete & Athlete"
-  email:          cole@coletownsend.com
-  twitter:        twnsndco
-  github:         coletownsend
-  instagram:      ctrunsthis
-  dribbble:       coletownsend
+  bio:            
+  email:          robotics.iitb@gmail.com
+  twitter:        
+  github:         robo-club-iitb
+  instagram:      
+  dribbble:       
   disqus:         balzac
-  location:       "Buffalo, NY"
+  location:       "Bombay, India"
   # Plug in your disqus shortname!
 
 tools:
@@ -38,7 +38,7 @@ links:
     external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
+timezone:    Kolkata/India
 future:      true
 highlighter: pygments
 markdown:    kramdown
