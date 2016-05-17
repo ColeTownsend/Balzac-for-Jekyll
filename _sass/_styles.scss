@@ -2,11 +2,11 @@
 
 body {
   font-family: $serif;
-  color: $black;
+  color: black;
   -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
   -moz-osx-font-smoothing: grayscale; /* Fix for Mozilla */
   text-size-adjust: 100%;
-  background: $white;
+  background: white;
   min-height: 100%;
   height: 100%;
   overflow-x: hidden;
@@ -291,7 +291,7 @@ header.site-header nav {
     
     .content1 {
         position: relative;
-        
+
     }
 
     .featured-image {
