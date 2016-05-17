@@ -12,14 +12,14 @@ The Robotics Club is a community of students who derive pleasure in creating rob
 
 ### Team
 Managers :
-+ Soham Shanbhag
-+ Sravan Patchala
+* Soham Shanbhag
+* Sravan Patchala
 
 Conveners : 
-+ Ritik Madan
-+ Aditya Kadmawala
-+ Shobhna Mishra
-+ Anshik Gupta
+* Ritik Madan
+* Aditya Kadmawala
+* Shobhna Mishra
+* Anshik Gupta
 
 ### Acknowledgements
 This theme is the Balzac theme by Cole Townsend, developed for Jekyll
