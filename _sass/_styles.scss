@@ -315,9 +315,10 @@ header.site-header nav {
     
     // Header Stuff
     header {
-        background-color: $white;
+
         margin: (2*$lh) 0 $lh 0;
         hgroup {
+            background-color: $white;
             color: $black;
             position: relative;
             text-align: center;
