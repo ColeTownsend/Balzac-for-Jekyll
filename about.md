@@ -16,10 +16,11 @@ Managers :
 * Sravan Patchala
 
 Conveners :  
-* Ritik Madan
 * Aditya Kadmawala
-* Shobhna Misra
 * Anshik Gupta
+* Ritik Madan
+* Shobhna Misra
+
 
 ### Acknowledgements
 This theme is the Balzac theme by Cole Townsend, developed for Jekyll
