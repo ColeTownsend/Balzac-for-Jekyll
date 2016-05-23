@@ -305,9 +305,9 @@ header.site-header nav {
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
-        //position: fixed;
+        position: fixed;
         top: 0;
-        //z-index: -1;
+        z-index: -1;
         img {
             max-height: 800px;
         }
