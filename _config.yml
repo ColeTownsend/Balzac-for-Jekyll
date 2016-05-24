@@ -30,15 +30,19 @@ opengraph:
 links:
   - title: About
     url: /about
-  - title: Team
-    url: /team
   - title: Events
     url: /events
- 
+  - title: Blog
+    url: /blog
+  - title: Tutorials
+    url: /tutorials    
+  - title: Team
+    url: /team
+    
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Asia/Kolkata
-future:      true
+future:      true														
 highlighter: pygments
 markdown:    kramdown
 

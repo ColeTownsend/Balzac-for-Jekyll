@@ -2,7 +2,7 @@
 layout: post
 permalink: /events/index.html
 title: Events
-description: Here are some things you just cannot miss
+description: There are some things you simply cannot miss
 tags: [Robotics, Club, IIT, Bombay, events]
 image:
   feature: robo_rises.jpg
@@ -10,14 +10,18 @@ image:
 
 - - - -
 
-## XLR8
+### XLR8
 
 - - - -
 
-## Get Mechanised
+### Get Mechanised
 
 - - - -
 
-## Informal Hangouts
+### Informal Hangouts
 
 - - - -
+
+### Institute Technical Summer Projects
+
+----
