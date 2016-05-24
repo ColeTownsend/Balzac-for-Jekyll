@@ -6,6 +6,7 @@ category: articles
 tags: [SLAM, Robotics, localisation, mapping]
 ---
 
+## Introduction
 
 The term SLAM is as stated an acronym for __Simultaneous Localization And Mapping__. Mapping is all about building maps of the environment. There are a number of different methods for building maps and some of them are quite sophisticated. All these methods have in common that they build a model of the environment while also addressing the fact that the robot itself accrues uncertainty while it moves. 
 

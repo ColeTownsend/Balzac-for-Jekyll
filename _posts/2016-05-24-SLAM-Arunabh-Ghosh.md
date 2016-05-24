@@ -3,9 +3,11 @@ layout: post-no-feature
 title: "SLAM"
 description: "Basics of Simultaneous Localisation and Mapping- By Arunabh Ghosh"
 category: articles
+comments: true
 tags: [SLAM, Robotics, localisation, mapping]
 ---
 
+## Introduction
 
 The term SLAM is as stated an acronym for __Simultaneous Localization And Mapping__. Mapping is all about building maps of the environment. There are a number of different methods for building maps and some of them are quite sophisticated. All these methods have in common that they build a model of the environment while also addressing the fact that the robot itself accrues uncertainty while it moves. 
 
@@ -15,10 +17,12 @@ The various algorithm consists of multiple parts; Landmark extraction, data asso
 
 * **Landmark Extraction**
 
+ ![Drawing B]({{ site.url }}/images/SLAM1.jpg)
 Landmarks are distinct, salient features like blobs or corners within an image/frame. Salient features in computer vision are an art in itself. There are dozens of different approaches to extract, describe and match such features. Once extracted they help the robot keep track of where it is by measuring its position relative to the landmark. Landmarks act as memory and helps the robot identify whether it has visited a certain place in the past or not which brings us to the next part.
 
 * **Data association** 
 
+ ![Drawing B]({{ site.url }}/images/SLAM2.jpg)
 The problem of data association is that of matching observed landmarks from different (laser) scans with each other. We have to accurately tell whether we have seen a landmark or if it’s a new landmark. If it’s new we add it to the list of observed landmarks, if it’s old we we can measure the relative position of the robot and then accordingly update the position of the robot as well as the landmark on the map. This brings it to the next logical step.
 
 * **State Estimation and State Update**
@@ -44,5 +48,7 @@ After Landmark update the robot moves and then the whole cycle repeats again. Wh
 ## Conclusion
 
 The main aim of this post was to familiarize one with the basics of a SLAM Algorithm to the level that he/she is now able to go further, read tutorials from the internet and implement a SLAM based robot. The applications of this technology are huge. It is the key to __self-driving cars__, __unmanned aerial vehicles__, __autonomous underwater vehicles__, __planetary rovers__, newly emerging __domestic robots__ and even __robots inside the human body__. It is a big and active research field with many unsolved problems.
+
+ ![Drawing C]({{ site.url }}/images/SLAM3.jpg)
 __Hope you had a good time reading this blog and were able to learn something new!!__ 
 

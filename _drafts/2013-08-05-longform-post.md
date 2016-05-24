@@ -1,11 +1,12 @@
 ---
 layout: post-no-feature
 title: "SLAM"
-description: "Basics of Simultaneous Localisation and Mapping- By Arunabh Ghosh"
+description: "Simultaneous Localisation and Mapping- By Arunabh Ghosh"
 category: articles
 tags: [SLAM, Robotics, localisation, mapping]
 ---
 
+## Introduction
 
 The term SLAM is as stated an acronym for __Simultaneous Localization And Mapping__. Mapping is all about building maps of the environment. There are a number of different methods for building maps and some of them are quite sophisticated. All these methods have in common that they build a model of the environment while also addressing the fact that the robot itself accrues uncertainty while it moves. 
 
@@ -24,8 +25,8 @@ The problem of data association is that of matching observed landmarks from diff
 * **State Estimation and State Update**
 
 Here we try to estimate position of the robot using input from number of sensors. There are two types of sensors internal and external sensors
-	* Internal sensors: These are sensors that are attached to the robot. They include accelerometer, gyroscopes, motor encoders, cameras which help the robot localize itself without any external interference.
-	* External sensors: As the name suggests these the robot gets its input from sources not attached to the robot. It includes navigation systems like GPS, electric beacons etc.
+	* *Internal sensors*: These are sensors that are attached to the robot. They include accelerometer, gyroscopes, motor encoders, cameras which help the robot localize itself without any external interference.
+	* *External sensors*: As the name suggests these the robot gets its input from sources not attached to the robot. It includes navigation systems like GPS, electric beacons etc.
 
 Using just internal sensors usually gives small amount of error which over time adds up to produce significant errors. This is why we also employ the use of external sensors to facilitate internal sensors. 
 We update the estimated state using sensor data. Using observed landmarks we calculate what should have been our position. Usually there is some difference between the estimated state and the calculated state, this is called the innovation.
