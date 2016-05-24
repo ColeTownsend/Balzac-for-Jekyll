@@ -1,11 +1,11 @@
 title:            Robotics Club IIT Bombay
 tagline:          
-description:      Official website of robotics club, IIT Bombay
+description:      Official website of Robotics Club, IIT Bombay
 canonical: https://robo-club-iitb.github.io
 
 # Owner/author information
 owner:
-  name:           Robotics CLub IITB
+  name:           Robotics Club IITB
   avatar:         avatar.jpg
   bio:            
   email:          robotics.iitb@gmail.com
@@ -13,7 +13,7 @@ owner:
   github:         robo-club-iitb
   instagram:      
   dribbble:       
-  disqus:         balzac
+  disqus:         robo-club
   location:       "Bombay, India"
   # Plug in your disqus shortname!
 
@@ -30,9 +30,10 @@ opengraph:
 links:
   - title: About
     url: /about
-  - title: Github
-    url: https://github.com/robo-club-iitb
-    external: true
+  - title: Team
+    url: /team
+  - title: Events
+  	url: /events
  
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones

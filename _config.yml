@@ -13,7 +13,7 @@ owner:
   github:         robo-club-iitb
   instagram:      
   dribbble:       
-  disqus:         balzac
+  disqus:         robo-club
   location:       "Bombay, India"
   # Plug in your disqus shortname!
 
@@ -30,9 +30,10 @@ opengraph:
 links:
   - title: About
     url: /about
-  - title: Github
-    url: https://github.com/robo-club-iitb
-    external: true
+  - title: Team
+    url: /team
+  - title: Events
+    url: /events
  
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
