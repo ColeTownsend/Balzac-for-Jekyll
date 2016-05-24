@@ -283,16 +283,12 @@ header.site-header nav {
         max-height: 800px;
         position: absolute;
         z-index: 2;
-        background: rgb(0,0,0);
+        background: rgba(0,0,0,.55);
     }
     .overlay-lighter {
-        background: rgb(0,0,0);
+        background: rgba(0,0,0,.1);
     }
     
-    .content1 {
-        background-color: $white;
-    }
-
     .featured-image {
         vertical-align: middle;
         min-height: 360px;
@@ -305,9 +301,9 @@ header.site-header nav {
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
-        //position: fixed;
+        position: relative;
         top: 0;
-        //z-index: -1;
+        z-index: -1;
         img {
             max-height: 800px;
         }
@@ -315,15 +311,13 @@ header.site-header nav {
     
     // Header Stuff
     header {
-
         margin: (2*$lh) 0 $lh 0;
         hgroup {
-            background-color: $white;
             color: $black;
             position: relative;
             text-align: center;
             width: 100%;
-            margin-top: 400px;
+            margin-top: 0;
             .date {
                 font-family: $sans;
                 font-size: $fs5;
