@@ -7,4 +7,4 @@ image:
   feature: robo_rises.jpg
 ---
 
- ![Club Logo]({{ site.url }}/images/avatar.jpg)
+ ![Club Logo]({{ site.url }}/images/avatar.png)
