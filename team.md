@@ -1,27 +1,33 @@
 ---
 layout: post
-permalink: /team/index.html
-title: Team 2016-2017
-description: Here is the managing team for the year 2016-2017
+permalink: /contact/index.html
+title: Contact Us
+description: Here are the options for contacting us!
 tags: [about, Robotics, Club, IIT, Bombay, managers, convenors]
 image:
   feature: robo_rises.jpg
 ---
 
+* Reach us on [FaceBook]( https://www.facebook.com/roboticsclubpage )
+
+* Reach us on [Google Groups]( https://groups.google.com/forum/#!forum/robotics-iitb )
+
+* Reach us on [Gitter]( https://gitter.im/robo-club-iitb/Robotics-Club-IIT-B ) 
+
 - - - -
 
 ## Managers
 
-* Soham Shanbhag
-* Sravan Patchala
+* [Soham Shanbhag]( https://www.facebook.com/soham.shanbhag ) 
+* [Sravan Patchala]( https://www.facebook.com/sravan.patchala )
 
 - - - -
 
 ## Convenors
 
-* Aditya Kadmawala
-* Anshik Gupta
-* Ritik Madan
-* Shobhna Misra 
+* [Aditya Kadmawala]( https://www.facebook.com/aditya.kadmawala )
+* [Anshik Gupta]( https://www.facebook.com/anshik.gupta.3 )
+* [Ritik Madan]( https://www.facebook.com/ritik.madan )
+* [Shobhna Misra]( https://www.facebook.com/shobhna.misra.5 )
 
 ----
