@@ -149,6 +149,7 @@ input {
     min-height: 100%;
     height: auto;
     margin: 0 auto -$footerHeight;
+
 }
 
 .wrap {
@@ -173,7 +174,7 @@ input {
 
 header.site-header {
   padding: 20px 0;
-  position: absolute;
+  position: fixed;
   width: 100%;
   z-index: 5000;
   
@@ -283,16 +284,15 @@ header.site-header nav {
         max-height: 800px;
         position: absolute;
         z-index: 2;
-        background: rgb(0,0,0);
+        background: rgba(0,0,0,.55);
+        color: 000000
     }
     .overlay-lighter {
-        background: rgb(0,0,0);
+        background: rgba(0,0,0,.1);
+        position:fixed;
+
     }
     
-    .content1 {
-        background-color: $white;
-    }
-
     .featured-image {
         vertical-align: middle;
         min-height: 360px;
@@ -305,7 +305,7 @@ header.site-header nav {
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
-        position: fixed;
+        position: relative;
         top: 0;
         z-index: -1;
         img {
@@ -315,15 +315,13 @@ header.site-header nav {
     
     // Header Stuff
     header {
-
         margin: (2*$lh) 0 $lh 0;
         hgroup {
-            background-color: $white;
             color: $black;
             position: relative;
             text-align: center;
             width: 100%;
-            margin-top: 400px;
+            margin-top: 0;
             .date {
                 font-family: $sans;
                 font-size: $fs5;

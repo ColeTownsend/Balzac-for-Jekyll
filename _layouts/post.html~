@@ -11,7 +11,7 @@
   {% endif %}
 {% else %}
   <div class="overlay"></div>
-  <div class="featured-image" style="background-image: url({{ site.url }}/images/robo_rises.jpg)"></div>
+  <div class="featured-image" style="background-image: url({{ site.url }}/images/typewriter.jpg)"></div>
 {% endif %}
 
 
