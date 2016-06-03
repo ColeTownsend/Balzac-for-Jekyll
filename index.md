@@ -8,4 +8,4 @@ image:
 ---
 
 ### <center> Assembled to Automate </center> 
- ![Club Logo]({{ site.url }}/images/club_logo.jpg)
+ ![Club Logo]({{ site.url }}/images/club_logo.png)
