@@ -7,5 +7,5 @@ image:
   feature: robo_rises.jpg
 ---
 
-### <center> We got nuts and bolts! </center> 
+### <center> We go nuts and bolts! </center> 
  ![Club Logo]({{ site.url }}/images/club_logo.png)
