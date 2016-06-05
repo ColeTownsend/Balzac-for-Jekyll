@@ -12,6 +12,7 @@ body {
   overflow-x: hidden;
 }
 
+
 h1,h2,h3,h4,h5 {
     font-family: $serif;
 }
@@ -62,11 +63,21 @@ blockquote, blockquote p {
 
 /*   Code Formatting    */
 
+pre{
+    padding-left: 5%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left:10px;
+    margin-right:10px;
+}
+
 code {
     color: $accent;
     font-family: "Monaco", "Courier New", "Courier";
-    font-size: .75em;
+    font-size: 0.9em;
     font-weight: bold;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 .highlight {
@@ -77,9 +88,11 @@ code {
     overflow-x: scroll;
 
     code {
+        margin-left:auto;
+        margin-right:auto;
         color: $white;
         font-family: "Monaco", "Courier New", "Courier";
-        font-size: .9em;
+        font-size: 0.9em;
         .lineno {
             margin-right: $lh/2;
             color: $grey-light;
@@ -142,6 +155,16 @@ input {
 .pad-top {
     padding-top: $lh*2;
 }
+
+/* LaTeX formatting */
+.equation{
+  padding-bottom:  0.5rem;
+  padding-top:     0.5rem;
+  text-align:      center;
+  font-size:       2em;
+}
+
+
 
 /************ Layout *************/
 
