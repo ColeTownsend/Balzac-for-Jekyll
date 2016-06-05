@@ -8,7 +8,7 @@ image:
   feature: robo_rises.jpg
 ---
 
-* Reach us on [FaceBook]( https://www.facebook.com/roboticsclubpage )
+* Reach us on [Facebook]( https://www.facebook.com/roboticsclubpage )
 
 * Reach us on [Google Groups]( https://groups.google.com/forum/#!forum/robotics-iitb )
 
