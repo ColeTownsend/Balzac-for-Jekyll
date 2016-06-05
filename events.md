@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: events_main
 permalink: /events/index.html
 title: Events
 description: There are some things you simply cannot miss
@@ -8,20 +8,3 @@ image:
   feature: robo_rises.jpg
 ---
 
-- - - -
-
-### XLR8
-
-- - - -
-
-### Get Mechanised
-
-- - - -
-
-### Informal Hangouts
-
-- - - -
-
-### Institute Technical Summer Projects
-
-----

@@ -436,8 +436,249 @@ header.site-header nav {
             vertical-align: middle;
         }
     }
+    // Tutorial Listing
+    .tutorial-list {
+        list-style-type: none;
+        list-style: none;
+        @include column(7);
+        @include push(2);
+        display: block;
+        float: none;
+        
+        lh h2 {
+            margin-bottom: $lh*1.5;
+        }
+        
+        li {
+            display: block;
+            float: none;
+            font-size: $fs3;
+            margin-bottom: $lh*2;
+            position: relative;
+            
+            a {
+                position: relative;
+                &:hover {
+                    @include transit;
+                }
+            }
+            
+            a:hover:before {
+                content:'...';
+                color: $grey-light;
+                font-family: $sans;
+                position: absolute;
+                margin-left: -70px;
+                font-size: 40px;
+                left: 0;
+                top: -20px;
+                text-align: center;
+                @include transit;
+            }
+            
+            a:before {
+                content:'\201c';
+                color: $grey-light;
+                position: absolute;
+                margin-left: -70px;
+                font-size: 60px;
+                z-index: 10;
+                top: -6px;
+                left: 0;
+                text-align: center;
+                @include transit;
+
+            }
+            
+            h1 {
+                font-size: $fs3;
+                font-style: italic;
+            }
+        }
+        
+        .summary {
+            font-size: 18px;
+            line-height: 1.45em;
+        }
+    }
+    // Event Listing
+    .event-list {
+        list-style-type: none;
+        list-style: none;
+        @include column(7);
+        @include push(2);
+        display: block;
+        float: none;
+        
+        lh h2 {
+            margin-bottom: $lh*1.5;
+        }
+        
+        li {
+            display: block;
+            float: none;
+            font-size: $fs3;
+            margin-bottom: $lh*2;
+            position: relative;
+            
+            a {
+                position: relative;
+                &:hover {
+                    @include transit;
+                }
+            }
+            
+            a:hover:before {
+                content:'...';
+                color: $grey-light;
+                font-family: $sans;
+                position: absolute;
+                margin-left: -70px;
+                font-size: 40px;
+                left: 0;
+                top: -20px;
+                text-align: center;
+                @include transit;
+            }
+            
+            a:before {
+                content:'\201c';
+                color: $grey-light;
+                position: absolute;
+                margin-left: -70px;
+                font-size: 60px;
+                z-index: 10;
+                top: -6px;
+                left: 0;
+                text-align: center;
+                @include transit;
+
+            }
+            
+            h1 {
+                font-size: $fs3;
+                font-style: italic;
+            }
+        }
+        
+        .summary {
+            font-size: 18px;
+            line-height: 1.45em;
+        }
+    }
 }
- 
+ .tutorial {
+    
+    min-height: 500px;
+    
+    .deets {
+        position: relative;
+        top: 45px;
+        z-index: 5;
+        .date {
+            font-size: $fs5;
+            position: relative;
+            top: 10px;
+            left: 6px;
+            color: $grey-medium;
+            margin-bottom: $lh/2;
+        }
+    }
+    
+    h1 {
+        font-style: italic;
+    }
+    
+    h1, h2, h3, h4, h5 {
+        padding-top: ($lh * 1/2);
+        margin-bottom: ($lh * 1/2);
+        line-height: 1.25em
+
+    }
+    
+    figure {
+        margin: $lh 0;
+        
+        img {
+            margin-bottom: $lh/2;
+        }
+        
+        figcaption {
+            font-size: $fs5;
+            font-family: $sans;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: lighten($black, 50%);
+            text-align: center;
+        }
+    }
+    
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: $lh auto;
+        @include br(4px);
+    }
+    
+    ul {
+        display: block;
+        margin-bottom: $lh;
+        list-style: disc;
+        list-style-type: disc;
+        lh h1, lh h2, lh h3, lh h4, lh h5 {
+            @include underline(2px, solid, $grey-light);
+        }
+        li {
+            list-style: disc;
+            list-style-type: disc;
+            margin-left: $lh*2;
+            padding-left: $lh/3;
+        &:last-child {
+            margin-bottom: 0;
+            }
+        }
+    }
+
+    ol {
+        display: block;
+        margin-bottom: $lh;
+        lh h1, lh h2, lh h3, lh h4, lh h5 {
+            @include underline(2px, solid, $grey-light);
+        }
+        li {
+            margin-left: $lh*2;
+            padding-left: $lh/3;
+            margin-bottom: $lh/3;
+            line-height: $lh;
+            font-size: $fsp;
+        &:last-child {
+            margin-bottom: 0;
+            }
+        } 
+    }  
+    
+    .share {
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        width: 76px;
+        font-size: $fs5;
+        font-family: $sans;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1px;
+        padding: 4px 6px 4px 6px;
+        color: $grey-light;
+        border: 2px solid transparentize($grey-light,.3);
+        @include br(4px);
+        &:hover {
+            color: $link;
+            border-color: transparentize($link,.3);
+            @include transit(all,.2s,ease)
+        }
+    }
+}
 // Post Formatting
 
 .post {

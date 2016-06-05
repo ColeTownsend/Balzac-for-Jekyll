@@ -1,0 +1,32 @@
+{% include head.html %}
+
+    <div id='bump'>
+        <section class="article archive">
+        {% if page.image.feature %}
+  		<div class="overlay"></div>
+	  	{% if page.image.feature contains 'https://' | escape or page.image.feature contains 'http://' | escape %}
+  		<div class="featured-image" style="background-image: url({{ page.image.feature }})"></div>
+  		{% else %}
+  		<div class="featured-image" style="background-image: url({{ site.url }}/images/{{ page.image.feature }})"></div>
+  		{% endif %}
+		{% else %}
+  		<div class="overlay"></div>
+  		<div class="featured-image" style="background-image: url({{ site.url }}/images/robo_rises.jpg)"></div>
+		{% endif %}
+          <article class="archive-wrap">
+              <ol class="event-list">
+                 <lh><h2><span class="bb">{{ page.title }}</span></h2></lh>
+                  {% for event in site.events %}
+                  <li>
+                    <div class="deets" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+                        <h1><a href="{{ site.url }}{{ event.url }}">{{ event.title }}</a></h1>
+                        <p class="">{% if event.description %}{{ event.description  | strip_html | strip_newlines | truncate: 120 }}{% else %}{{ event.content | strip_html | strip_newlines | truncate: 120 }}{% endif %}</p>
+                    </div>
+                  </li>
+                  {% endfor %}
+              </ol>
+          </article>
+        </section>
+    </div>
+
+{% include footer.html %}

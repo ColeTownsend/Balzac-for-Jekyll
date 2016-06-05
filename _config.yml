@@ -63,6 +63,14 @@ kramdown:
 sass:
     style: :compressed
 
+collections:
+  tutorials:
+    permalink: /tutorials/:path/
+    output: true
+  events:
+    permalink: /events/:path/
+    output: true
+    
 # https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink:   /:categories/:title
 
