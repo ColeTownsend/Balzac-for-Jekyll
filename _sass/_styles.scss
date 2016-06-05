@@ -352,7 +352,9 @@ header.site-header nav {
     @include column(10);
     max-width: 800px;
     display: block;
+    font-style: italic;
     margin: 0 auto;
+    text-align: center;
     float: none;
     padding-top: 140px;
     
