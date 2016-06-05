@@ -2,6 +2,7 @@
 layout: post
 comments: true
 assets_dir: /images/dl
+description: 
 title: Deep Learning
 author: Gurbir Singh, Arkya Chatterjee
 category: blog
@@ -61,9 +62,3 @@ Take, for example, the act of serving a tennis ball. As long as the ball is in t
 Google has been extremely proactive in investing in DL research. They are known to be exploring methods of integrating deep learning into their recently developed self-driving cars. It is believed that the use of such techniques are going to improve image recognition substantially. Another research group (at UC, Berkeley) has reportedly developed a [robot](https://blogs.nvidia.com/blog/2016/01/15/deep-learning-robot-walk/) that can learn to walk on its own, just like a human child. This robot, aptly named Darwin, is hopefully just the beginning of the era of ultra-smart robotics.  
 
 The days ahead sure promise to be exciting for us robotics enthusiasts!  
-
-Authors:  
-
-* [Gurbir Singh](https://www.facebook.com/gurbir.singh10)  
-* [Arkya Chatterjee](https://www.facebook.com/ArkyaChat)
-
