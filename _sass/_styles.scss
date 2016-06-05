@@ -285,13 +285,14 @@ header.site-header nav {
         position: absolute;
         z-index: 2;
         background: rgba(0,0,0,.55);
+
     }
     .overlay-lighter {
         background: rgba(0,0,0,.1);
         position:fixed;
 
     }
-    
+
     .featured-image {
         vertical-align: middle;
         min-height: 360px;
@@ -794,7 +795,7 @@ header.site-header nav {
     }
 }
 
-/* Footer Stuff */
+Footer Stuff 
 .push {
     height: $footerHeight/4 !important;
 }
