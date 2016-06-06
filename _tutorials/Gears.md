@@ -9,7 +9,7 @@ image:
   feature: robo_rises.jpg
 ---
 
-## Introduction
+### Introduction
 
 A gear is defined as “a toothed wheel that works with others to alter the relation between the speed of a driving mechanism (such as the engine of a vehicle) and the speed of the driven parts (the wheels).”
 
