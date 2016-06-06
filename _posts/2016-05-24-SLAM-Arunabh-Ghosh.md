@@ -1,5 +1,5 @@
 ---
-layout: post-no-feature
+layout: post
 title: "SLAM"
 description: "Basics of Simultaneous Localisation and Mapping"
 category: blog

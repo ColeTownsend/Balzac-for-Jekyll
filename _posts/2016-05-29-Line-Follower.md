@@ -7,6 +7,7 @@ title: Line Follower Bot
 author: Tanya Choudhary, Thariq Shanavas
 category: blog
 tags: [Sensors, PID, bot, IR]
+LaTeX : true
 ---
 
 Line follower is an autonomous robot that follows a line, either a black line on white surface or vise-versa. Robot must be able to detect particular line and keep following it.

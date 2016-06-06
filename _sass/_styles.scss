@@ -150,13 +150,16 @@ input {
 
 .bb {
     border-bottom: 2px solid $link;
+    font-size: 1.25em;
 }
 
 .pad-top {
     padding-top: $lh*2;
 }
 
+
 /* LaTeX formatting */
+
 .equation{
   padding-bottom:  0.5rem;
   padding-top:     0.5rem;
@@ -241,10 +244,10 @@ header.site-header a.menu {
   display: none;
 }
 
-header.site-header hgroup h1, header.site-header nav ul {
+header.site-header .hgroup h1, header.site-header nav ul {
   font-family: $sans;
 }
-header.site-header hgroup {
+header.site-header .hgroup {
   float: left;
   padding-left: 5vw;
   h1 {
@@ -339,7 +342,8 @@ header.site-header nav {
     // Header Stuff
     header {
         margin: (2*$lh) 0 $lh 0;
-        hgroup {
+        .hgroup {
+            overflow: hidden;
             color: $black;
             position: relative;
             text-align: center;
@@ -375,7 +379,7 @@ header.site-header nav {
     @include column(10);
     max-width: 800px;
     display: block;
-    font-style: italic;
+    /*font-style: italic;*/
     margin: 0 auto;
     text-align: center;
     float: none;
@@ -408,11 +412,9 @@ header.site-header nav {
                 }
             }
             
-            
-            
             h1 {
                 font-size: $fs3;
-                font-style: italic;
+                /*font-style: italic;*/
             }
         }
         
@@ -649,8 +651,8 @@ header.site-header nav {
         }
     }
     
-    h1 {
-        font-style: italic;
+    h1 {/*
+        font-style: italic;*/
     }
     
     h1, h2, h3, h4, h5 {
@@ -931,12 +933,13 @@ footer {
     padding-top: 0;
   }
   
-  header.site-header hgroup h1 {
+  header.site-header .hgroup h1 {
     margin-bottom: 0;
     font-size: $fsp;
   }
   
-  header.site-header hgroup {
+  header.site-header .hgroup {
+    width: 100%;
     position: absolute;
     left: 7%;
     float: none;

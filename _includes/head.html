@@ -8,8 +8,9 @@
 {% include graphs.html %}
 
 <link href="{{ site.url }}/feed.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
+{% if page.LaTeX %}
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
+{% endif %}
 <!-- http://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
@@ -47,9 +48,10 @@
   <body class="">
     <header class="site-header">
       <div class="wrap">
-        <hgroup>
+        <div class="hgroup">
+          <h1><img src="{{ site.url }}/images/header_image.png" style="width:40px; margin-left: 10px; margin-right: 10px;" align="left"></h1>
           <h1><a href="/">{{ site.title }}</a></h1>
-        </hgroup>
+        </div>
         <a href="#nav" class="menu"><span class='icons'>☰</span></a>
         <nav role="navigation">
           <ul>

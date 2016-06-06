@@ -1,17 +1,13 @@
 ---
 layout: post
-title: "Robotics Club IITB"
+title: "Robotics Club IIT Bombay"
 description: 
 tags: [Jekyll, theme, responsive, blog, template]
 image:
   feature: robo_rises.jpg
 ---
-### <center> We go nuts and bolts! </center>
+### <center>We go nuts and bolts!</center>
 
-----
-
- ![Club Logo]({{ site.url }}/images/club_logo.png)
- 
 - - - -
 
 ### <center> About Us </center>
