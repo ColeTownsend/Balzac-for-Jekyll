@@ -8,7 +8,13 @@ category: articles
 tags: []
 ---
 
-## An experience shared with us :-
+## About the event
+
+Make your XLR8 bot obedient enough to follow the path drawn for it! 
+On a serious note, the Line Follower Competition is the best platform for freshmen to start off with AVR! It also uses the PID Algorithm. Big words, I know, but we'll be helping you out with the concepts before you get down to making your bot! So, chill, and take a look as to what the competition has in store for you!
+
+
+## A Line Follower experience shared with us :-
 __Line Follower : Possible in first year?__  
 
 By - Rishabh Shah
