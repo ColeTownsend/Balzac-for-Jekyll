@@ -20,8 +20,10 @@
                   <li>
                     <div class="deets" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
                         <h1><a href="{{ site.url }}{{ tutorial.url }}">{{ tutorial.title }}</a></h1>
+                        <p class="">{% if tutorial.author %}{{ tutorial.author  | strip_html | strip_newlines | truncate: 120 }}{% else %}{% endif %}</p>
                         <p class="">{% if tutorial.description %}{{ tutorial.description  | strip_html | strip_newlines | truncate: 120 }}{% else %}{{ tutorial.content | strip_html | strip_newlines | truncate: 120 }}{% endif %}</p>
                     </div>
+                    <hr>
                   </li>
                   {% endfor %}
               </ol>
