@@ -750,11 +750,12 @@ header.site-header nav {
 Footer Stuff 
 .push {
     height: $footerHeight/4 !important;
+    color : #0000FF;
 }
 
 footer {
     width: 100%;
-    background: $black;
+    background: #496A90;
     height: $footerHeight;
     font-size: $fsp;
     color: $white;
