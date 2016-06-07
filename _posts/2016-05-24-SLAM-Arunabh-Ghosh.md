@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "SLAM"
-description: "Basics of Simultaneous Localisation and Mapping"
+author: Arunabh Ghosh
+description: Basics of Simultaneous Localisation and Mapping
 category: blog
 comments: true
 tags: [SLAM, Robotics, localisation, mapping]

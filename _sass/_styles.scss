@@ -179,7 +179,7 @@ input {
 }
 
 .wrap {
-    max-width: 960px;
+    max-width:100%;
     @include column(10);
     float: none;
     margin: 0 auto;
@@ -250,6 +250,7 @@ header.site-header .hgroup h1, header.site-header nav ul {
 header.site-header .hgroup {
   float: left;
   padding-left: 5vw;
+  width: 45%;
   h1 {
       font-weight: 700;
       font-size: 18px;
