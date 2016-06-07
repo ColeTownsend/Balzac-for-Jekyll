@@ -1,5 +1,5 @@
 ---
-layout: post-no-feature
+layout: post
 title: Gears
 description: Turn em round and round
 category: tutorial

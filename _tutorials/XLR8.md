@@ -1,5 +1,5 @@
 ---
-layout: post-no-feature
+layout: post
 title: XLR8
 comments: True
 description: <center>Ace the race</center>
