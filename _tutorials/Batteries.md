@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Batteries
-description: Charge
+description: Power it up!
 category: tutorial
 comments: true
 tags: [Charge, Robotics, Battery]
