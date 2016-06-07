@@ -39,7 +39,7 @@ When you put two batteries together in parallel that do not have equal charges, 
 ![Drawing B]({{ site.url }}/images/Batteries/battery2.jpg)
 
 
-* **Fuel Cell batteries** are finally here for robot builders! Although they are still probably too expensive for most hobbyists (~$400). The technology is rapidly improving, so only a few more years until they become cheaply available. Fuel cells are heavily being pursued in research by companies who want to out do the lithium batteries and make billions of dollars. Basically a fuel cell is a tiny engine the size of a battery, and refillable with methanol or ethanol. They are expected to have a two to three times improvement in energy density over today�s Lithium-ion batteries. However it has been estimated that Lithium Ion batteries themselves will probably be developed to have twice the energy capacity as they have today.
+* **Fuel Cell batteries** are finally here for robot builders! Although they are still probably too expensive for most hobbyists (~$400). The technology is rapidly improving, so only a few more years until they become cheaply available. Fuel cells are heavily being pursued in research by companies who want to out do the lithium batteries and make billions of dollars. Basically a fuel cell is a tiny engine the size of a battery, and refillable with methanol or ethanol. They are expected to have a two to three times improvement in energy density over today's Lithium-ion batteries. However it has been estimated that Lithium Ion batteries themselves will probably be developed to have twice the energy capacity as they have today.
 
 
 ![Drawing B]({{ site.url }}/images/Batteries/battery3.jpg)
