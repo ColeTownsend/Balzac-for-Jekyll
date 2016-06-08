@@ -20,7 +20,9 @@
                   <li>
                     <div class="deets" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
                         <h1><a href="{{ site.url }}{{ event.url }}">{{ event.title }}</a></h1>
+                        <p class="">{% if event.author %}{| strip_html | strip_newlines | truncate: 120 }}{% else %}{% endif %}</p>
                         <p class="">{% if event.description %}{{ event.description  | strip_html | strip_newlines | truncate: 120 }}{% else %}{{ event.content | strip_html | strip_newlines | truncate: 120 }}{% endif %}</p>
+  
                     </div>
                     <hr>
                   </li>
