@@ -35,25 +35,23 @@ There are also prizes for other aspects of the competition which are be declared
 ## Problem Statement
 Shown below is last year's Problem Statement.
 <center>
-<<<<<<< HEAD:_posts/2016-06-05-xlr8.md
 <iframe  src="https://docs.google.com/document/d/14tQoom9PaKOk1WBhgi2lqF6kOkLIoFLo-tcHaxS7TYk/pub?embedded=true" width="800" height="600"></iframe>
 </center>
 <p> The essence of the Problem Statement would remain intact albeit some tweaks can be introduced </p>
 
 <h2> Mechanical Aspects</h2>
 <center>  
-<iframe src="https://docs.google.com/presentation/d/1MDPm4OmmbW2QOJjqbY4_72j-fr36CNGe6o4N6XjvfBM/embed?start=true&loop=false&delayms=10000" frameborder="0" width="800" height="600" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
 =======
 <iframe src="https://docs.google.com/presentation/d/1MDPm4OmmbW2QOJjqbY4_72j-fr36CNGe6o4N6XjvfBM/embed?start=true&loop=false&delayms=10000" frameborder="0" width="900" height="650" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
->>>>>>> 6bbaa9540c6ff0457583b9a16b73a9faf06ff926:_tutorials/XLR8.md
 </center>
 
 ## Electrical Aspects
 
 ### Circuit
-<<<<<<< HEAD:_posts/2016-06-05-xlr8.md
 The following circuit is supposed to be soldered on a PCB.  
 ![circuit]({{ site.url }}/images/xlr8_circuit.jpg)  
+
 ### Interfacing Bluetooth Module
 [Link to the guide](https://stab-iitb.org/media/2015/club_assets/robo/XLR8_Bluetooth_RF_module_Soldering_guide-1.pdf)  
 
@@ -69,4 +67,3 @@ Your browser does not support the video tag.
 The following circuit is supposed to be soldered on a PCB.
 ![circuit]({{ site.url }}/images/xlr8_circuit.jpg)
 The working will be explained during the respective session. 
->>>>>>> 6bbaa9540c6ff0457583b9a16b73a9faf06ff926:_tutorials/XLR8.md
