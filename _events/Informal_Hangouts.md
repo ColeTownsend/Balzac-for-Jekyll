@@ -13,19 +13,19 @@ These informal events will be conducted on regular intervals and will be of vari
 
 The various kinds of informal hangouts the club aims to conduct are :
 
-##Group Discussions (GD)
+**Group Discussions (GD)**
 
 The topics will vary from quirky topics like " Feasibility of Iron Man's Suit " to extremely broad and complicated one like "Deep Learning/Machine Learning"
 
-##Talks
+**Talks**
 
 Talks by knowledgeable people on topics like "SLAM" and "Robotics in Industries" aim to provide a more sophisticated perspective on these fields. 
 
-##Hands-On Session
+**Hands-On Session**
 
 "Theory shows you the path, Hands-On takes you on it."    
 Interesting Hands-On session (e.g on 3D printing) will ensure you never loose touch.
 
-##Lab Visits
+**Lab Visits**
 
 Aimed to keep you acquainted with the research happening in the areas you love in the very place you live.  
