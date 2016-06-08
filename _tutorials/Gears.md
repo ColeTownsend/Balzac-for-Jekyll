@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Gears
-description: Turn em round and round
+description: Speed 'em up or slow 'em down!
 category: tutorial
 comments: true
 tags: [Gears, Robotics, mechanical]
