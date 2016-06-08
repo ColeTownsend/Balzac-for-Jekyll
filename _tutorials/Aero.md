@@ -36,9 +36,8 @@ Interference drag or induced drag on the other hand is the result of vortices th
 
 Other sources of drag include wave drag and ram drag. The first is unimportant for normal race cars as it occurs when the moving object speeds up to the speed of sound. Ram drag on the other hand is the result of slowing down the free airstream, as in an air inlet.
 The amount of drag that a certain object generates in an airflow is quantified in a drag coefficient. This coefficient expresses the ratio of the drag force to the force produced by the dynamic pressure times the area. Therefore, a  of 1 denotes that all air flowing onto the object will be stopped, while a theoretical 0 is a perfectly clean air stream.
-At relatively high speeds, ie. at high Reynolds number (), the aerodynamic drag force can be calculated by this formula:
 
-where  is the force of drag (in Newton),  the density of the air,  the speed of the object relative to the fluid (in m/s),  the reference surface and  the coëfficient of drag. Note the minus sign and the vector  which indicate that the resulting drag force is opposite to the movement of the object.
+![Pic]({{ site.url }}/images/Aero/i.png)
 
 Drag can be understood in a very simple way. We know that vacuum attracts strongly due to the massive pressure difference generated. What happens in a F1 car is somewhat similar. As the air flows at high speed above and below the car a vacuum or a low pressure region is created directly behind the rear of the car. It is this vacuum that pulls the car opposite to its velocity and is what is known as drag. Also the bodywork and wings of the bend the air flowing above the car upwards slightly at various strategically located places in order to gain downforce. This also results in increased drag.
 
