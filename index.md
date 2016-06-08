@@ -17,7 +17,7 @@ The Robotics Club is a community of students who derive pleasure in creating rob
 
 ### <center> Vision Of the Club </center>
 
-Robotics today is a field where a lot is happening. Not many things can be comprehended by a human brain. It was the aim of making robotics an everyday phenomenon. 9 years ago a day saw the onset of Robotics Club IIT Bombay. Over the years it sure has made it presence felt. With a vision of involving as many students as it can, in various activities relating Robot development, we continue to grow. We at Robotics club involve ourselves in activities ranging from lectures to workshops to competitions to even technical night outs. Various competitions are conducted over the course of two semesters followed by summer projects by few enthusiasts. We look forward to developing Robosapiens who are the ‘Future’.
+Robotics today is a field where a lot is happening. Not many things can be comprehended by a human brain. It was the aim of making robotics an everyday phenomenon. 9 years ago, a day saw the onset of Robotics Club IIT Bombay. Over the years it sure has made it presence felt. With a vision of involving as many students as it can, in various activities related to Robot development, we continue to grow. We at Robotics club involve ourselves in activities ranging from lectures to workshops to competitions to even technical night outs. Various competitions are conducted over the course of two semesters followed by summer projects by few enthusiasts. We look forward to developing Robosapiens who are the ‘Future’.
 
 - - - -
 
