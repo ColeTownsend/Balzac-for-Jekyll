@@ -64,6 +64,3 @@ Your browser does not support the video tag.
 </video>
 =======
 
-The following circuit is supposed to be soldered on a PCB.
-![circuit]({{ site.url }}/images/xlr8_circuit.jpg)
-The working will be explained during the respective session. 
