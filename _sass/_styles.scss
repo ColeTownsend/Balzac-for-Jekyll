@@ -771,19 +771,20 @@ header.site-header nav {
     }
 }
 
-Footer Stuff 
+/*Footer Stuff */
 .push {
     height: $footerHeight/4 !important;
-    color : #0000FF;
+    color : $black;
 }
 
 footer {
     width: 100%;
-    background: #496A90;
+    background: $white;
     height: $footerHeight;
     font-size: $fsp;
-    color: $white;
+    color: $black;
     position: relative;
+    bottom: 10px;
         
     // Contain that ish
     section {
@@ -802,13 +803,13 @@ footer {
         bottom: 8px;
         font-family: $sans;
         text-transform: uppercase;
-        color: transparentize($white, .9);
+        color: transparentize($grey-medium, .4);
         a {
-            color: transparentize($white, .7);
+            color: transparentize($grey-dark, .3);
         }
     }
     
-    .list-title {
+    /*.list-title {
         margin-bottom: $lh/2;
         border-bottom: 2px solid $link;
         font-style: normal;
@@ -866,7 +867,7 @@ footer {
                 }
             }
         }
-    }
+    }*/
 }
 
 .disqus {
