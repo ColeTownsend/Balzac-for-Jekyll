@@ -16,9 +16,13 @@ ftp://ftp.iitb.ac.in/IITB/SolidWorks%20Education%20Edition%202014/
 
 While Installing, Select option 'Individual installation'
 
+![Drawing B]({{ site.url }}/images/SW/a.jpg)
+
 When prompted, enter the following details for serial key and server address:
 
 License Key ­ 9710 0109 7897 5887 HFB2 HFBK
+
+![Drawing B]({{ site.url }}/images/SW/b.jpg)
 
 During First installation:
 
@@ -27,6 +31,12 @@ Server Port info ­ 25734@10.185.101.108 or use 25734@WIN-UTNV8H89NIL
 Select the location( Default is C drive) where you want the SW software to be installed
 
 Please note that for Solidworks to work your PC needs to be connected to IITB network.
+
+![Drawing B]({{ site.url }}/images/SW/c.jpg)
+
+![Drawing B]({{ site.url }}/images/SW/d.jpg)
+
+![Drawing B]({{ site.url }}/images/SW/e.jpg)
 
 For any queries, contact us.
 
