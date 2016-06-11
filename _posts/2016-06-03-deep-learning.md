@@ -34,7 +34,7 @@ Let’s take an example, suppose, you want to teach computer to recognise your p
 I’ll present a simplified version of how Facebook does it. There are two main layers of artificial neurons, the input layer and the output layer. The rest of the layers are called hidden layers. It is hidden layers where the magic happens. All the layers are interconnected to one another with a “weight” between their links. Each layer is programmed to perform a specific task. In the example above, the first layer may do the task of identifying corners. The second layer may do the task of finding edges and so on.  
 
 <figure>
-	<img src="{{page.assets_dir}}/DL_blog.png">
+	<img src="{{site.url}}/{{page.assets_dir}}/DL_blog.png">
 	<figcaption>Different layers of an artificial neural network</figcaption>
 </figure>
 
@@ -51,7 +51,7 @@ DL is yet far from perfect but we’re making huge headways into making an AI a 
 As a new research area, deep learning (DL) is taking surprisingly big steps, and not just with the theoretical aspects of it. DL is making huge inroads into applications in fields as diverse as robotics, language translation and gaming, to name a few. Especially, in the field of robotics, deep learning has already started making its impact visible. At the recently held Google I/O, Japan-based SoftBank Robotics handed over Pepper, the humanoid robot, to the researchers at Google in a collaboration aimed at giving rise to the first generation of robots making use of deep learning.  
 
 <figure>
-	<img src="{{page.assets_dir}}/pepper.jpg">
+	<img src="{{site.url}}/{{page.assets_dir}}/pepper.jpg">
 	<figcaption>Pepper at Google I/O 2016</figcaption>
 </figure>
 
