@@ -44,8 +44,9 @@ future:      true
 highlighter: pygments
 markdown:    kramdown
 
-baseurl: /robotics-club
-url: https://stab-iitb.org/robotics-club
+# baseurl: /robotics-club
+# url: https://stab-iitb.org/robotics-club
+
 kramdown:
   auto_ids: true
   footnote_nr: 1
