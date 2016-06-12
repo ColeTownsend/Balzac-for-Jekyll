@@ -43,6 +43,7 @@ timezone:    Asia/Kolkata
 future:      true														
 highlighter: pygments
 markdown:    kramdown
+mathjax: true
 
 # baseurl: /robotics-club
 # url: https://stab-iitb.org/robotics-club
