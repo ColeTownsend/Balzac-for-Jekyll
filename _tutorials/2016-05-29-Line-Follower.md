@@ -37,11 +37,13 @@ Yep! We need to continuously monitor the car’s speed and “press the accelera
 Well, that was a bit vague. If the car was going at more than the set speed, do you release the accelerator completely? Of if it’s going too slow, you shouldn’t slam the accelerator, should you?
 
 So let us define the **Process Variable** as the current speed, the **Set Point** as the value the Process variable is required to maintain, and the **Error** as the difference between Set Point and Process variable.
+{% raw %}
 <div class="equation">
 $$ 
 e = SP - PV
 $$
 </div>
+{% endraw %}
 So the error in this case would be 40 – \<Current speed of the car\>. Clearly, e has to be minimised.
 
 Let’s say we press the accelerator by an amount u(t). Press the accelerator if u is positive, and brakes if u is negative.
