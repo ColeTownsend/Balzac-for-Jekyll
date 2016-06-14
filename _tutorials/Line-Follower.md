@@ -108,8 +108,6 @@ Now, coming to the technicalities of the code- The code can either be written in
 
 [Here's](https://www.facebook.com/electronicshub.org/videos/1100561919966374/?autoplay_reason=all_page_organic_allowed&video_container_type=0&video_creator_product_type=2&app_id=2392950137) an awesome Line Follower bot in action.
 
-Authors- Tanya Choudhary, Thariq Shanavas
-
 ### Line Follower bots in action (LF 2016, IIT Bombay)
 Team: Bot Swag 4.0 - [https://www.facebook.com/profile.php?id=100010041307477&fref=ts](https://www.facebook.com/profile.php?id=100010041307477&fref=ts)
 
