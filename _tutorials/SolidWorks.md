@@ -32,8 +32,6 @@ Select the location( Default is C drive) where you want the SW software to be in
 
 Please note that for Solidworks to work your PC needs to be connected to IITB network.
 
-![Drawing B]({{ site.url }}/images/SW/c.jpg)
-
 ![Drawing B]({{ site.url }}/images/SW/d.jpg)
 
 ![Drawing B]({{ site.url }}/images/SW/e.jpg)
