@@ -1102,4 +1102,99 @@ small {
   float: right;
 }
 
+/******************* Slider Stuff ***********************/
+
+#sliderFrame, #sliderFrame div {
+    box-sizing: content-box;
+}
+#sliderFrame 
+{
+    width:150%;
+    margin:40px auto 40px auto; /*center-aligned*/
+
+}
+
+#slider, #slider .sliderInner {
+    width:150%;height:306px;/* Must be the same size as the slider images */
+    border-radius:3px;
+}
+
+#slider {
+    background-color:white;
+    position:relative;
+    margin:0 auto; /*center-aligned*/
+    transform: translate3d(0,0,0);
+    box-shadow: 0px 1px 5px #999999;
+}
+
+/* the link style (if an image is wrapped by a link) */
+#slider a.imgLink, #slider .video {
+    z-index:2;
+    cursor:pointer;
+    position:absolute;
+    top:0px;left:0px;border:0;padding:0;margin:0;
+    width:100%;height:100%;
+}
+#slider .video {
+    background:transparent url(video.png) no-repeat 50% 50%;
+}
+
+/* Caption styles */
+#slider .mc-caption {
+    position:absolute;
+    width:100%;
+    height:auto;
+    padding:10px 0;/* 10px will increase the height.*/
+    left:0px;
+    bottom:0px;top:auto;
+    overflow:hidden;
+    font: bold 14px/20px Arial;
+    color:#EEE;
+    text-align:center;
+    background:rgba(0,0,0,0.3);
+}
+#slider .mc-caption a {
+    color:#FB0;
+}
+#slider .mc-caption a:hover {
+    color:#DA0;
+}
+
+
+/* ------ built-in navigation bullets wrapper ------*/
+#slider .navBulletsWrapper  {
+    top:320px;
+    text-align:center;
+    background:none;
+    position:relative;
+    z-index:3;
+}
+
+/* each bullet */
+#slider .navBulletsWrapper div 
+{
+    width:11px; height:11px;
+    font-size:0;color:White;/*hide the index number in the bullet element*/
+    background:transparent url(bullet.png) no-repeat 0 0;
+    display:inline-block; *display:inline; zoom:1;
+    overflow:hidden;cursor:pointer;
+    margin:0 6px;/* set distance between each bullet*/
+}
+
+#slider .navBulletsWrapper .active {background-position:0 -11px;}
+
+
+/* --------- Others ------- */
+
+#slider img, #slider>b, #slider a>b {
+    position:absolute; border:none; display:none;
+}
+
+#slider .sliderInner {
+    overflow:hidden;
+    position:absolute; top:0; left:0;
+}
+
+#slider>a, #slider video, #slider audio {display:none;}
+#slider div {-webkit-transform: translate3d(0,0,0);transform: translate3d(0,0,0);}
 

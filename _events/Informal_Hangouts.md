@@ -5,7 +5,18 @@ category: blog
 description: The most unpredictable event having everything you can think of.
 comments: true
 tags: [IIT, Robotics, Bombay, event]
+slider: true
 ---
+
+<div id="sliderFrame">
+    <div id="slider">
+        <img src="{{ site.url }}/images/Informal_Hangouts/IH1.jpg"/>
+        <img src="{{ site.url }}/images/Informal_Hangouts/IH2.jpg" />
+        <img src="{{ site.url }}/images/Informal_Hangouts/IH3.jpg" />
+        <img src="{{ site.url }}/images/Informal_Hangouts/IH4.jpg" />
+        <img src="{{ site.url }}/images/Informal_Hangouts/IH5.jpg" />
+    </div>
+</div>
 
 Starting this year onwards we introduce you to __"Informal Hangouts"__ , an extension of <em>"How Things Work"</em>, aimed at strengthening the community of Robotics Enthusiasts in IIT-Bombay.  
 These informal events will be conducted on regular intervals and will be of various types.  

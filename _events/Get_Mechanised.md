@@ -6,14 +6,27 @@ assets_dir: /images/dl
 title: Get Mechanised
 category: articles
 tags: []
+slider: true
 ---
+
+<div id="sliderFrame">
+    <div id="slider">
+        <img src="{{ site.url }}/images/Get_Mechanised/GM1.jpg"/>
+        <img src="{{ site.url }}/images/Get_Mechanised/GM2.jpg" />
+        <img src="{{ site.url }}/images/Get_Mechanised/GM3.jpg" />
+        <img src="{{ site.url }}/images/Get_Mechanised/GM4.jpg" />
+        <img src="{{ site.url }}/images/Get_Mechanised/GM5.jpg" />
+    </div>
+</div>
+
+
 
 Excited about gears and stuff? These sessions are just for you!
 As the name suggests the main objective of the event is to give a basic idea about different mechanical aspects that must be looked upon while building a robot. The session starts building from the most fundamental and basic level for better understanding. You need no prerequisite to garner the maximum advantage of the sessions, all that matters is your will to learn new and amazing stuff.
 
-## A Get Mechanised Experience:-
+## A Get Mechanised Experience
 
-By- Anmol Gupta
+By - Anmol Gupta
 
 It was truly an amazing session - practically the first one through which we realised that the high school mechanics that we learnt in class 11th for our JEE (:P) actually had some applications in real life and in an area which we all have had a lot of fascination since childhood - Robotics!
 We were taught what all aspects to keep in mind while designing our (ro)bot like its dimensions, mass, the purpose, etc.

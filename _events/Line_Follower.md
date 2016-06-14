@@ -6,7 +6,18 @@ assets_dir: /images/dl
 title: Line Follower
 category: articles
 tags: []
+sider: true
 ---
+
+<div id="sliderFrame">
+    <div id="slider">
+        <img src="{{ site.url }}/images/Line_Follower/LF1.jpg"/>
+        <img src="{{ site.url }}/images/Line_Follower/LF2.jpg" />
+        <img src="{{ site.url }}/images/Line_Follower/LF3.jpg" />
+        <img src="{{ site.url }}/images/Line_Follower/LF4.jpg" />
+        <img src="{{ site.url }}/images/Line_Follower/LF5.jpg" />
+    </div>
+</div>
 
 ## About the event
 

@@ -6,7 +6,18 @@ assets_dir: /images/dl
 title: XLR8
 category: articles
 tags: []
+slider: true
 ---
+
+<div id="sliderFrame">
+    <div id="slider">
+        <img src="{{ site.url }}/images/XLR8/XLR81.jpg"/>
+        <img src="{{ site.url }}/images/XLR8/XLR82.jpg" />
+        <img src="{{ site.url }}/images/XLR8/XLR83.jpg" />
+        <img src="{{ site.url }}/images/XLR8/XLR84.jpg" />
+        <img src="{{ site.url }}/images/XLR8/XLR85.jpg" />
+    </div>
+</div>
 
 ## An XLR8 Experience
 By- Meet Tavariya
