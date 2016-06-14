@@ -14,8 +14,6 @@ slider: true
         <img src="{{ site.url }}/images/Get_Mechanised/GM1.jpg"/>
         <img src="{{ site.url }}/images/Get_Mechanised/GM2.jpg" />
         <img src="{{ site.url }}/images/Get_Mechanised/GM3.jpg" />
-        <img src="{{ site.url }}/images/Get_Mechanised/GM4.jpg" />
-        <img src="{{ site.url }}/images/Get_Mechanised/GM5.jpg" />
     </div>
 </div>
 
