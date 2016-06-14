@@ -6,16 +6,16 @@ assets_dir: /images/dl
 title: Get Mechanised
 category: articles
 tags: []
-slider: true
+slider: false
 ---
-
+<!-- 
 <div id="sliderFrame">
     <div id="slider">
         <img src="{{ site.url }}/images/Get_Mechanised/GM1.jpg"/>
         <img src="{{ site.url }}/images/Get_Mechanised/GM2.jpg" />
         <img src="{{ site.url }}/images/Get_Mechanised/GM3.jpg" />
     </div>
-</div>
+</div> -->
 
 
 

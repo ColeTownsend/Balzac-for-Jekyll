@@ -45,8 +45,8 @@ highlighter: pygments
 markdown:    kramdown
 mathjax: true
 
-baseurl: /robotics-club 
-url: https://stab-iitb.org/robotics-club
+#baseurl: /robotics-club 
+#url: https://stab-iitb.org/robotics-club
 
 kramdown:
   auto_ids: true
