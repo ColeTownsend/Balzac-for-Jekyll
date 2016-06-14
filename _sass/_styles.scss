@@ -432,6 +432,11 @@ header.site-header nav {
             /*margin-bottom: 3px;*/
         }
 
+        .post_desc{
+            position: relative;
+            top: -20px;
+        }
+
         .author_blog {
             position: relative;
             text-transform: uppercase; 
@@ -545,17 +550,17 @@ header.site-header nav {
         .date {
             font-size: $fs5;
             position: relative;
-            top: 10px;
-            left: 6px;
+            top: 10px;/*
+            left: 6px;*/
             color: $grey-medium;
             /*margin-bottom: $lh/2;*/
         }
-        .author_blog {
+        /*.author_blog {
             text-transform: uppercase; 
             color: $grey-dark; 
             font-size: 12pt;
             top: -30px;
-        }
+        }*/
     }
     
     h1 {
@@ -564,8 +569,8 @@ header.site-header nav {
     
     h1, h2, h3, h4, h5 {
         padding-top: ($lh * 1/2);
-        margin-bottom: ($lh * 1/2);
-        line-height: 1.25em
+        /*margin-bottom: ($lh * 1/2);
+        */line-height: 1.25em
 
     }
     
@@ -670,12 +675,12 @@ header.site-header nav {
             color: $grey-medium;
             /*margin-bottom: $lh/2;*/
         }
-        .author_blog {
+        /*.author_blog {
             text-transform: uppercase; 
             color: $grey-dark; 
             font-size: 12pt;
             top: -30px;
-        }
+        }*/
     }
     
     h1 {/*
