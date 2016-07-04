@@ -23,8 +23,14 @@
 {% include graphs.html %}
 
 <link href="{{ site.url }}/feed.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
+
 {% if page.LaTeX %}
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+{% endif %}
+
+
+{% if page.comments %}
+ <script id="dsq-count-scr" src="//roboticsclubiitb.disqus.com/count.js" async></script>
 {% endif %}
 
 {% if page.slider %}
