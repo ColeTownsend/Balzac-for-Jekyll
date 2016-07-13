@@ -13,7 +13,7 @@ owner:
   github:         robo-club-iitb
   instagram:      
   dribbble:       
-  disqus:         robo-club
+  disqus:         roboclubiitb
   location:       "Bombay, India"
   # Plug in your disqus shortname!
 
@@ -28,8 +28,6 @@ opengraph:
 # Links to include in top navigation
 # For external links add external: true
 links:
-  - title: About
-    url: /about
   - title: Events
     url: /events
   - title: Blog
@@ -38,8 +36,6 @@ links:
     url: /tutorials    
   - title: Contact us
     url: /contact
-  - title: About2
-    url: /about2
     
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -47,6 +43,10 @@ timezone:    Asia/Kolkata
 future:      true														
 highlighter: pygments
 markdown:    kramdown
+mathjax: true
+
+baseurl: /robotics-club 
+url: https://stab-iitb.org/robotics-club
 
 kramdown:
   auto_ids: true

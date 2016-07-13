@@ -19,7 +19,7 @@ image:
 ## Managers
 
 * [Soham Shanbhag]( https://www.facebook.com/soham.shanbhag ) 
-* [Sravan Patchala]( https://www.facebook.com/sravan.patchala ) ![Sravan]({{ site.url }}/images/sravan.jpg )
+* [Sravan Patchala]( https://www.facebook.com/sravan.patchala )
 	 
 - - - -
 

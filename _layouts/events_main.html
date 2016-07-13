@@ -1,65 +1,36 @@
 {% include head.html %}
 
-<section class="article">
-
-{% if page.image.feature %}
-  <div class="overlay"></div>
-  {% if page.image.feature contains 'https://' | escape or page.image.feature contains 'http://' | escape %}
-  <div class="featured-image" style="background-image: url({{ page.image.feature }})"></div>
-  {% else %}
-  <div class="featured-image" style="background-image: url({{ site.url }}/images/{{ page.image.feature }})"></div>
-  {% endif %}
-{% else %}
-  <div class="overlay"></div>
-  <div class="featured-image" style="background-image: url({{ site.url }}/images/robo_rises.jpg)"></div>
-{% endif %}
-
-
-      <article class="wrap post">
-        <header class="post-header">
-          <hgroup>
-            <h1>{{page.title}}</h1>
-            <p class="date">{{page.date | date: "%b %d, %Y" }}</p>
-            <p class="intro">{% if page.description %}{{ page.description }}{% else %}{{ page.tagline }}{% endif %}</p>
-          </hgroup>
-        </header>
-		<ol class="event-list">
+    <div id='bump'>
+        <section class="article">
+        {% if page.image.feature %}
+  		<div class="overlay"></div>
+	  	{% if page.image.feature contains 'https://' | escape or page.image.feature contains 'http://' | escape %}
+  		<div class="featured-image" style="background-image: url({{ page.image.feature }});"></div>
+  		{% else %}
+  		<div class="featured-image" style="background-image: url({{ site.url }}/images/{{ page.image.feature }})"></div>
+  		{% endif %}
+		{% else %}
+  		<div class="overlay"></div>
+  		<div class="featured-image" style="background-image: url({{ site.url }}/images/robo_rises.jpg)"></div>
+		{% endif %}
+          <article class="archive-wrap">
+              <ol class="event-list">
+                 <lh><h2><span class="bb">{{ page.title }}</span></h2></lh>
                   {% for event in site.events %}
                   <li>
                     <div class="deets" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
                         <h1><a href="{{ site.url }}{{ event.url }}">{{ event.title }}</a></h1>
+                        <p class="">{% if event.author %}{| strip_html | strip_newlines | truncate: 120 }}{% else %}{% endif %}</p>
                         <p class="">{% if event.description %}{{ event.description  | strip_html | strip_newlines | truncate: 120 }}{% else %}{{ event.content | strip_html | strip_newlines | truncate: 120 }}{% endif %}</p>
+  
                     </div>
+                    <hr>
                   </li>
                   {% endfor %}
               </ol>
-        <div class="content1">
-        {{ content }}
-        </div>
-
-      {% if page.comments %}
-      <aside class="disqus">
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-            var disqus_shortname = '{{ site.owner.disqus }}'; // required: replace example with your forum shortname
-
-            /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-      </aside>
-      {% endif %}
-
-
-      </article>
-
-    </section>
+          </article>
+        </section>
+    </div>
 
 
 {% include footer.html %}

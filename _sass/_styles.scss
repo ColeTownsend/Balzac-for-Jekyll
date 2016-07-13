@@ -12,6 +12,7 @@ body {
   overflow-x: hidden;
 }
 
+
 h1,h2,h3,h4,h5 {
     font-family: $serif;
 }
@@ -52,7 +53,7 @@ small {
 }
 
 blockquote, blockquote p {
-    font-style: italic;
+    font-style: normal;
     line-height: 1.3em;
     text-align: center;
     color: lighten($black, .2);
@@ -62,11 +63,21 @@ blockquote, blockquote p {
 
 /*   Code Formatting    */
 
+pre{
+    padding-left: 5%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left:10px;
+    margin-right:10px;
+}
+
 code {
     color: $accent;
     font-family: "Monaco", "Courier New", "Courier";
-    font-size: .75em;
+    font-size: 0.9em;
     font-weight: bold;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 .highlight {
@@ -77,9 +88,11 @@ code {
     overflow-x: scroll;
 
     code {
+        margin-left:auto;
+        margin-right:auto;
         color: $white;
         font-family: "Monaco", "Courier New", "Courier";
-        font-size: .9em;
+        font-size: 0.9em;
         .lineno {
             margin-right: $lh/2;
             color: $grey-light;
@@ -127,6 +140,8 @@ input {
     }
 }
 
+
+
 /* Variables and Building Blocks */
 
 .icons {
@@ -137,11 +152,24 @@ input {
 
 .bb {
     border-bottom: 2px solid $link;
+    font-size: 1.25em;
 }
 
 .pad-top {
     padding-top: $lh*2;
 }
+
+
+/* LaTeX formatting */
+
+.equation{
+  padding-bottom:  0.5rem;
+  padding-top:     0.5rem;
+  text-align:      center;
+  font-size:       2em;
+}
+
+
 
 /************ Layout *************/
 
@@ -153,7 +181,7 @@ input {
 }
 
 .wrap {
-    max-width: 960px;
+    max-width:100%;
     @include column(10);
     float: none;
     margin: 0 auto;
@@ -181,6 +209,8 @@ header.site-header {
   .wrap {
       max-width: 90vw;
   }
+
+  
 
 }
 
@@ -218,16 +248,17 @@ header.site-header a.menu {
   display: none;
 }
 
-header.site-header hgroup h1, header.site-header nav ul {
+header.site-header .hgroup h1, header.site-header nav ul {
   font-family: $sans;
 }
-header.site-header hgroup {
+header.site-header .hgroup {
   float: left;
   padding-left: 5vw;
+  width: 45%;
   h1 {
       font-weight: 700;
       font-size: 18px;
-      line-height: 100%;
+      line-height: 150%;
       color: $accent;
       letter-spacing: 2px;
       text-transform: uppercase;
@@ -316,7 +347,8 @@ header.site-header nav {
     // Header Stuff
     header {
         margin: (2*$lh) 0 $lh 0;
-        hgroup {
+        .hgroup {
+            overflow: hidden;
             color: $black;
             position: relative;
             text-align: center;
@@ -352,7 +384,7 @@ header.site-header nav {
     @include column(10);
     max-width: 800px;
     display: block;
-    font-style: italic;
+    /*font-style: italic;*/
     margin: 0 auto;
     text-align: center;
     float: none;
@@ -385,36 +417,9 @@ header.site-header nav {
                 }
             }
             
-            a:hover:before {
-                content:'...';
-                color: $grey-light;
-                font-family: $sans;
-                position: absolute;
-                margin-left: -70px;
-                font-size: 40px;
-                left: 0;
-                top: -20px;
-                text-align: center;
-                @include transit;
-            }
-            
-            a:before {
-                content:'\201c';
-                color: $grey-light;
-                position: absolute;
-                margin-left: -70px;
-                font-size: 60px;
-                z-index: 10;
-                top: -6px;
-                left: 0;
-                text-align: center;
-                @include transit;
-
-            }
-            
             h1 {
                 font-size: $fs3;
-                font-style: italic;
+                /*font-style: italic;*/
             }
         }
         
@@ -424,7 +429,22 @@ header.site-header nav {
         }
         
         .date {
-            margin-bottom: 3px;
+            /*margin-bottom: 3px;*/
+        }
+
+        .post_desc{
+            position: relative;
+            top: -20px;
+        }
+
+        .author_blog {
+            position: relative;
+            text-transform: uppercase; 
+            color: $grey-medium; 
+            font-size: 12pt;
+            font-family: $sans;
+            top: -30px;
+            font-weight: bold;
         }
         
         .date time {
@@ -466,36 +486,11 @@ header.site-header nav {
                 }
             }
             
-            a:hover:before {
-                content:'...';
-                color: $grey-light;
-                font-family: $sans;
-                position: absolute;
-                margin-left: -70px;
-                font-size: 40px;
-                left: 0;
-                top: -20px;
-                text-align: center;
-                @include transit;
-            }
-            
-            a:before {
-                content:'\201c';
-                color: $grey-light;
-                position: absolute;
-                margin-left: -70px;
-                font-size: 60px;
-                z-index: 10;
-                top: -6px;
-                left: 0;
-                text-align: center;
-                @include transit;
-
-            }
+           
             
             h1 {
                 font-size: $fs3;
-                font-style: italic;
+                font-style: normal;
             }
         }
         
@@ -531,36 +526,10 @@ header.site-header nav {
                 }
             }
             
-            a:hover:before {
-                content:'...';
-                color: $grey-light;
-                font-family: $sans;
-                position: absolute;
-                margin-left: -70px;
-                font-size: 40px;
-                left: 0;
-                top: -20px;
-                text-align: center;
-                @include transit;
-            }
-            
-            a:before {
-                content:'\201c';
-                color: $grey-light;
-                position: absolute;
-                margin-left: -70px;
-                font-size: 60px;
-                z-index: 10;
-                top: -6px;
-                left: 0;
-                text-align: center;
-                @include transit;
-
-            }
             
             h1 {
                 font-size: $fs3;
-                font-style: italic;
+                font-style: normal;
             }
         }
         
@@ -581,21 +550,27 @@ header.site-header nav {
         .date {
             font-size: $fs5;
             position: relative;
-            top: 10px;
-            left: 6px;
+            top: 10px;/*
+            left: 6px;*/
             color: $grey-medium;
-            margin-bottom: $lh/2;
+            /*margin-bottom: $lh/2;*/
         }
+        /*.author_blog {
+            text-transform: uppercase; 
+            color: $grey-dark; 
+            font-size: 12pt;
+            top: -30px;
+        }*/
     }
     
     h1 {
-        font-style: italic;
+        font-style: normal;
     }
     
     h1, h2, h3, h4, h5 {
         padding-top: ($lh * 1/2);
-        margin-bottom: ($lh * 1/2);
-        line-height: 1.25em
+        /*margin-bottom: ($lh * 1/2);
+        */line-height: 1.25em
 
     }
     
@@ -695,15 +670,21 @@ header.site-header nav {
         .date {
             font-size: $fs5;
             position: relative;
-            top: 10px;
-            left: 6px;
+            top: 10px;/*
+            left: 6px;*/
             color: $grey-medium;
-            margin-bottom: $lh/2;
+            /*margin-bottom: $lh/2;*/
         }
+        /*.author_blog {
+            text-transform: uppercase; 
+            color: $grey-dark; 
+            font-size: 12pt;
+            top: -30px;
+        }*/
     }
     
-    h1 {
-        font-style: italic;
+    h1 {/*
+        font-style: italic;*/
     }
     
     h1, h2, h3, h4, h5 {
@@ -797,18 +778,20 @@ header.site-header nav {
     }
 }
 
-Footer Stuff 
+Footer Stuff
 .push {
     height: $footerHeight/4 !important;
+    color : $black;
 }
 
 footer {
     width: 100%;
-    background: $black;
+    background: $white;
     height: $footerHeight;
     font-size: $fsp;
-    color: $white;
+    color: $black;
     position: relative;
+    bottom: 10px;
         
     // Contain that ish
     section {
@@ -827,16 +810,16 @@ footer {
         bottom: 8px;
         font-family: $sans;
         text-transform: uppercase;
-        color: transparentize($white, .9);
+        color: transparentize($grey-medium, .4);
         a {
-            color: transparentize($white, .7);
+            color: transparentize($grey-dark, .3);
         }
     }
     
-    .list-title {
+    /*.list-title {
         margin-bottom: $lh/2;
         border-bottom: 2px solid $link;
-        font-style: italic;
+        font-style: normal;
         font-size: $fs4;
     }
     .prev-posts {
@@ -852,7 +835,7 @@ footer {
             margin-top: $lh/2;
             .recent-title {
                 @include column(8,12);
-                font-style: italic;
+                font-style: normal;
                 a {
                     &:hover {
                         color: $white;
@@ -877,7 +860,7 @@ footer {
         top: 109px;
         @include column(2,12);
         right: 5vw;
-        font-style: italic;
+        font-style: normal;
         a {
             &:hover {
                 color: $white;
@@ -891,7 +874,7 @@ footer {
                 }
             }
         }
-    }
+    }*/
 }
 
 .disqus {
@@ -984,12 +967,13 @@ footer {
     padding-top: 0;
   }
   
-  header.site-header hgroup h1 {
+  header.site-header .hgroup h1 {
     margin-bottom: 0;
     font-size: $fsp;
   }
   
-  header.site-header hgroup {
+  header.site-header .hgroup {
+    width: 100%;
     position: absolute;
     left: 7%;
     float: none;
@@ -1098,6 +1082,97 @@ small {
 
 }
 
+/* Navigation */
+.PageNavigation {
+  display: block;
+  width: auto;
+  overflow: hidden;
+  font-size: $fs4;
+}
+
+.PageNavigation a {
+  display: block;
+  width: 50%;
+  float: left;
+  margin: 1em 0;
+}
+
+.PageNavigation .next {
+  text-align: right;
+  float: right;
+}
+
+/******************* Slider Stuff ***********************/
+
+#sliderFrame, #sliderFrame div {
+    box-sizing: content-box;
+}
+#sliderFrame 
+{
+    width:100%;
+    margin:40px auto 40px auto; /*center-aligned*/
+
+}
+
+#slider, #slider .sliderInner {
+    width:100%;height:306px;/* Must be the same size as the slider images */
+    border-radius:3px;
+}
+
+#slider {
+    background-color:white;
+    position:relative;
+    margin:0 auto; /*center-aligned*/
+    transform: translate3d(0,0,0);
+    box-shadow: 0px 1px 5px #999999;
+}
+
+/* the link style (if an image is wrapped by a link) */
+#slider a.imgLink, #slider .video {
+    z-index:2;
+    cursor:pointer;
+    position:absolute;
+    top:0px;left:0px;border:0;padding:0;margin:0;
+    width:100%;height:100%;
+}
+#slider .video {
+    background:transparent url(video.png) no-repeat 50% 50%;
+}
+
+/* Caption styles */
+#slider .mc-caption {
+    position:absolute;
+    width:100%;
+    height:auto;
+    padding:10px 0;/* 10px will increase the height.*/
+    left:0px;
+    bottom:0px;top:auto;
+    overflow:hidden;
+    font: bold 14px/20px Arial;
+    color:#EEE;
+    text-align:center;
+    background:rgba(0,0,0,0.3);
+}
+#slider .mc-caption a {
+    color:#FB0;
+}
+#slider .mc-caption a:hover {
+    color:#DA0;
+}
 
 
+
+/* --------- Others ------- */
+
+#slider img, #slider>b, #slider a>b {
+    position:absolute; border:none; display:none;
+}
+
+#slider .sliderInner {
+    overflow:hidden;
+    position:absolute; top:0; left:0;
+}
+
+#slider>a, #slider video, #slider audio {display:none;}
+#slider div {-webkit-transform: translate3d(0,0,0);transform: translate3d(0,0,0);}
 
