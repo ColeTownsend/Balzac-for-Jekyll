@@ -19,6 +19,11 @@ slider: false
     </div>
 </div> -->
 
+Register for XLR8 Here:
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdhYOB9h60x3t73wMvMPlBY3yAGoZHWYdwmrhBnRK581Q8fiA/viewform?embedded=true" width="700" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+<br />
+<hr />
+
 ## An XLR8 Experience
 By- Meet Tavariya
 
