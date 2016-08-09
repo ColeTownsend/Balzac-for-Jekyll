@@ -19,12 +19,14 @@ slider: false
     </div>
 </div> -->
 
+Find the 2016 problem statement <a href="{{ site.url }}/images/XLR8/XLR8_Problem_Statement.pdf">HERE</a>
+
 Register for XLR8 Here:
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdhYOB9h60x3t73wMvMPlBY3yAGoZHWYdwmrhBnRK581Q8fiA/viewform?embedded=true" width="700" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 <br />
 <hr />
 
-Find the 2016 problem statement <a href="{{ site.url }}/images/XLR8/XLR8_Problem_Statement.pdf">HERE</a>
+
 
 
 ## An XLR8 Experience
