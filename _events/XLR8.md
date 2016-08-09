@@ -24,6 +24,9 @@ Register for XLR8 Here:
 <br />
 <hr />
 
+Find the 2016 problem statement <a href="{{ site.url }}/images/XLR8/XLR8_Problem_Statement.pdf">HERE</a>
+
+
 ## An XLR8 Experience
 By- Meet Tavariya
 
