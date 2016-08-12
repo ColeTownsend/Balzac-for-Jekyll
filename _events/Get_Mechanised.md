@@ -17,6 +17,7 @@ slider: false
     </div>
 </div> -->
 
+Find slides of Get Mechanised 1 - 2k16 <a href="{{ site.url }}/images/XLR8/XLR8_mech_session_2k16.pptx">HERE</a>
 
 
 Excited about gears and stuff? These sessions are just for you!
