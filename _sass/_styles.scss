@@ -44,6 +44,11 @@ small {
     font-size: $fs5;
 }
 
+sup {
+    vertical-align: super;
+    font-size: $fs6;
+}
+
 .hilite {
     display: inline-block;
     padding: 0 0.3em;
@@ -490,6 +495,57 @@ header.site-header nav {
         margin: $lh auto;
         @include br(4px);
     }
+    
+        table {
+        margin-bottom: $lh;
+        width: 100%;
+        font-size: $fsp;
+
+        caption {
+            font-size: $fs5;
+            font-family: $sans;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: lighten($black, 50%);
+            text-align: center;
+            margin-bottom: $lh/2;
+        }
+    }
+
+    tbody {
+	   tr:hover > td, tr:hover > th {
+		  background-color: $grey-medium;
+	   }
+    }
+
+    thead {
+	   tr:first-child td {
+		  border-bottom: 2px solid $grey-dark;
+	   }
+    }
+
+    th {
+       padding: (0px + $lhsmall) / 2;
+	   padding: (0rem + ($lhsmall / $fsp)) / 2;
+	   font-family: $sans;
+       font-size: $fs5;
+	   font-weight: bold;
+	   text-align: left;
+	   background-color: $grey-light;
+	   border-bottom: 1px solid darken($grey-dark, 15%);
+    }
+
+    td {
+	   font-size: $fs5;
+       border-bottom: 1px solid $grey-dark;
+	   padding: (0px + $lhsmall) / 2;
+	   padding: (0rem + ($lhsmall / $fsp)) / 2;
+    }
+
+    tr, td, th {
+	   vertical-align: middle;
+    }
+
     
     ul {
         display: block;
