@@ -22,12 +22,10 @@ p {
 
 a, a:visited, a:active {
     color: $link;
-    @include transit(all,0.25s,ease-in-out);
 }
 
 a:hover {
     color: $accent;
-    @include transit(all,.25s, ease-in-out)
 }
 
 em {
@@ -192,11 +190,9 @@ header.site-header {
       
       a {
       color: $black;
-      @include transit(all, .2s, ease-in-out);
 
       &:hover {
         color: $link;
-        @include transit(all, .2s, ease-in-out);
         }
       }
       
@@ -238,11 +234,9 @@ header.site-header hgroup {
   }
   a {
       color: #fff;
-      @include transit(all, .2s, ease);
 
       &:hover {
         @include tshd(0, 0, 3px, rgba(255,255,255,.6));
-        @include transit(all, .2s, ease);
       }
   }
 }
@@ -263,10 +257,8 @@ header.site-header nav {
     margin-left: 20px; 
     a {
         color: white;
-        @include transit(all, .2s, ease);
         &:hover {
             @include tshd(0, 0, 3px, rgba(255,255,255,.6));
-            @include transit(all, .2s, ease);
         }
     } 
   }
@@ -379,26 +371,10 @@ header.site-header nav {
             
             a {
                 position: relative;
-                &:hover {
-                    @include transit;
-                }
-            }
-            
-            a:hover:before {
-                content:'...';
-                color: $grey-light;
-                font-family: $sans;
-                position: absolute;
-                margin-left: -70px;
-                font-size: 40px;
-                left: 0;
-                top: -20px;
-                text-align: center;
-                @include transit;
             }
             
             a:before {
-                content:'\201c';
+                content:'--';
                 color: $grey-light;
                 position: absolute;
                 margin-left: -70px;
@@ -407,13 +383,11 @@ header.site-header nav {
                 top: -6px;
                 left: 0;
                 text-align: center;
-                @include transit;
 
             }
             
             h1 {
                 font-size: $fs3;
-                font-style: italic;
             }
         }
         
@@ -458,10 +432,6 @@ header.site-header nav {
             color: $grey-medium;
             margin-bottom: $lh/2;
         }
-    }
-    
-    h1 {
-        font-style: italic;
     }
     
     h1, h2, h3, h4, h5 {
@@ -601,7 +571,6 @@ header.site-header nav {
         &:hover {
             color: $link;
             border-color: transparentize($link,.3);
-            @include transit(all,.2s,ease)
         }
     }
 }
@@ -645,7 +614,6 @@ footer {
     .list-title {
         margin-bottom: $lh/2;
         border-bottom: 2px solid $link;
-        font-style: italic;
         font-size: $fs4;
     }
     .prev-posts {
@@ -661,7 +629,6 @@ footer {
             margin-top: $lh/2;
             .recent-title {
                 @include column(8,12);
-                font-style: italic;
                 a {
                     &:hover {
                         color: $white;
