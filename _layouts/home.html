@@ -1,7 +1,19 @@
-{% include head-dark.html %}
+{% include head.html %}
 
     <div id='bump'>
-        <section class="article archive">
+        <section class="article">
+        {% if page.image.feature %}
+  		<div class="overlay"></div>
+	  	{% if page.image.feature contains 'https://' | escape or page.image.feature contains 'http://' | escape %}
+  		<div class="featured-image" style="background-image: url({{ page.image.feature }});"></div>
+  		{% else %}
+  		<div class="featured-image" style="background-image: url({{ site.url }}/images/{{ page.image.feature }})"></div>
+  		{% endif %}
+		{% else %}
+  		<div class="overlay"></div>
+  		<div class="featured-image" style="background-image: url({{ site.url }}/images/robo_rises.jpg)"></div>
+		{% endif %}
+		<hr>
           <article class="archive-wrap">
               <ol class="post-list">
                  <lh><h2><span class="bb">{{ page.title }}</span></h2></lh>
@@ -10,7 +22,9 @@
                     <div class="deets" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
                         <h1><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h1>
                         <p class="date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></p>
-                        <p class="">{% if post.description %}{{ post.description  | strip_html | strip_newlines | truncate: 120 }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 120 }}{% endif %}</p>
+                        <p class="author_blog">{% if post.author %}{{ post.author  | strip_html | strip_newlines | truncate: 120 }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 120 }}{% endif %}</p>
+                        <p class="post_desc">{% if post.description %}{{ post.description  | strip_html | strip_newlines | truncate: 120 }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 120 }}{% endif %}</p>
+                        <hr>
                     </div>
                   </li>
                   {% endfor %}
@@ -18,5 +32,6 @@
           </article>
         </section>
     </div>
+
 
 {% include footer.html %}

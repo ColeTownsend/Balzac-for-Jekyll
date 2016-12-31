@@ -11,39 +11,69 @@
   {% endif %}
 {% else %}
   <div class="overlay"></div>
-  <div class="featured-image" style="background-image: url({{ site.url }}/images/typewriter.jpg)"></div>
+  <div class="featured-image" style="background-image: url({{ site.url }}/images/robo_rises.jpg)"></div>
 {% endif %}
 
 
       <article class="wrap post">
         <header class="post-header">
-          <hgroup>
+          <div class="hgroup">
             <h1>{{page.title}}</h1>
             <p class="date">{{page.date | date: "%b %d, %Y" }}</p>
-            <p class="intro">{% if page.description %}{{ page.description }}{% else %}{{ page.tagline }}{% endif %}</p>
-          </hgroup>
+            <!-- <p class="intro">{% if page.description %}{{ page.description }}{% else %}{{ page.tagline }}{% endif %}</p> -->
+          </div>
         </header>
+  		<ol class="post-list">
+        {% for post in site.post %}
+        <li>
+          <div class="deets" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+              <h1><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h1>
+              <p class="">{% if post.author %}{{ post.author  | strip_html | strip_newlines | truncate: 120 }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 120 }}{% endif %}</p>
+          </div>
+        </li>
+        {% endfor %}
+      </ol>
+      <div class="content1">
+      {{ content }}
+      </div>
 
-        {{ content }}
 
-      <a class="share" href="https://twitter.com/intent/tweet?text=&quot;{{ page.title }}&quot;%20{{ site.canonical }}{{ page.url }}%20via%20&#64;{{ site.owner.twitter }}" data-dnt="true">Share</a>
-      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+      <div class="PageNavigation">
+        {% if page.previous.url %}
+          <a class="prev" href="{{ site.url }}{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+        {% endif %}
+        {% if page.next.url %}
+          <a class="next" href="{{ site.url }}{{page.next.url}}">{{page.next.title}} &raquo;</a>
+        {% endif %}
+      </div>
+
+
 
       {% if page.comments %}
       <aside class="disqus">
         <div id="disqus_thread"></div>
-        <script type="text/javascript">
-            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-            var disqus_shortname = '{{ site.owner.disqus }}'; // required: replace example with your forum shortname
-
-            /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        <script>
+            /**
+             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+             */
+            
+            var disqus_config = function () {
+                this.page.url = {{ site.url }};  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = {{ page.id }}; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            
+            (function() {  // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                
+                s.src = '//roboticsclubiitb.disqus.com/embed.js';
+                
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
             })();
         </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
       </aside>
       {% endif %}
@@ -52,6 +82,6 @@
       </article>
 
     </section>
-</div>
+
 
 {% include footer.html %}

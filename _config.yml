@@ -1,20 +1,20 @@
-title:            Balzac
-tagline:          A beautiful theme.
-description:      Describe your website.
-canonical: http://jekyll.gtat.me
+title:            Robotics Club IIT Bombay
+tagline:          
+description:      Official website of Robotics Club, IIT Bombay
+canonical: https://robo-club-iitb.github.io
 
 # Owner/author information
 owner:
-  name:           Cole Townsend
-  avatar:         avatar.png
-  bio:            "Aesthete & Athlete"
-  email:          cole@coletownsend.com
-  twitter:        twnsndco
-  github:         coletownsend
-  instagram:      ctrunsthis
-  dribbble:       coletownsend
-  disqus:         balzac
-  location:       "Buffalo, NY"
+  name:           Robotics Club IITB
+  avatar:         club_logo.png
+  bio:            
+  email:          robotics.iitb@gmail.com
+  twitter:        
+  github:         robo-club-iitb
+  instagram:      
+  dribbble:       
+  disqus:         roboclubiitb
+  location:       "Bombay, India"
   # Plug in your disqus shortname!
 
 tools:
@@ -28,27 +28,32 @@ opengraph:
 # Links to include in top navigation
 # For external links add external: true
 links:
-  - title: About
-    url: /about
-  - title: Github
-    url: https://github.com/ColeTownsend/Balzac-for-Jekyll
-    external: true
-  - title: Cole Who?
-    url: http://coletownsend.com
-    external: true
+  - title: Events
+    url: /events
+  - title: Blog
+    url: /blog
+  - title: Tutorials
+    url: /tutorials    
+  - title: Contact us
+    url: /contact
+    
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
-future:      true
+timezone:    Asia/Kolkata
+future:      true														
 highlighter: pygments
 markdown:    kramdown
+mathjax: true
+
+baseurl: /robotics-club 
+url: https://stab-iitb.org/robotics-club
 
 kramdown:
   auto_ids: true
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..6
-  use_coderay: false
+  enable_coderay: false
 
   coderay:
     coderay_line_numbers:
@@ -60,6 +65,14 @@ kramdown:
 sass:
     style: :compressed
 
+collections:
+  tutorials:
+    permalink: /tutorials/:path/
+    output: true
+  events:
+    permalink: /events/:path/
+    output: true
+    
 # https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink:   /:categories/:title
 
