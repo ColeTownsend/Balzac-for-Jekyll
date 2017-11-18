@@ -1,6 +1,12 @@
-title:            A Wandering Mind
+---
+layout: default
+comments: true
+# other options
+---
+
+title:            A Curious Mind
 tagline:          A beautiful theme.
-description:      Describe your website.
+description:      Blog
 canonical: 
 
 # Owner/author information
