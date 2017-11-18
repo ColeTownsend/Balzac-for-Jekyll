@@ -6,6 +6,7 @@ categories: Mathematics
 date: 2017-11-18
 image: 
         feature: soft-trees.jpg
+comments: true
 ---
 Here is an informal, but intuitive proof that I came up with back in highschool.
 
