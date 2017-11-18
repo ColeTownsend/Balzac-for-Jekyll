@@ -29,6 +29,6 @@ So,
 
 But, 9/9 = 1 
 
-Hence, %mathstart% 0.9999... = 1 %mathend%
+Hence, 0.9999... = 1
 
 And we're done!
