@@ -1,7 +1,7 @@
 title:            A Wandering Mind
 tagline:          A beautiful theme.
 description:      Describe your website.
-canonical: http://jekyll.gtat.me
+canonical: 
 
 # Owner/author information
 owner:
@@ -31,7 +31,7 @@ links:
   - title: About
     url: /about
   - title: Github
-    url: https://github.com/ColeTownsend/Balzac-for-Jekyll
+    url: https://github.com/joshfpedro
     external: true
   - title: Cole Who?
     url: 
