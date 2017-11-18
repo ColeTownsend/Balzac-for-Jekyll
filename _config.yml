@@ -1,9 +1,3 @@
----
-layout: default
-comments: true
-# other options
----
-
 title:            A Curious Mind
 tagline:          A beautiful theme.
 description:      Blog
@@ -71,3 +65,9 @@ permalink:   /:categories/:title
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp"]
+
+---
+layout: default
+comments: true
+# other options
+---
