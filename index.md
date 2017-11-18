@@ -1,6 +1,6 @@
 ---
 layout: home
-title: ""
+title: "Recent Posts"
 tags: [Economics, Mathematics, blog]
 image:
   feature: typewriter.jpg
