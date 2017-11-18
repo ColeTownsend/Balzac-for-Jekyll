@@ -1,6 +1,6 @@
 ---
 layout: post
-permalink: /about/index.html
+permalink:
 title: A Bit About Me
 description: 
 tags: [about, me]
