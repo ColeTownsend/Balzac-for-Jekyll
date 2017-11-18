@@ -35,7 +35,7 @@ links:
     external: true
   - title: Cole Who?
     url: 
-    external: false
+    external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/New_York
