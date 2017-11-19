@@ -3,7 +3,6 @@ layout: post-light-feature
 title: Is 0.9999... = 1?
 description: "What happens if we keep writing 9's infinitely many times in the n<sup>th</sup> decimal place? Will we get arbitrarily close to 1 or does it precisely equal 1?"
 categories: Mathematics
-date: 2017-11-18
 image: 
         feature: soft-trees.jpg
 comments: true
