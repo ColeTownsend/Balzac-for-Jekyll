@@ -4,10 +4,10 @@
 
 {% if page.image.feature %}
   <div class="overlay"></div>
-  <div class="featured-image" style="background-image: url({{ site.url }}/images/{{ page.image.feature }})"></div>
+  <div class="featured-image" style="background-image: url({{ site.baseurl }}/images/{{ page.image.feature }})"></div>
 {% else %}
   <div class="overlay"></div>
-  <div class="featured-image" style="background-image: url({{ site.url }}/images/typewriter.jpg)"></div>
+  <div class="featured-image" style="background-image: url({{ site.baseurl }}/images/typewriter.jpg)"></div>
 {% endif %}
 
 
