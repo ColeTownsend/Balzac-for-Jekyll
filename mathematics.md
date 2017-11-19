@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-index
 permalink: /Mathematics/
 title: Mathematics
 description: Mathematics
