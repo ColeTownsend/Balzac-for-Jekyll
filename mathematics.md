@@ -1,6 +1,6 @@
 ---
 layout: post-index
-permalink: /Mathematics/index.html
+permalink: /Mathematics/
 title: Mathematics
 description: Mathematics
 tags: [Mathematics]
