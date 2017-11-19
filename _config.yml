@@ -31,8 +31,7 @@ links:
   - title: About
     url: /about
   - title: Mathematics
-    url: https://joshfpedro.github.io/mathematics
-    external: false    
+    url: /mathematics    
   - title: Github
     url: https://github.com/joshfpedro
     external: true
