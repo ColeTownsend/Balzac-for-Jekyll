@@ -33,7 +33,8 @@ And we're done!
 
 ### Mathjax Test
 
-$$\begin{align*}
+$$
+\begin{align*}
   & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
   = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
   & (x_1, \ldots, x_n) \left( \begin{array}{ccc}
@@ -46,4 +47,5 @@ $$\begin{align*}
       \vdots \\
       y_n
     \end{array} \right)
-\end{align*}$$
+\end{align*}
+$$
