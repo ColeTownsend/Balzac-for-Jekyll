@@ -29,7 +29,9 @@ opengraph:
 # For external links add external: true
 links:
   - title: About
-    url: /about   
+    url: /about
+  - title: Mathematics
+    url: /Mathematics 
   - title: Github
     url: https://github.com/joshfpedro
     external: true
