@@ -98,3 +98,4 @@ you can use the generic selector below, but it's slower:
 .icon-rss:before {
 	content: "\34";
 }
+.MathJax_Display {font-size: 250% }
