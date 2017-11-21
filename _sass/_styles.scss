@@ -157,7 +157,7 @@ input {
 }
 
 .wrap {
-    max-width: 960px;
+    max-width: $maxwidth;
     @include column(10);
     float: none;
     margin: 0 auto;
@@ -167,7 +167,7 @@ input {
 
 .post {
     @include column(8);
-    max-width: 680px;
+    max-width: $maxwidth;
     display: block;
     margin: 0 auto;
     float: none;
@@ -351,7 +351,7 @@ header.site-header nav {
 
 .archive-wrap {
     @include column(10);
-    max-width: 800px;
+    max-width: $maxwidth;
     display: block;
     margin: 0 auto;
     float: none;
