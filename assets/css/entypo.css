@@ -102,7 +102,7 @@ you can use the generic selector below, but it's slower:
 .MathJax.Hub.Config({
   "HTML-CSS": {
     mtextFontInherit: false;
-	  scale: 100;
-	  minScaleAdjust: 50
+	  scale: 250;
+	  minScaleAdjust: 250
   }
 });
