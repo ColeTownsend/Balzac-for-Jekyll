@@ -5,15 +5,15 @@ description: "Throughout my journey in mathematics I have uncovered many surpris
 categories: Mathematics
 comments: true
 ---
-## Introduction
+### Introduction
 
 As a high school student, mathematics was the subject I struggled the most with. However, I was rather intrigued by the mysteries surrounding math and though I had no idea what most of the symbols were, I enjoyed playing around with my calculator while there was nothing better to do in class. 
 
 I first came across the idea that 0.999... = 1 (where the 9's are repeating infinitely many times, of course) whilst studying [Geometric Series](http://mathworld.wolfram.com/GeometricSeries.html) and I must say, even after seeing the proof, I was not fully convinced. This may be due to my lack of understanding of what "infinitely many" really meant. At the time, I needed something tangible that I could grasp. 
 
-## Informal Proof
+### Informal Proof
 
-The basic intuition I had was to use the fact that 1 is a rational number and so is 0.999..., since they are equal, then I must be able to express 0.999... as a ratio of two integers which are equal to 1. This is very easy since the ratio of any integer $$a \ne 0$$ with itself is equal to 1. That is, 
+The basic intuition I had was to use the fact that 1 is a rational number and so is 0.999..., since they are equal, then I must be able to express 0.999... as a ratio of two integers which are equal to 1. This is very easy since the ratio of any integer, except 0, with itself is equal to 1. That is, 
 
 $${a \over a} = 1, a \ne 0, a \in \mathbb{Z}$$.
 
