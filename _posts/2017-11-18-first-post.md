@@ -1,7 +1,7 @@
 ---
 layout: post-no-feature
 title: 0.999... = 1
-description: "Throughout my journey in mathematics I have uncovered many surprising details about our reality. One of my first revelations was that 0.999... and 1 represent the same number"
+description: "Throughout my journey in mathematics I have uncovered many surprising details about our reality. One of my first revelations was that 0.999... and 1 represent the same number."
 categories: Mathematics
 comments: true
 ---
