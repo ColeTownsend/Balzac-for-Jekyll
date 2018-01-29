@@ -60,10 +60,11 @@ $$(1 - {9 \over 10}) s_n = {9 \over 10} - {9 \over 10^{n+1}}$$
 
 Therefore,
 
-$$s_n = {9 \over 10 - 9 \over 10^{n+1}} \over {1 - {1 \over 10}} = 1 - {1 \over 10^n}$$
+$$s_n = {{{9 \over {10}} - {9 \over {{{10}^{n + 1}}}}} \over {1 - {1 \over {10}}}} = 1 - {1 \over 10^n}$$
 
 Notice that as $n$ gets larger, more 9's are included in the $n^{th}$ decimal place, and the term ${1 \over 10^n}$ in (13) goes to $0$.
 
-Hence,
+Hence
 
-$$\mathop {\lim }\limits_{n \to \infty } {s_n} = \mathop {\lim }\limits_{n \to \infty } {1 - {1 \over 10^n}} = 1$$.
+$$\mathop {\lim }\limits_{n \to \infty } {s_n} = \mathop {\lim }\limits_{n \to \infty } {1 - {1 \over 10^n}} = 1$$
+
