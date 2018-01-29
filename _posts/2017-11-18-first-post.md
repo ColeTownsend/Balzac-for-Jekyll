@@ -5,7 +5,7 @@ description: "Throughout my journey in mathematics I have uncovered many surpris
 categories: Mathematics
 comments: true
 ---
-#Introduction
+# Introduction
 
 As a high school student, mathematics was the subject I struggled the most with. However, I was rather intrigued by the mysteries surrounding math and though I had no idea what most of the symbols were, I enjoyed playing around with my calculator while there was nothing better to do in class. 
 
