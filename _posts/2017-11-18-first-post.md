@@ -22,14 +22,20 @@ For example, $${1 \over 1} = 1$$.
 Now, after spending some time playing around with the numbers on my calculator, I discovered the following pattern.
 
 $${1 \over 9} = 0.111...$$
+
 $${2 \over 9} = 0.222...$$
+
 $${3 \over 9} = {1 \over 3} = 0.333...$$
+
 $${4 \over 9} = 0.444...$$
+
 $${5 \over 9} = 0.555...$$
+
 $${6 \over 9} = {2 \over 3} = 0.666...$$
+
 $${7 \over 9} = 0.777...$$
+
 $${8 \over 9} = 0.888...$$
 
 Here I thought it was reasonable to assume by induction that,
-
 $${9 \over 9} = 1 = 0.999...$$.
