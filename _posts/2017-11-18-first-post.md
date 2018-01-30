@@ -40,7 +40,7 @@ $${9 \over 9} = 1 = 0.999...$$
 
 # Rigorous Proof
 
-First, we rewrite $$0.999...$$ as the sequence of partial sums denoted by $$s_n$$ where n is the number of terms (or number of 9's) and is given by:
+First, we rewrite 0.999... as the sequence of partial sums denoted by $$s_n$$ where n is the number of terms (or number of 9's) and is given by:
 
 $$s_n = {9 \over 10} + {9 \over 10^2} + {9 \over 10^3} + ... + {9 \over 10^n}$$
 
