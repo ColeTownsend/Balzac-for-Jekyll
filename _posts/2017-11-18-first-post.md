@@ -17,7 +17,7 @@ The basic intuition I had was to use the fact that 1 is a rational number and so
 
 $${a \over a} = 1, a \ne 0, a \in \mathbb{Z}$$.
 
-Now, after spending some time playing around with the numbers on my calculator, I discovered the following pattern.
+Now, after spending some time playing around with the numbers on my calculator, I discovered the following pattern:
 
 $${1 \over 9} = 0.111$$...
 
