@@ -7,7 +7,7 @@ comments: true
 ---
 # Introduction
 
-As a high school student, mathematics was the subject I struggled the most with. However, I was rather intrigued by the mysteries surrounding math and though I had no idea what most of the symbols were, I enjoyed playing around with my calculator while there was nothing better to do in class. 
+As a high school student, mathematics was the subject I struggled the most with. However, I was rather intrigued by the mysteries surrounding math and although I had no idea what most of the symbols were, I enjoyed playing around with my calculator. 
 
 I first came across the idea that 0.999... = 1 (where the 9's are repeating infinitely many times, of course) whilst studying [Geometric Series](http://mathworld.wolfram.com/GeometricSeries.html) and I must say, even after seeing the proof, I was not yet fully convinced. This was due to my lack of understanding of what "infinitely many" really meant. At the time, I needed something tangible that I could grasp. 
 
