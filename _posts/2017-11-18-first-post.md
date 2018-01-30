@@ -60,9 +60,9 @@ Therefore,
 
 $$s_n = \frac { \frac {9}{10} - \frac {9}{10^{n+1}}}{1 - \frac {1}{10}} = 1 - {1 \over 10^n}$$.
 
-Notice that as $n$ gets larger, the term ${1 \over 10^n}$ goes to 0.
-
 Hence,
 
 $$\mathop {\lim }\limits_{n \to \infty } {s_n} = \mathop {\lim }\limits_{n \to \infty } {1 - {1 \over 10^n}} = 1$$.
+
+Thus, we conclude that 1 and 0.999... are different decimal representations of the same real number.
 
