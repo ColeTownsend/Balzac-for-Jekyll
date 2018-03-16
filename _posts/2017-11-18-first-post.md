@@ -54,7 +54,7 @@ $$(1 - {1 \over 10}) s_n = ({9 \over 10} + {9 \over 10^2} + {9 \over 10^3} + ...
 
 so
 
-$$(1 - {9 \over 10}) s_n = {9 \over 10} - {9 \over 10^{n+1}}$$.
+$$(1 - {1 \over 10}) s_n = {9 \over 10} - {9 \over 10^{n+1}}$$.
 
 Therefore,
 
