@@ -1,7 +1,8 @@
 ---
 layout: home
 title: "Recent Posts"
-tags: [Jekyll, theme, responsive, blog, template]
+tags: [Economics, Mathematics, blog]
 image:
   feature: typewriter.jpg
+comments: true
 ---

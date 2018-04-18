@@ -98,3 +98,11 @@ you can use the generic selector below, but it's slower:
 .icon-rss:before {
 	content: "\34";
 }
+
+.MathJax.Hub.Config({
+  "HTML-CSS": {
+    mtextFontInherit: false;
+	  scale: 250;
+	  minScaleAdjust: 250
+  }
+});

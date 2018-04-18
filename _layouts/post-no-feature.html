@@ -2,10 +2,11 @@
 
 {% include head.html %}
 
+
 <section class="article">
 
   <div class="overlay"></div>
-  <div class="featured-image" style="background-image: url({{ site.url }}/images/{{ page.image.feature }})"></div>
+  <div class="featured-image" style="background-image: url({{ site.baseurl }}/images/{{ page.image.feature }})"></div>
 {% else %}
 
 {% include head-dark.html %}
@@ -13,8 +14,26 @@
 <section class="article pad-top">
 
 {% endif %}
-
-
+  
+      <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
+      <script type="text/x-mathjax-config"> MathJax.Hub.Config({
+        "HTML-CSS": {
+             scale: 110,
+             minScaleAdjust: 110,
+             mtextFontInherit: false   
+              } 
+           }); 
+      </script>     
+      <script type="text/x-mathjax-config">
+         MathJax.Hub.Config({
+           tex2jax: {
+             inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+             processEscapes: true
+           }
+         });
+       </script>
+       <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  
       <article class="wrap post">
         <header class="post-header">
           <hgroup>
@@ -27,7 +46,7 @@
         {{ content }}
 
       <a class="share" href="https://twitter.com/intent/tweet?text=&quot;{{ page.title }}&quot;%20{{ site.canonical }}{{ page.url }}%20via%20&#64;{{ site.owner.twitter }}" data-dnt="true">Share</a>
-      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
       {% if page.comments %}
       <aside class="disqus">
