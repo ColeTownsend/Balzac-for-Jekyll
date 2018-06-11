@@ -1,0 +1,6 @@
+design: ["*.less","*.scss" "*.css"]
+config: .github
+team_reviewers: designers
+comment: |
+  Please be sure to reference the Robin Design Guide: https://github.com/robinpowered/design-guide.
+  If you need additional design guidance tag the design team @designers.
