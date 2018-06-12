@@ -6,12 +6,10 @@
    ========================================================================== */
 
 /* Don't use black */
-
 $black:  #3b3b3b;
 $white: #f9f9f9;
 
 /* Gray scale */
-
 $grey-dark:   #222;
 $grey-medium: #999;
 $grey-light:  #d9d9d9;
@@ -26,7 +24,6 @@ $accent: #24536B;
 
 /* Typography
    ========================================================================== */
-
 $sans: "Source Sans Pro", "Open Sans", "Helvetica Neue", "Arial", sans-serif;
 $serif: "Calendas Plus","Crimson Text", "Hoefler Text", "Georgia", serif;
 
@@ -34,21 +31,16 @@ $serif: "Calendas Plus","Crimson Text", "Hoefler Text", "Georgia", serif;
    
 /* Type Scale
    ========================================================================== */
-
 /** * 12 & 16 as roots then powers of two. */
-
 $fs1:64px;
 $fs2:48px;
 $fs3:32px;
 $fs4:24px;
-
 $fsp:22px;
-
 $fs5:16px;
 $fs6:12px;
 
 // Line Height
-
 $lh: 33px;
 $lhsmall: 24px;
 
@@ -56,9 +48,6 @@ $lhsmall: 24px;
 $footerHeight: 320px;
 
 // Griddit
-
-
-
 /* Break Points
    ========================================================================== */
    
@@ -71,6 +60,5 @@ $breakpoint-3-max-width:1200px;
 
 /* Style Tidbits
    ========================================================================== */
-
 $borderR: 4px;
 
