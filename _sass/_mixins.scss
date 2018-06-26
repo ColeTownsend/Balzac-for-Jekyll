@@ -3,7 +3,6 @@
   border-bottom: 2px solid $border-color; 
 }
 
-
 // Clearfix
 @mixin clearfix {
  // For modern browsers
@@ -19,7 +18,6 @@
     }
 }
 
-
 // BACKGROUND GRADIENT 
 @mixin background-gradient($startColor: #3C3C3C, $endColor: #999999) {
     background-color: $startColor;
@@ -32,14 +30,12 @@
     filter:            progid:DXImageTransform.Microsoft.gradient(startColorStr=$startColor, EndColorStr=$endColor);
 }
 
-
 // BACKGROUND SIZE
 @mixin background-size($width: 100%, $height: 100%) {
      -moz-background-size: $width $height;
   -webkit-background-size: $width $height;
           background-size: $width $height;
 }
-
 
 // BORDER RADIUS
 @mixin br($radius: 5px) {
@@ -91,7 +87,6 @@
             filter: progid:DXImageTransform.Microsoft.gradient(startColorstr#$color,endColorstr=$color);
             zoom:   1;
 }
-
 
 /* BOX SHADOW */
 @mixin bxshd($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4), $inset: "") {
@@ -171,7 +166,6 @@
 @mixin tshd($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4)) {
     text-shadow: $x $y $blur $color;
 }
-
 
 /* TRANSITION */
 @mixin transit($what: all, $length: 1s, $easing: ease-in-out) {
