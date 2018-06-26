@@ -1,13 +1,3 @@
-/* ==========================================================================
-   TYPE
-   - Meat
-   - Headings
-   - Media Query adjustments
-   ========================================================================== */
-
-/* Meat
-   ========================================================================== */
-
 p {           
     font-size: $fsp;
     line-height: $lh; 
@@ -25,10 +15,6 @@ p {
 }
 
 
-
-/* Headings
-   ========================================================================== */
-
 h1,.h1 {      font-size: $fs1; }
 h2,.h2 {      font-size: $fs2; } 
 h3,.h3 {      font-size: $fs3; } 
@@ -42,12 +28,6 @@ blockquote, blockquote p {  font-size: $fs2; }
 
 .archive input { font-size: $fs2}
 
-
-
-
-
-
-// Iphone 
 
 @media only screen and (max-width: $breakpoint-1-max-width) {
 
