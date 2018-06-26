@@ -10,7 +10,6 @@
 	font-style: normal;
 }
 
-/* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
 	font-family: 'Icons';
 	content: attr(data-icon);
@@ -22,12 +21,6 @@
 	-webkit-font-smoothing: antialiased;
 }
 
-/* Use the following CSS code if you want to have a class per icon */
-/*
-Instead of a list of all class selectors,
-you can use the generic selector below, but it's slower:
-[class*="icon-"] {
-*/
 .icon-directions, .icon-paperplane, .icon-mail, .icon-feather, .icon-pencil, .icon-user, .icon-heart, .icon-location, .icon-chat, .icon-quote, .icon-bolt, .icon-credit-card, .icon-list, .icon-twitter, .icon-facebook, .icon-github, .icon-dribbble, .icon-rdio, .icon-spotify, .icon-rss {
 	font-family: 'Icons';
 	speak: none;
