@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+<title type="text">Bruno Ripa</title>
+<subtitle type="text">It's all about data, baby...</subtitle>
+<generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
+<link rel="self" type="application/atom+xml" href="/feed.xml" />
+<link rel="alternate" type="text/html" href="" />
+<updated>2018-07-22T22:02:11+02:00</updated>
+<id>/</id>
+<author>
+  <name>Bruno Ripa</name>
+  <uri>/</uri>
+  <email>bruno.ripa@gmail.com</email>
+</author>
+
+
+<entry>
+  <title type="html"><![CDATA[Elixir Concurrent Programming.]]></title>
+  <link rel="alternate" type="text/html" href="/articles/genserver" />
+  <id>/articles/genserver</id>
+  <published>2018-07-09T00:00:00+02:00</published>
+  <updated>2018-07-09T00:00:00+02:00</updated>
+  <author>
+    <name>Bruno Ripa</name>
+    <uri></uri>
+    <email>bruno.ripa@gmail.com</email>
+  </author>
+  <content type="html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;In &lt;code&gt;Elixir&lt;/code&gt; if you need to write concurrent code, the &lt;code&gt;GenServer&lt;/code&gt; module offers you lots of nice functions to handle the boilerplate it takes.&lt;/p&gt;
+
+&lt;p&gt;Let’s imagine we have a module called &lt;code&gt;Concurrent&lt;/code&gt; and you want it to be run into a detached process; all it takes is to wrap it using the &lt;code&gt;GenServer&lt;/code&gt; module: it exposes a bunch of special functions that help you define the way your concurrent module must work.&lt;/p&gt;
+
+&lt;p&gt;Let’s start with a very simple example.&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/224cb9869e83853ddfa9748658a33b31.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;The &lt;code&gt;start_link&lt;/code&gt; function is used to launch a &lt;code&gt;GenServer&lt;/code&gt; process.&lt;/p&gt;
+
+&lt;p&gt;To try it, just type &lt;code&gt;iex -S mix&lt;/code&gt; and type &lt;code&gt;Concurrent.start_link&lt;/code&gt;; here’s the output you should be seeing:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;iex(5)&amp;gt; Concurrent.start_link
+  {:ok, #PID&amp;lt;0.164.0&amp;gt;}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;As you can see, a tuple is returned: the &lt;code&gt;:ok&lt;/code&gt; atom and the process id for the process.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: the special &lt;code&gt;__MODULE__&lt;/code&gt; variable is used to automatically provide the module name to the &lt;code&gt;start_link&lt;/code&gt; function, which is supposed to receive it. Also, the second argument, the empty list [], is the initial state of the process, which in this example is empty.&lt;/p&gt;
+
+&lt;p&gt;If, by any chance, you need to make some stuff when the process starts, you can implement the &lt;code&gt;init&lt;/code&gt; function (if you don’t provide your own implementation, a warning will be shown and a default implementation will be injected by the compiler).&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/6f27e8d61dd67aa8d274fe660998e9c1.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Execute this (don’t forget to type recompile if you’re still in the old &lt;code&gt;iex&lt;/code&gt; session) and you will see:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;21:25:33.310 [info] Starting Elixir.Concurrent
+  {:ok, #PID&amp;lt;0.177.0&amp;gt;}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So now you can also see the log message we injected in our init implementation. Please also note that you must return the tuple {:ok, initial_data} when you provide your function implementation.
+On the other side, the initial_data is whatever is passed to the start_link function.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-about-the-state-&quot;&gt;What about the state ?&lt;/h3&gt;
+
+&lt;p&gt;I have previously mentioned that the &lt;code&gt;GenServer&lt;/code&gt; module gives you the chance to store the state of the process. Let’s understand how.&lt;/p&gt;
+
+&lt;p&gt;We have seen that whatever is passed to &lt;code&gt;start_link&lt;/code&gt; is injected into the &lt;code&gt;initial_data&lt;/code&gt;, which represents the inital state of the module. So, we can retrieve the state of the process by using the call function of the &lt;code&gt;GenServer&lt;/code&gt; module:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;GenServer.call(pid, {:get_state})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Anytime the &lt;code&gt;GenServer.call&lt;/code&gt; function is invoked the compiler looks for any existing implementation of the &lt;code&gt;handle_call&lt;/code&gt; function, selecting the right one by applying pattern matching using the second argument provided. For example, assuming the following implementation is provided:&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/cc0e3f614e0d020820c264677536f7f9.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;By typing in the &lt;code&gt;iex&lt;/code&gt; session:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;GenServer.call(pid, {:get_state})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;will make you obtain:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;iex(4)&amp;gt; GenServer.call(pid, {:get_state})
+  []
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;handle_call&lt;/code&gt; function takes 3 arguments:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;the identifier and the arguments for the function&lt;/li&gt;
+  &lt;li&gt;a reference to the caller&lt;/li&gt;
+  &lt;li&gt;the current state of the process&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;So this is the signature that your function must have. On the other side, the return value is always a tuple with the &lt;code&gt;:reply&lt;/code&gt; atom as first argument, indicating that the function is actually returning something; the second one is the response value, and the last one is the new state that this process will hold (as you can understand, they are the same in our implementation since we are not changing anything here).&lt;/p&gt;
+
+&lt;p&gt;Note: the &lt;code&gt;handle_call&lt;/code&gt; function is synchronous, meaning that it will be blocking the code execution until the response is ready and returned.&lt;/p&gt;
+
+&lt;p&gt;Of course, we might create an helper function to retrieve the state of the process:&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/bc023a938bd440e89e010295d7f18d2f.js&quot;&gt; &lt;/script&gt;
+
+&lt;h3 id=&quot;updating-the-state-of-a-process&quot;&gt;Updating the state of a process&lt;/h3&gt;
+
+&lt;p&gt;If i have not lost you so far, it might be pretty easy to understand that changing the state of a process can be a very easy task. For example:&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/b2db8c0563ecc722e2878a5653ccd2c7.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;which will give us:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;iex(7)&amp;gt; {:ok, pid} = Concurrent.start_link
+  22:46:50.703 [info] Starting Elixir.Concurrent
+  {:ok, #PID&amp;lt;0.469.0&amp;gt;}
+  iex(8)&amp;gt; Concurrent.get_state(pid)
+  []
+  iex(9)&amp;gt; Concurrent.set_state(pid, &quot;test&quot;)
+  %{state: &quot;test&quot;}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: this is of course a pretty useless state management logic, consider it just a placeholder for something worth showing :D&lt;/p&gt;
+
+&lt;h3 id=&quot;interprocess-communication&quot;&gt;Interprocess communication&lt;/h3&gt;
+
+&lt;p&gt;In order to make possible for processes to communicate &lt;code&gt;GenServer&lt;/code&gt; exposes, among the others, 3 functions:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;handle_call&lt;/li&gt;
+  &lt;li&gt;handle_cast&lt;/li&gt;
+  &lt;li&gt;handle_info&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All of them access the current state of the process, and all of them return it.&lt;/p&gt;
+
+&lt;p&gt;The one that differs the most from the others is the &lt;code&gt;handle_call&lt;/code&gt; one, which receives the from parameter and returns a tuple with 3 elements, the second one being the response value. Do not confuse this with the last argument, the new state, which is used to update the current state of the process.&lt;/p&gt;
+
+&lt;p&gt;We have already seen how to use the &lt;code&gt;handle_call&lt;/code&gt; one, which, i remember, is synchronous. &lt;code&gt;handle_cast&lt;/code&gt;, instead, is triggered by the &lt;code&gt;GenServer.cast&lt;/code&gt; call, and is the one to be used if you do not need immediate response and can afford to go asynchronous.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;GenServer.cast(pid, {:something_to_cast})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This method will only return the &lt;code&gt;:ok&lt;/code&gt; atom.&lt;/p&gt;
+
+&lt;p&gt;About &lt;code&gt;GenServer.handle_info&lt;/code&gt;, we must observe that no &lt;code&gt;GenServer.info&lt;/code&gt; will exist, and can be used to receive messages from any &lt;code&gt;Elixir&lt;/code&gt; process except &lt;code&gt;GenServer&lt;/code&gt;. For example, the one to send a message to our &lt;code&gt;GenServer&lt;/code&gt; process can be the standard &lt;code&gt;Elixir&lt;/code&gt; Process module, by using the send function. Like &lt;code&gt;handle_cast&lt;/code&gt; it always returns the &lt;code&gt;:ok&lt;/code&gt; atom.&lt;/p&gt;
+
+&lt;h3 id=&quot;an-example-of-synchronous-vs-asynchronous-scenario&quot;&gt;An example of synchronous vs asynchronous scenario&lt;/h3&gt;
+
+&lt;p&gt;Imagine we have a payment system, where clients send a payload that describes the item to purchase; we can have two types of implementation:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;a &lt;em&gt;synchronous&lt;/em&gt; one: the client must wait for a response from the process, and so the user&lt;/li&gt;
+  &lt;li&gt;an &lt;em&gt;asynchronous&lt;/em&gt; one: the client gets detached after the payload delivery and the user can keep on using the application&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Of course, the second implementation requires other features, like the ability to notify a client about a successful (or not) purchase; it is by far the more convenient for a good user experience, but it’s not that unusual to find synchronous implementations around.&lt;/p&gt;
+
+&lt;p&gt;In this scenario we will be having the following code:&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/c387737db88ec633f56983719d431dd1.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Also, we have added a new module, to better outline concepts and responsibilities:&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/b0b53724bf55d5c5cb5552127efd12cd.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;After recompiling the code in the &lt;code&gt;iex&lt;/code&gt; session, we will see:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;iex(20)&amp;gt; {:ok, pid} = Concurrent.start_link
+  10:08:51.953 [info] Starting Elixir.Concurrent
+  {:ok, #PID}
+  iex(21)&amp;gt; PaymentProcessor.process_payment(&quot;payload&quot;)
+  :ok
+  10:08:53.233 [info] Starting Elixir.Concurrent
+  10:08:53.233 [info] Elixir.Concurrent: done
+  10:08:53.233 [info] Elixir.PaymentProcessor: payment processed
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So we start the &lt;code&gt;Concurrent&lt;/code&gt; process, that will be handling payments, and use the &lt;code&gt;PaymentProcess&lt;/code&gt; one to trigger the process of a payment.&lt;/p&gt;
+
+&lt;p&gt;If we want to go asynchronous, we must slightly modify our code. We need a function to handle the &lt;code&gt;GenServer.cast&lt;/code&gt; call:&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/f9ec7978cea140ec808b4f95ead256dd.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;As well as a helper function in the &lt;code&gt;Concurrent&lt;/code&gt; module:&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/9c81c6b36401ec3f295ede692257a3cf.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Last, but not least, to have consistent names, we add the following function to the &lt;code&gt;PaymentProcessor&lt;/code&gt; module:&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/bc6f45684b8defd1941f577a6ea95269.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Recompiling the code and executing again:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;iex(48)&amp;gt; {:ok, pid} = Concurrent.start_link
+  10:54:29.690 [info] Starting Elixir.Concurrent
+  {:ok, #PID}
+  iex(49)&amp;gt; PaymentProcessor.submit_payment(&quot;test&quot;)
+  10:54:30.475 [info] Starting Elixir.Concurrent
+  10:54:30.475 [info] Elixir.Concurrent: done
+  10:54:30.475 [info] Elixir.PaymentProcessor: payment processed. Process detached.
+  :ok
+  iex(50)&amp;gt;
+  10:54:33.476 [info] Payload test has been processed.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;As you can see, the client is totally detached from the payment process, and after 3 seconds (because of the &lt;code&gt;:timer.sleep(3000)&lt;/code&gt; command) the &lt;code&gt;Payload test has been processed&lt;/code&gt; pops up.&lt;/p&gt;
+
+&lt;p&gt;So, we made hopefully clear that if you have clear in mind what problem you are resoliving, if it needs concurrent code execution, &lt;code&gt;GenServer&lt;/code&gt; module can be a great help.&lt;/p&gt;
+
+&lt;p&gt;The next reasonable question is: how can I be sure that a given process does not crash ? The answer is &lt;strong&gt;Supervisor&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-supervisor-module&quot;&gt;The Supervisor module&lt;/h2&gt;
+
+&lt;p&gt;The &lt;code&gt;Supervisor&lt;/code&gt; module is able to control a &lt;code&gt;GenServer&lt;/code&gt; process and respawn it if crashes, according to some specific policies.&lt;/p&gt;
+
+&lt;p&gt;Let’s jump straight on the code:&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/6287a85c6e979c113127974133c759cb.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;If you, as always, test it in the &lt;code&gt;iex&lt;/code&gt; session, you will see:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;iex(5)&amp;gt; ConcurrentSupervisor.start_link
+  09:55:47.943 [info] Starting Elixir.Concurrent
+  {:ok, #PID&amp;lt;0.142.0&amp;gt;}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So basically we are having back the pid of the &lt;code&gt;Supervisor&lt;/code&gt; process, and we can see the log of the &lt;code&gt;Concurrent&lt;/code&gt; process that is started.&lt;/p&gt;
+
+&lt;p&gt;As you can see, the children list is made by the modules we want to run, wrapped in a &lt;code&gt;worker&lt;/code&gt; function, which represents a sort of template; it receives the module to wrap and the list of options to pass to it. Pay attention here: what you pass to the worker is used as argument of the module &lt;code&gt;start_link&lt;/code&gt; function, where you have to correctly handle them before injecting in the &lt;code&gt;GenServer.start_link&lt;/code&gt; call in your module.&lt;/p&gt;
+
+&lt;p&gt;Basically, if you pass values there, the signature of your module &lt;code&gt;start_link&lt;/code&gt; must accept them.&lt;/p&gt;
+
+&lt;p&gt;Once the &lt;code&gt;Supervisor&lt;/code&gt; starts and launches the workers, it calls, by default, the &lt;code&gt;start_link&lt;/code&gt; method of the module it wraps.&lt;/p&gt;
+
+&lt;h3 id=&quot;supervisor-strategies&quot;&gt;Supervisor strategies&lt;/h3&gt;
+
+&lt;p&gt;In the &lt;code&gt;supervise&lt;/code&gt; command we must pass a strategy type. Possible values are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;:one_for_one&lt;/code&gt;: if any of the worker crashes, it gets restarted&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;:one_for_all&lt;/code&gt;: if any of the worker crashes, all of them are restarted&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;:rest_for_one&lt;/code&gt;: if one of the worker crashes, only the ones defined right below it (in the children list) get restarted&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;:simple_one_for_one&lt;/code&gt;: this is slightly different from other strategies; we’ll see this laters.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For example, imagine that we have a children like the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;children = [
+  worker(ConcurrentA, []),
+  worker(ConcurrentB, []),
+  worker(ConcurrentC, [])
+]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;with 3 existing modules, &lt;code&gt;:one_for_one&lt;/code&gt; would cause that any of the workers crashing will be automatically restarted, always; &lt;code&gt;:one_for_all&lt;/code&gt; means that if one of the workers crashes, all of them will be restarted; &lt;code&gt;:rest_for_one&lt;/code&gt; means that if &lt;code&gt;ConcurrentB&lt;/code&gt; crashes, it and &lt;code&gt;ConcurrentC&lt;/code&gt; will be restarted.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-different-strategy-simple_on_for_one&quot;&gt;A different strategy: :simple_on_for_one&lt;/h3&gt;
+
+&lt;p&gt;If you create a &lt;code&gt;Supervisor&lt;/code&gt; that uses such strategy and you try to start it you will see that no workers are launched; it’s because this strategy pretends explicit and manual starting of the workers, by using &lt;code&gt;Supervisor.start_child&lt;/code&gt;; this means that you have the flexibility to spawn multiple occurrences of the same process. Basically, the whole idea of this strategy is that you might need an undefined number of processes, spawning more of them, for example, due to some specific demand or needs. The lifecycle of the workers of a Supervisor so defined must explicitly be controlled, as already told, by using some Supervisor functions like &lt;code&gt;stat_child&lt;/code&gt; and &lt;code&gt;terminate_child&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-restart-option&quot;&gt;The restart option&lt;/h3&gt;
+
+&lt;p&gt;The worker function takes an optional restart argument that can define the restart policies for the process. Possible values are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;:permanent&lt;/code&gt;: the crashing process will always be restarted. This option is default for all the strategies except the :simple_rest_for_one one.&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;:transient&lt;/code&gt;: the process is restarted only in case of cerash. Nothing will be done if the process will be termined by user command, for example. This option is default for :simple_rest_for_one.&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;:temporary&lt;/code&gt;: a terminating process will never be restarted.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It’s not unusual that an &lt;code&gt;Elixir&lt;/code&gt; application spawns a big number of processes, so dealing with pids might be tricky and error prone. Since version 1.4, the &lt;code&gt;Registry&lt;/code&gt; module is there to help us giving the chance to play with processes and using them by names and not pids. I will cover the &lt;code&gt;Registry&lt;/code&gt; in a separated article in the near future.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/articles/genserver&quot;&gt;Elixir Concurrent Programming.&lt;/a&gt; was originally published by Bruno Ripa at &lt;a href=&quot;&quot;&gt;Bruno Ripa&lt;/a&gt; on July 09, 2018.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Apache Beam. A python example.]]></title>
+  <link rel="alternate" type="text/html" href="/articles/apache-beam-python-example" />
+  <id>/articles/apache-beam-python-example</id>
+  <published>2018-05-28T00:00:00+02:00</published>
+  <updated>2018-05-28T00:00:00+02:00</updated>
+  <author>
+    <name>Bruno Ripa</name>
+    <uri></uri>
+    <email>bruno.ripa@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Nowadays, being able to handle huge amounts of data can be an interesting skill: analytics, user profiling, statistics — virtually any business that needs to extrapolate information from whatever data is, in one way or another, using some big data tools or platforms.&lt;/p&gt;
+
+&lt;p&gt;One of the most interesting tool is &lt;a href=&quot;https://beam.apache.com&quot;&gt;Apache Beam&lt;/a&gt;, a framework that gives us the instruments to generate procedures to transform, process, aggregate, and manipulate data for our needs.&lt;/p&gt;
+
+&lt;p&gt;Let’s try and see how we can use it in a very simple scenario.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-context&quot;&gt;The context&lt;/h2&gt;
+
+&lt;p&gt;Imagine that we have a database with information about users visiting a website, with each record containing:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;country of the visiting user&lt;/li&gt;
+  &lt;li&gt;duration of the visit&lt;/li&gt;
+  &lt;li&gt;user name&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We want to create some reports containing:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;for each country, the &lt;strong&gt;number of users&lt;/strong&gt; visiting the website&lt;/li&gt;
+  &lt;li&gt;for each country, the &lt;strong&gt;average visit time&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;So, Apache Beam is a Google SDK (previously called Dataflow) representing a &lt;strong&gt;programming model&lt;/strong&gt; aimed at simplifying the mechanism of large-scale data processing.&lt;/p&gt;
+
+&lt;p&gt;It’s been donated to the Apache Foundation, and called Beam because it’s able to process data in whatever form you need: &lt;strong&gt;batches&lt;/strong&gt; and &lt;strong&gt;streams&lt;/strong&gt; (b-eam). It gives you the chance to define &lt;strong&gt;pipelines&lt;/strong&gt; to process real-time data (&lt;strong&gt;streams&lt;/strong&gt; ) and historical data (&lt;strong&gt;batches&lt;/strong&gt; ).&lt;/p&gt;
+
+&lt;p&gt;The pipeline definition is totally disjointed by the context that you will use to run it, so Beam gives you the chance to choose one of the supported runners you can use:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Beam model: local execution of your pipeline&lt;/li&gt;
+  &lt;li&gt;Google Cloud Dataflow: dataflow as a service&lt;/li&gt;
+  &lt;li&gt;Apache Flink&lt;/li&gt;
+  &lt;li&gt;Apache Spark&lt;/li&gt;
+  &lt;li&gt;Apache Gearpump&lt;/li&gt;
+  &lt;li&gt;Apache Hadoop MapReduce&lt;/li&gt;
+  &lt;li&gt;JStorm&lt;/li&gt;
+  &lt;li&gt;IBM Streams&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We will be running the beam model one, which basically executes everything on your local machine.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-programming-model&quot;&gt;The programming model&lt;/h2&gt;
+
+&lt;p&gt;Though this is not going to be a deep explanation of the DataFlow programming model, it’s necessary to understand what a pipeline is: a set of manipulations being made on an input data set that provides a new set of data. More precisely, a pipeline is made of &lt;strong&gt;transforms&lt;/strong&gt; applied to &lt;strong&gt;collections.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Straight from the &lt;a href=&quot;https://href.li/?https://beam.apache.org&quot;&gt;Apache Beam website&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A pipeline encapsulates your entire data processing task, from start to finish. This includes reading input data, transforming that data, and writing output data.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The pipeline gets data injected from the outside and represents it as &lt;strong&gt;collections&lt;/strong&gt; (formally named &lt;code&gt;PCollection&lt;/code&gt; s ), each of them being&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;a potentially distributed, multi-element, data set&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;When one or more &lt;code&gt;Transform&lt;/code&gt; s are applied to a &lt;code&gt;PCollection&lt;/code&gt;, a brand new &lt;code&gt;PCollection&lt;/code&gt; is generated (and for this reason the resulting &lt;code&gt;PCollection&lt;/code&gt; s are &lt;strong&gt;immutable&lt;/strong&gt; objects).&lt;/p&gt;
+
+&lt;p&gt;The first and last step of a pipeline are, of course, the ones that can read and write data to and from several kind of storages — you can find a list &lt;a href=&quot;https://href.li/?https://beam.apache.org/documentation/programming-guide/#pipeline-io&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-application&quot;&gt;The application&lt;/h2&gt;
+
+&lt;p&gt;We will have the data in a &lt;code&gt;csv&lt;/code&gt; file, so the first thing we need to do is to read the contents of the file and provide a structured representation of all of the rows.&lt;/p&gt;
+
+&lt;p&gt;A generic row of the &lt;code&gt;csv&lt;/code&gt; file will be like the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;United States Of America, 0.5, John Doe
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;with the columns being the &lt;em&gt;country&lt;/em&gt;, the &lt;em&gt;visit time&lt;/em&gt; in seconds, and the &lt;em&gt;user name&lt;/em&gt;, respectively.&lt;/p&gt;
+
+&lt;p&gt;Given the data we want to provide, let’s see what our pipeline will be doing and how.&lt;/p&gt;
+
+&lt;h2 id=&quot;read-the-input-data-set&quot;&gt;Read the input data set&lt;/h2&gt;
+
+&lt;p&gt;The first step will be to read the input file.&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/e693c531d7a29bf4bfb6e7cb18795a68.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;In the above context, &lt;code&gt;p&lt;/code&gt; is an instance of &lt;code&gt;apache_beam.Pipeline&lt;/code&gt; and the first thing that we do is to apply a built-in transform, &lt;code&gt;apache_beam.io.textio.ReadFromText&lt;/code&gt; that will load the contents of the file into a &lt;code&gt;PCollection&lt;/code&gt;. After this, we apply a specific logic, &lt;code&gt;Split&lt;/code&gt;, to process every row in the input file and provide a more convenient representation (a dictionary, specifically).&lt;/p&gt;
+
+&lt;p&gt;Here’s the &lt;code&gt;Split&lt;/code&gt; function:&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/684c9fd288fbec66d057f7dff67720f2.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;The &lt;code&gt;ParDo&lt;/code&gt; transform is a core one, and, as per official Apache Beam documentation:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;ParDo&lt;/code&gt; is useful for a variety of common data processing operations, including:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Filtering a data set.&lt;/strong&gt; You can use &lt;code&gt;ParDo&lt;/code&gt; to consider each element in a &lt;code&gt;PCollection&lt;/code&gt; and either output that element to a new collection or discard it.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Formatting or type-converting each element in a data set.&lt;/strong&gt; If your input &lt;code&gt;PCollection&lt;/code&gt; contains elements that are of a different type or format than you want, you can use &lt;code&gt;ParDo&lt;/code&gt; to perform a conversion on each element and output the result to a new &lt;code&gt;PCollection&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Extracting parts of each element in a data set.&lt;/strong&gt; If you have a&lt;code&gt;PCollection&lt;/code&gt; of records with multiple fields, for example, you can use a &lt;code&gt;ParDo&lt;/code&gt; to parse out just the fields you want to consider into a new &lt;code&gt;PCollection&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Performing computations on each element in a data set.&lt;/strong&gt; You can use &lt;code&gt;ParDo&lt;/code&gt; to perform simple or complex computations on every element, or certain elements, of a &lt;code&gt;PCollection&lt;/code&gt; and output the results as a new &lt;code&gt;PCollection&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you want to read more about this, please go &lt;a href=&quot;https://beam.apache.org/documentation/programming-guide/#pardo&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;grouping-relevant-information-under-proper-keys&quot;&gt;Grouping relevant information under proper keys&lt;/h2&gt;
+
+&lt;p&gt;At this point, we have a list of valid rows, but we need to reorganize the information under keys that are the countries referenced by such rows. For example, if we have three rows like the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Spain (ES), 2.2, John Doe
+Spain (ES), 2.9, John Wayne
+United Kingdom (UK), 4.2, Frank Sinatra
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;we need to rearrange the information like this:&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/363eb08445e75ff245e1cc7be2242e08.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;If we do this, we have all the information in good shape to make all the calculations we need.&lt;/p&gt;
+
+&lt;p&gt;Here we go:&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/a14e4f8417631fae04d73aa0e3936c81.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;The classes &lt;code&gt;CollectTimings&lt;/code&gt; and &lt;code&gt;CollectUsers&lt;/code&gt; basically filter the rows that are of interest for our goal. They also rearrange each of them in the right form, that is something like:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;(“Spain (ES)”, 2.2)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;At this point, we are able to use the &lt;code&gt;GroupByKey&lt;/code&gt; transform, that will create a single record that, incredibly, groups all of the info that shares the same keys:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;(“Spain (ES)”, (2.2, 2.9))&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Note: the key is always the first element of the tuple.&lt;/p&gt;
+
+&lt;p&gt;The very last missing bit of the logic to apply is the one that has to process the values associated to each key. The built-in transform is &lt;code&gt;apache_beam.CombineValues&lt;/code&gt;, which is pretty much self explanatory.&lt;/p&gt;
+
+&lt;p&gt;The logics that are applied are &lt;code&gt;apache_beam.combiners.MeanCombineFn&lt;/code&gt; and &lt;code&gt;apache_beam.combiners.CountCombineFn&lt;/code&gt; respectively: the former calculates the arithmetic mean, the latter counts the element of a set.&lt;/p&gt;
+
+&lt;p&gt;For the sake of completeness, here is the definition of the two classes &lt;code&gt;CollectTimings&lt;/code&gt; and &lt;code&gt;CollectUsers&lt;/code&gt;:&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/b621882385eb179fbfb5db3096dc5531.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Note: the operation of applying multiple times some transforms to a given &lt;code&gt;PCollection&lt;/code&gt; generates multiple brand new collections. This is called &lt;strong&gt;collection branching&lt;/strong&gt;. It’s very well represented here:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*ZaEtSYpRB1nZykP02RNp9A.png&quot; alt=&quot;&quot; /&gt;
+&lt;em&gt;Source: &lt;a href=&quot;https://beam.apache.org/images/design-your-pipeline-multiple-pcollections.png&quot;&gt;https://beam.apache.org/images/design-your-pipeline-multiple-pcollections.png&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Basically, now we have two sets of information — the average visit time for each country and the number of users for each country. What we’re missing is a single structure containing all of the information we want.&lt;/p&gt;
+
+&lt;p&gt;Also, having made a pipeline branching, we need to recompose the data. We can do this by using &lt;code&gt;CoGroupByKey&lt;/code&gt;, which is nothing less than a &lt;strong&gt;join&lt;/strong&gt; made on &lt;em&gt;two or more&lt;/em&gt; collections that have the same keys.&lt;/p&gt;
+
+&lt;p&gt;The last two transforms are ones that format the info into &lt;code&gt;csv&lt;/code&gt; entries while the other writes them to a file.&lt;/p&gt;
+
+&lt;p&gt;After this, the resulting &lt;code&gt;output.txt&lt;/code&gt; file will contain rows like this one:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Italy (IT),36,2.23611111111&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;meaning that 36 people visited the website from Italy, spending, on average, 2.23 seconds on the website.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-input-data&quot;&gt;The input data&lt;/h2&gt;
+
+&lt;p&gt;The data used for this simulation has been procedurally generated: 10,000 rows, with a maximum of 200 different users, spending between 1 and 5 seconds on the website. This was needed to have a rough estimate on the resulting values we obtained. A new article about &lt;strong&gt;pipeline testing&lt;/strong&gt; will probably follow.&lt;/p&gt;
+
+&lt;h2 id=&quot;github-repository&quot;&gt;GitHub repository&lt;/h2&gt;
+
+&lt;p&gt;The GitHub repository for this article is &lt;a href=&quot;https://github.com/brunoripa/beam-example&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The README.md file contains everything needed to try it locally.!&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/articles/apache-beam-python-example&quot;&gt;Apache Beam. A python example.&lt;/a&gt; was originally published by Bruno Ripa at &lt;a href=&quot;&quot;&gt;Bruno Ripa&lt;/a&gt; on May 28, 2018.&lt;/p&gt;</content>
+</entry>
+
+</feed>

@@ -1,0 +1,14 @@
+/* TEAM */
+Creator: Bruno Ripa
+Contact: bruno.ripa@gmail.com
+Twitter: brunoripa
+Location: Barcelona, Spain
+                           
+/* THANKS */                           
+Creator of Balzac theme: Cole Townsend
+Twitter: @twnsndco
+
+/* SITE */                         
+Last update: 2018-07-22
+Standards: HTML, SCSS, Jekyll                        
+Software: git

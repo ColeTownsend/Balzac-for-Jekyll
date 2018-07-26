@@ -33,7 +33,8 @@ a:hover {
 em {
     padding: 1px 2px;
     border-radius: 2px;
-    background: #ffe8c0;
+    background: transparent;
+    font-style: italic;
 }
 
 strong {
@@ -56,12 +57,22 @@ sup {
     background: $hilite;
 }
 
-blockquote, blockquote p {
+blockquote {
     font-style: italic;
     line-height: 1.3em;
     text-align: center;
     color: lighten($black, .2);
     margin-bottom: $lh;
+    font-size: 130%;
+    border-left: 4px gray solid;
+    padding-left: 15px;
+    text-align: justify;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+blockquote p {
+    border-left: none;
 }
 
 
@@ -536,8 +547,9 @@ header.site-header nav {
     }
 
     td {
-	   font-size: $fs5;
-       border-bottom: 1px solid $grey-dark;
+       font-size: $fs5;
+    //    Gist border deleted
+    //    border-bottom: 1px solid $grey-dark;
 	   padding: (0px + $lhsmall) / 2;
 	   padding: (0rem + ($lhsmall / $fsp)) / 2;
     }
@@ -907,6 +919,25 @@ small {
 
 }
 
+pre code {
 
+    color: darkorange;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 100%;
+    padding: 20px;
+}
 
+.js-line-number {
+    border-bottom: none;
+}
 
+pre {
+    padding: 20px;
+    border-left: 3px lightgray solid;
+}
+
+blockquote p {
+    font-size: 35px;
+    color: #bb5100;
+    font-style: italic;
+}
