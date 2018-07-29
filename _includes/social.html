@@ -1,0 +1,9 @@
+<ul>
+    {% if site.owner.twitter %}
+    <a class="share" href="https://twitter.com/intent/tweet?text=&quot;{{ page.title }}&quot;%20{{ site.canonical }}{{ page.url }}%20via%20&#64;{{ site.owner.twitter }}" data-dnt="true"><i class="fab fa-twitter strong"></i></a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    {% endif %}
+    {% if site.owner.gplus %}
+    <li>G+</li>
+    {% endif %}
+</ul>

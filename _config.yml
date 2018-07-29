@@ -1,7 +1,9 @@
 title:            Bruno Ripa
 tagline:          It's all about data, baby...
 description:      Here's the description
-canonical: https://brunoripa.com
+canonical:        https://brunoripa.com
+url:              https://brunoripa.com
+cache_burst:      uncached
 
 # Owner/author information
 owner:
@@ -13,6 +15,8 @@ owner:
   github:         brunoripa
   location:       "Barcelona, Spain"
   # Plug in your disqus shortname!
+  disquss_shortname: brunoripa
+
 
 tools:
   standards:      "HTML, SCSS, Jekyll"
@@ -26,7 +30,7 @@ opengraph:
 # For external links add external: true
 links:
   - title: About
-    url: /about
+    url: /about/
   - title: Twitter
     url: https://twitter.com/brunoripa
     external: true
@@ -62,12 +66,16 @@ sass:
     style: :compressed
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title
+# permalink:   /:categories/:title
+permalink: pretty
 
 include: [".htaccess"]
-exclude: ["gae", "lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "vendor"]
+exclude: ["firebase.json", "firebase.rc", "build_stage.sh", "lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "vendor"]
 
 plugins:
+  - jekyll-font-awesome-sass
   - jekyll-gist
+  - jekyll-feed
 
-destination: ./gae/www
+font-awesome:
+  assets: true

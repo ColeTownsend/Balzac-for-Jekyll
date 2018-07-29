@@ -1,11 +1,12 @@
 ---
-layout: page
+layout: post
 title: Elixir Concurrent Programming.
 description: "GenServer module for concurrent programming in Elixir"
 categories: articles
 date: 2018-07-09
-image:
-    feature: bigdata.jpeg
+image: 
+    feature: mind.jpg
+comments: true
 ---
 
 

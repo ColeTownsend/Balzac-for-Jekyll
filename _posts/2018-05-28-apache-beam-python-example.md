@@ -1,11 +1,12 @@
 ---
-layout: page
+layout: post
 title: Apache Beam. A python example.
 description: "A step-by-step guide to Apache Beam example in Python"
 categories: articles
-date: 2018-05-28
+date: 2018-01-30
 image: 
     feature: bigdata.jpeg
+comments: true
 ---
 Nowadays, being able to handle huge amounts of data can be an interesting skill: analytics, user profiling, statistics — virtually any business that needs to extrapolate information from whatever data is, in one way or another, using some big data tools or platforms.
 

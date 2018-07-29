@@ -1,4 +1,6 @@
 /************ Basic *************/
+$fa-font-path: "/assets/fonts/font-awesome";
+@import 'font-awesome';
 
 body {
   font-family: $serif;
@@ -648,7 +650,7 @@ footer {
         bottom: 8px;
         font-family: $sans;
         text-transform: uppercase;
-        color: transparentize($white, .9);
+        color: transparentize($white, .6);
         a {
             color: transparentize($white, .7);
         }
