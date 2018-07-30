@@ -600,7 +600,6 @@ header.site-header nav {
     
     .share {
         text-align: center;
-        display: block;
         margin: 0 auto;
         width: 76px;
         font-size: $fs5;
@@ -942,4 +941,9 @@ blockquote p {
     font-size: 35px;
     color: #bb5100;
     font-style: italic;
+}
+
+.social {
+    text-align: right;
+
 }

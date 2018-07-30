@@ -1,11 +1,18 @@
 <!-- DSLs for various open graph languages -->
-<meta property="og:locale" content="{{ site.opengraph.locale }}">
-<meta property="og:title" content="{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}">
-<meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 120  }}{% else %}{{ page.content | strip_html | strip_newlines | truncate: 120 }}{% endif %}">
-<meta property="og:url" content="{{ site.url }}{{ page.url }}">
-<meta property="og:site_name" content="{{ site.title }}">
+<link rel="canonical" content="{{ site.url }}{{ page.url }}"/>
+<meta property="og:locale" content="{{ site.opengraph.locale }}"/>
+<meta property="og:title" content="{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}"/>
+<meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 120  }}{% else %}{{ page.content | strip_html | strip_newlines | truncate: 120 }}{% endif %}"/>
+<meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
+<meta property="og:site_name" content="{{ site.url }}"/>
 {% if page.image.feature %}
-<meta property="og:image" content="{{ page.image.feature }}">
+<meta property="og:image" content="{{site.url}}/images/{{ page.image.feature }}"/>
+<meta property="og:image:secure_url" content="{{site.url}}/images/{{ page.image.feature }}"/>
 {% endif %}
+
+<meta name="twitter:title" content="{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}"/>
+<meta name="twitter:site" content="{{ site.url }}"/>
+<meta name="twitter:image" content="{{site.url}}/images/{{ page.image.feature }}"/>
+<meta name="twitter:creator" content="{{ site.owner.name }}" />
 
 

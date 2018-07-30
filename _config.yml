@@ -1,6 +1,5 @@
 title:            Bruno Ripa
 tagline:          It's all about data, baby...
-description:      Here's the description
 canonical:        https://brunoripa.com
 url:              https://brunoripa.com
 cache_burst:      uncached
@@ -16,7 +15,6 @@ owner:
   location:       "Barcelona, Spain"
   # Plug in your disqus shortname!
   disquss_shortname: brunoripa
-
 
 tools:
   standards:      "HTML, SCSS, Jekyll"

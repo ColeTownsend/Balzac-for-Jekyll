@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Elixir Concurrent Programming.
+title: Elixir Concurrent Programming
 description: "GenServer module for concurrent programming in Elixir"
 categories: articles
 date: 2018-07-09
 image: 
     feature: mind.jpg
 comments: true
+excerpt: A not so light overview of the Elixir GenServer module for concurrent programming 
 ---
-
 
 ## Introduction
 

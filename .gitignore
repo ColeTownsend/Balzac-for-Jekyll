@@ -9,3 +9,5 @@ _site
 vendor
 .bundle
 
+bin
+
