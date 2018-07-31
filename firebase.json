@@ -10,7 +10,7 @@
       "source" : "**/*.@(jpg|jpeg|gif|png|css|js|woff|woff2|eot)",
       "headers" : [ {
         "key" : "Cache-Control",
-        "value" : "max-age=7200"
+        "value" : "smax-age=7200"
       } ]
     }]
   }
