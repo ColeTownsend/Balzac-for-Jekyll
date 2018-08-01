@@ -1,96 +1,106 @@
 <!doctype html>
 <html lang="en" prefix="og: http://ogp.me/ns#">
+
 <head>
-<meta charset="utf-8">
-<title>{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}</title>
-<meta name="description" content="{{ page.description }}">
-<meta name="keywords" content="{{ page.tags | join: ', ' }}">
+  <meta charset="utf-8">
+  <title>{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.description }}">
+  <meta name="keywords" content="{{ page.tags | join: ', ' }}"> {% include graphs.html %}
 
-{% include graphs.html %}
+  <link href="{{ site.url }}/feed.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 
-<link href="{{ site.url }}/feed.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
-
-<!-- http://t.co/dKP3o1e -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-{% feed_meta %}
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> {% feed_meta %}
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-39717701-5"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'UA-39717701-5');
   </script>
 
-<!-- Cookie consent -->
-<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
-<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
-<script>
-window.addEventListener("load", function(){
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#edeff5",
-      "text": "#838391"
-    },
-    "button": {
-      "background": "#4b81e8"
-    }
-  },
-  "theme": "classic",
-  "position": "bottom-right"
-})});
-</script>
+  <!-- Cookie consent -->
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css"
+  />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+  <script>
+    window.addEventListener("load", function () {
+      window.cookieconsent.initialise({
+        "palette": {
+          "popup": {
+            "background": "#edeff5",
+            "text": "#838391"
+          },
+          "button": {
+            "background": "#4b81e8"
+          }
+        },
+        "theme": "classic",
+        "position": "bottom-right"
+      })
+    });
+  </script>
 
-<!-- Type -->
-<link href="//fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700,700italic" rel='stylesheet' type='text/css' />
-<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="{{ site.url }}/assets/css/entypo.css" media="all">
+  <!-- Type -->
+  <link href="//fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700,700italic" rel='stylesheet' type='text/css'
+  />
+  <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ site.url }}/assets/css/entypo.css" media="all">
 
-<!-- In order to use Calendas Plus, you must first purchase it. Then, create a font-face package using FontSquirrel.
+  <!-- In order to use Calendas Plus, you must first purchase it. Then, create a font-face package using FontSquirrel.
 <link rel='stylesheet' href='{{ site.url }}/assets/cal.css' media='all' />
 -->
 
 
 
-<!-- For all browsers -->
-<link rel="stylesheet" href="{{ site.url }}/assets/css/i.css">
+  <!-- For all browsers -->
+  <link rel="stylesheet" href="{{ site.url }}/assets/css/i.css">
 
-<!-- Fresh Squeezed jQuery -->
+  <!-- Fresh Squeezed jQuery -->
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
-<!-- Load Modernizr -->
-<script src="{{ site.url }}/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+  <!-- Load Modernizr -->
+  <script src="{{ site.url }}/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
 
 
-<!-- Icons -->
-<!-- 16x16 -->
-<link rel="shortcut icon" href="{{ site.url }}/favicon.ico">
+  <!-- Icons -->
+  <!-- 16x16 -->
+  <link rel="shortcut icon" href="{{ site.url }}/favicon.ico">
 </head>
-  <body class="">
+
+<body class="">
+  <div id="bump">
     <header class="site-header darken">
       <div class="wrap">
         <hgroup>
-          <h1><a href="/">{{ site.title }}</a></h1>
+          <h1>
+            <a href="/">{{ site.title }}</a>
+          </h1>
         </hgroup>
-        <a href="#nav" class="menu"><span class='icons'>☰</span></a>
+        <a href="#nav" class="menu">
+          <span class='icons'>☰</span>
+        </a>
         <nav>
           <ul>
-              {% comment %}
-              <li>
-                  <a href="/" title="{{ site.title }}">Home</a>
-                </li>
-              {% endcomment %}
-            {% for link in site.links %}
-                <li><a href="{% if link.external %}{{ link.url }}{% else %}{{ site.url }}{{ link.url }}{% endif %}" {% if link.external %}target="_blank"{% endif %}>{{ link.title }}</a></li>
+            {% comment %}
+            <li>
+              <a href="/" title="{{ site.title }}">Home</a>
+            </li>
+            {% endcomment %} {% for link in site.links %}
+            <li>
+              <a href="{% if link.external %}{{ link.url }}{% else %}{{ site.url }}{{ link.url }}{% endif %}" {% if link.external
+                %}target="_blank" {% endif %}>{{ link.title }}</a>
+            </li>
             {% endfor %}
 
           </ul>
         </nav>
       </div>
     </header>
+  </div>

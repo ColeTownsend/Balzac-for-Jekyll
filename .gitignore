@@ -13,3 +13,5 @@ bin
 
 .DS_store
 token.yml
+.vscode
+
