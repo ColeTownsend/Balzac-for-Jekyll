@@ -1,5 +1,5 @@
 <!-- DSLs for various open graph languages -->
-<link rel="canonical" content="{{ site.url }}{{ page.url }}"/>
+<link rel="canonical" href="{{ site.url }}{{ page.url }}"/>
 <meta property="og:locale" content="{{ site.opengraph.locale }}"/>
 <meta property="og:title" content="{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}"/>
 <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 120  }}{% else %}{{ page.content | strip_html | strip_newlines | truncate: 120 }}{% endif %}"/>

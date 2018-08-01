@@ -379,7 +379,7 @@ header.site-header nav {
         display: block;
         float: none;
         
-        lh h2 {
+        h2 {
             margin-bottom: $lh*1.5;
         }
         
@@ -566,7 +566,7 @@ header.site-header nav {
         margin-bottom: $lh;
         list-style: disc;
         list-style-type: disc;
-        lh h1, lh h2, lh h3, lh h4, lh h5 {
+        h1, h2, h3, h4, h5 {
             @include underline(2px, solid, $grey-light);
         }
         li {
@@ -583,7 +583,7 @@ header.site-header nav {
     ol {
         display: block;
         margin-bottom: $lh;
-        lh h1, lh h2, lh h3, lh h4, lh h5 {
+        h1, h2, h3, h4, h5 {
             @include underline(2px, solid, $grey-light);
         }
         li {
